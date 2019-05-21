@@ -1,0 +1,12 @@
+{
+  "name": "tools",
+  "main": "lib/tools.js",
+  "ignore": [
+    "**/.*",
+    "component.json",
+    "package.json",
+    "Makefile",
+    "tests",
+    "examples"
+  ]
+}
