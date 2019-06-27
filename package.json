@@ -1,28 +1,11 @@
 {
   "name": "tools",
-  "version": "1.0.6",
+  "version": "1.0.1",
   "description": "Polyfill to remove click delays on browsers with touch UIs.",
-  "maintainers": [
-    {
-      "name": "Matthew Caruana Galizia",
-      "email": "m@m.cg",
-      "url": "http://m.cg/"
-    }
-  ],
   "author": {
-    "name": "Rowan Beentje",
-    "email": "rowan.beentje@ft.com"
+    "name": "LiuMouLiang",
+    "email": "869022787@qq.com"
   },
-  "contributors": [
-    {
-      "name": "Rowan Beentje",
-      "email": "rowan.beentje@ft.com"
-    },
-    {
-      "name": "Matthew Caruana Galizia",
-      "email": "m@m.cg"
-    }
-  ],
   "main": "lib/tools.js",
   "repository": {
     "type": "git",
