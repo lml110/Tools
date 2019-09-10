@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "description": "Polyfill to remove click delays on browsers with touch UIs.",
   "author": {
-    "name": "LiuMouLiang",
+    "name": "mohun",
     "email": "869022787@qq.com"
   },
   "main": "lib/tools.js",
