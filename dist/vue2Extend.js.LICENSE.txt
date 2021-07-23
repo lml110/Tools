@@ -1,0 +1,6 @@
+/**!
+ *** athor liumouliang
+ *** date 2021.7.6
+ *** axios扩展API
+ *** 纯属个人爱好
+ **/

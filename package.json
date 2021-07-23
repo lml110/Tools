@@ -1,23 +1,19 @@
 {
   "name": "tools",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "Polyfill to remove click delays on browsers with touch UIs.",
   "author": {
     "name": "mohun",
     "email": "869022787@qq.com"
   },
-  "main": "lib/tools.js",
+  "main": "dist/tools.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lml110/admin-tools.git"
+    "url": "git://github.com/lml110/Tools.git"
   },
   "keywords": [
     "tools",
-    "mobile",
-    "touch",
-    "tap",
-    "click",
-    "delay"
+    "mobile"
   ],
   "licenses": [
     {
@@ -28,8 +24,5 @@
   "implements": [
     "CommonJS/Modules/1.0"
   ],
-  "homepage": "https://github.com/lml110/admin-tools",
-  "__npminstall_done": "Tue Mar 26 2019 13:40:20 GMT+0800 (GMT+08:00)",
-  "_from": "tools@1.0.6",
-  "_resolved": "http://registry.npm.taobao.org/admin-tools/download/tools-1.0.6.tgz"
+  "homepage": "https://github.com/lml110/Tools"
 }

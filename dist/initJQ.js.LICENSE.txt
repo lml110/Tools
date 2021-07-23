@@ -1,0 +1,6 @@
+/**!
+ *** athor liumouliang
+ *** date 2017.11.17
+ *** JQuery业务扩展
+ *** 纯属个人爱好
+ **/
