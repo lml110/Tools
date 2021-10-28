@@ -1,0 +1,16 @@
+## \_on(element, event, handler) ⇒ <code>null</code>
+<p>绑定事件</p>
+
+**Date**: 2017-11-23  
+**Author**: liumouliang  
+
+| Param | Type |
+| --- | --- |
+| element | <code>ele</code> | 
+| event | <code>eve</code> | 
+| handler | <code>function</code> | 
+
+**Example**  
+```javascript
+_on(window, 'resize', this.resize)
+```

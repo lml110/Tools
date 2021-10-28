@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1620465693002" clover="3.2.0">
+  <project timestamp="1620465693002" name="All files">
+    <metrics statements="179" coveredstatements="179" conditionals="127" coveredconditionals="127" methods="22" coveredmethods="22" elements="328" coveredelements="328" complexity="0" loc="179" ncloc="179" packages="20" files="20" classes="20"/>
+    <package name="VERSION">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="VERSION.ts" path="D:\Works\weiyi\bxs-js-tools\src\VERSION\VERSION.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="_getUaString">
+      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="_getUaString.ts" path="D:\Works\weiyi\bxs-js-tools\src\_getUaString\_getUaString.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="166" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="73" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="93" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="166" type="stmt"/>
+      </file>
+    </package>
+    <package name="_isDate">
+      <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="_isDate.ts" path="D:\Works\weiyi\bxs-js-tools\src\_isDate\_isDate.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="148" type="stmt"/>
+      </file>
+    </package>
+    <package name="_isProdEnv">
+      <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+      <file name="_isProdEnv.ts" path="D:\Works\weiyi\bxs-js-tools\src\_isProdEnv\_isProdEnv.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="calcAge">
+      <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="calcAge.ts" path="D:\Works\weiyi\bxs-js-tools\src\calcAge\calcAge.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="7" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
+        <line num="42" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="45" count="7" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="48" count="7" type="stmt"/>
+        <line num="49" count="7" type="stmt"/>
+        <line num="53" count="7" type="stmt"/>
+        <line num="54" count="7" type="stmt"/>
+        <line num="56" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="getAppVersion">
+      <metrics statements="16" coveredstatements="16" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+      <file name="getAppVersion.ts" path="D:\Works\weiyi\bxs-js-tools\src\getAppVersion\getAppVersion.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="24" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="16" count="24" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="19" count="16" type="stmt"/>
+        <line num="20" count="16" type="cond" truecount="4" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="24" count="12" type="cond" truecount="4" falsecount="0"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="humanTime">
+      <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="humanTime.ts" path="D:\Works\weiyi\bxs-js-tools\src\humanTime\humanTime.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="64" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="63" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="62" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="58" type="cond" truecount="4" falsecount="0"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="50" count="55" type="stmt"/>
+      </file>
+    </package>
+    <package name="isAndroid">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isAndroid.ts" path="D:\Works\weiyi\bxs-js-tools\src\isAndroid\isAndroid.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="isApp">
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="isApp.ts" path="D:\Works\weiyi\bxs-js-tools\src\isApp\isApp.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="4" falsecount="0"/>
+      </file>
+    </package>
+    <package name="isBrokerApp">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isBrokerApp.ts" path="D:\Works\weiyi\bxs-js-tools\src\isBrokerApp\isBrokerApp.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="23" type="stmt"/>
+      </file>
+    </package>
+    <package name="isBxsApp">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isBxsApp.ts" path="D:\Works\weiyi\bxs-js-tools\src\isBxsApp\isBxsApp.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="26" type="stmt"/>
+      </file>
+    </package>
+    <package name="isIP">
+      <metrics statements="44" coveredstatements="44" conditionals="41" coveredconditionals="41" methods="2" coveredmethods="2"/>
+      <file name="isIP.ts" path="D:\Works\weiyi\bxs-js-tools\src\isIP\isIP.ts">
+        <metrics statements="44" coveredstatements="44" conditionals="41" coveredconditionals="41" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="147" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="146" type="cond" truecount="4" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="145" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="38" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="107" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="72" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="57" type="stmt"/>
+        <line num="27" count="15" type="stmt"/>
+        <line num="29" count="75" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="32" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="34" type="stmt"/>
+        <line num="34" count="34" type="stmt"/>
+        <line num="40" count="34" type="stmt"/>
+        <line num="41" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="47" count="31" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="8" type="stmt"/>
+        <line num="52" count="8" type="stmt"/>
+        <line num="53" count="8" type="stmt"/>
+        <line num="54" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="60" count="30" type="stmt"/>
+        <line num="63" count="69" type="cond" truecount="5" falsecount="0"/>
+        <line num="64" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="66" type="cond" truecount="4" falsecount="0"/>
+        <line num="71" count="62" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="15" type="stmt"/>
+        <line num="75" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="76" count="8" type="stmt"/>
+        <line num="78" count="6" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="isIdentityCard">
+      <metrics statements="31" coveredstatements="31" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
+      <file name="isIdentityCard.ts" path="D:\Works\weiyi\bxs-js-tools\src\isIdentityCard\isIdentityCard.ts">
+        <metrics statements="31" coveredstatements="31" conditionals="20" coveredconditionals="20" methods="3" coveredmethods="3"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="5" count="8" type="cond" truecount="6" falsecount="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="11" count="102" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="30" count="11" type="stmt"/>
+        <line num="31" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="9" type="stmt"/>
+        <line num="35" count="9" type="stmt"/>
+        <line num="36" count="9" type="stmt"/>
+        <line num="37" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
+        <line num="45" count="6" type="stmt"/>
+        <line num="46" count="102" type="stmt"/>
+        <line num="48" count="6" type="stmt"/>
+        <line num="49" count="6" type="stmt"/>
+        <line num="50" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="57" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="isIos">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isIos.ts" path="D:\Works\weiyi\bxs-js-tools\src\isIos\isIos.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+      </file>
+    </package>
+    <package name="isMobilePhone">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="isMobilePhone.ts" path="D:\Works\weiyi\bxs-js-tools\src\isMobilePhone\isMobilePhone.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="isPostalCode">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="isPostalCode.ts" path="D:\Works\weiyi\bxs-js-tools\src\isPostalCode\isPostalCode.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="isToBApp">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isToBApp.ts" path="D:\Works\weiyi\bxs-js-tools\src\isToBApp\isToBApp.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="23" type="stmt"/>
+      </file>
+    </package>
+    <package name="isVehicleCode">
+      <metrics statements="11" coveredstatements="11" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <file name="isVehicleCode.ts" path="D:\Works\weiyi\bxs-js-tools\src\isVehicleCode\isVehicleCode.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="13" count="47" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="18" count="24" type="stmt"/>
+        <line num="19" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="23" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="isWeChat">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isWeChat.ts" path="D:\Works\weiyi\bxs-js-tools\src\isWeChat\isWeChat.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="isYjjApp">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="isYjjApp.ts" path="D:\Works\weiyi\bxs-js-tools\src\isYjjApp\isYjjApp.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="22" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

@@ -1,0 +1,20 @@
+/**!
+ *** athor liumouliang
+ *** date 2021.7.6
+ *** VUE2扩展API-install版
+ *** 纯属个人爱好
+ **/
+
+/**!
+ *** athor liumouliang
+ *** date 2021.7.6
+ *** axios扩展API
+ *** 纯属个人爱好
+ **/
+
+/**!
+ *** athor liumouliang
+ *** date 2021.7.6
+ *** element-v2.15.2 + vue扩展
+ *** 纯属个人爱好
+ **/
