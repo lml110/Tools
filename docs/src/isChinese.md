@@ -10,5 +10,5 @@
 
 **Example**  
 ```javascript
-URI  加密和解密：decodeURI(URIstring)encodeURI(URIstring)//全加密encodeURIComponentunicode国标码：value.charCodeAt()String.fromCharCode(value)
+isChinese('122')	//falseURI  加密和解密：decodeURI(URIstring)encodeURI(URIstring)//全加密encodeURIComponentunicode国标码：value.charCodeAt()String.fromCharCode(value)
 ```

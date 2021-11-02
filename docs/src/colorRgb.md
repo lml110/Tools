@@ -6,9 +6,9 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| sColor | <code>String</code> | <p>#34538b</p> |
+| sColor | <code>String</code> | <p>颜色值</p> |
 
 **Example**  
 ```javascript
-colorRgb(sColor)
+console.log(colorRgb('#34538b'));   // GB(52,83,139)
 ```

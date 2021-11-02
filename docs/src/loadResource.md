@@ -1,5 +1,5 @@
 ## loadResource(url:, type) ⇒ <code>url</code>
-<p>加载资源</p>
+<p>加载页面资源文件</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

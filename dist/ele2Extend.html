@@ -1,0 +1,250 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no,address=no,email=no"><title>ele2Extend</title><style>html{
+    	-ms-touch-action: none;
+    	touch-action: none;
+    }
+    body{
+    	margin: 0;
+    }
+    [v-cloak] {
+        display: none;
+    }
+    .ellipsis{
+        width: 200px;
+        word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .lml{
+        display: flex;
+    }</style></head><body><div class="lml">as</div><div id="app" v-cloak><form-button @click="click_submit">保存</form-button><el-form ref="formValidate" label-width="76px" size="small" :model="formInfo"><el-row :gutter="7"><el-col :span="6"><form-item required prop="serviceType" :forms="forms.serviceType"/></el-col><el-col :span="6"><form-item required prop="serviceId" :forms="forms.serviceId"/></el-col><el-col :span="6"><form-item required prop="returnVisitTime" :forms="forms.returnVisitTime"/></el-col><el-col :span="6"><form-item required prop="id" :forms="forms.id"/></el-col><el-col :span="6"><form-item required prop="je" :forms="forms.je"/></el-col><el-col :span="6"><form-item required prop="smsTemplate" :forms="forms.smsTemplate"/></el-col><el-col :span="12"><form-item required prop="check" :forms="forms.check"/></el-col><el-col :span="12"><form-item required prop="radio" :forms="forms.radio"/></el-col></el-row><form-item required prop="content" :forms="forms.content"/></el-form><form-button @click="click_com" icon="el-icon-edit" plain round>22</form-button><form-cell v-model="lmldata[4]" type="radio" :row="lmls.radio"></form-cell><form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell><form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell><form-cell v-model="lmldata[6]" type="date"></form-cell><page-container style="height:360px;"><search-form v-model="searchForm" is-compute :query="searchData" :isloaded="false" :iss="iss" :columns="columns" :pages="pageParams" url="/mock/60dae3958621c72358c0d4d7/template/custom/coupon/getUsableCouponList"><template slot="periodEnd" slot-scope="{row}">2021-09-06 ~ 2021-10-06</template></search-form></page-container><apply-descriptions :apis="descriptions_data"><template slot="id" slot-scope="{row}"><form-button type="text">{{row.value}}</form-button></template><template slot="avatarUrl" slot-scope="{row}"><div class="imgbox avatarUrl" v-if="row.value"><img :src="row.value" alt="" class="imgbox-img"></div></template><template slot="sex" slot-scope="{row}"><div>{{row.value==1?'男':'女'}}</div></template><template slot="isMerge" slot-scope="{row}"><div>{{row.value?'是':'否'}}</div></template></apply-descriptions></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script src="vue.min.js"></script><script src="//assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
+    'use strict';
+    // new VConsole();
+    if(ele2Extend) Vue.use(ele2Extend);
+    const { 
+        findTarget, 
+        filterList,
+        getClientSize
+    } = tools
+    let file = '../plugin/ele2Extend/lml/apply-base-info/apply-base-info.vue'
+    console.log(file.split('/')[2]);
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                isCompute: true,
+                pageParams: {
+                    total: 'totalElements',
+                    list: 'content',
+                    pageIndex: 0,
+                },
+                formInfo: {
+                    serviceType: '',
+                    serviceId: '',
+                    content: '',
+                    returnVisitTime: '',
+                    je: void 0,
+                    check: [],
+                    smsTemplate: [],
+                },
+                forms: {
+                    id: {
+                        label: '用户ID',
+                        rule: 'number'
+                    },
+                    je: {
+                        label: '金额',
+                        pre:2,
+                        type: 'input-number'
+                    },
+                    smsTemplate: {
+                        type: 'select',
+                        label: '短信模板',
+                        list: [],
+                        multiple:true,
+                        allowCreate: true,
+                        // clearable: '',
+                        'list-name': 'templateName',
+                    },
+                    serviceType: {
+                        type: 'select',
+                        label: '服务类型',
+                        list: {
+                            '1': '客户来电',
+                            '2': '电话回访',
+                            '3': '运营外呼',
+                        },
+                    },
+                    serviceId: {
+                        label: '关联服务',
+                        type: 'input',
+                    },
+                    content: {
+                        label: '反馈内容',
+                        disabled: false,
+                        autosize: true,
+                        type: 'textarea',
+                        max: 500,
+                    },
+                    returnVisitTime: {
+                        type: 'date',
+                        label: '预约回访',
+                        options: {
+                            disabledDate: this.mon2now,
+                        }
+                    },
+                    check: {
+                        isButton: true,
+                        border: true,
+                        trueVal: '1',
+                        falseVal: '2',
+                        size: 'small',
+                        label: '多选',
+                        type: 'check',
+                        // disabled: true,
+                        listName: '多选',
+                        list: [
+                            '麻醉1',
+                            '麻醉2',
+                            {label: 'label1',value:'11'},
+                            {label: 'label2',value:'22',disabled:true},
+                        ],
+                        change(v){
+                            console.log('check',v);
+                        }
+                    },
+                    radio: {
+                        // isButton: true,
+                        border: true,
+                        // disabled: true,
+                        listName: '单选',
+                        label: '单选',
+                        type: 'radio',
+                        size: 'small',
+                        list: [
+                            '麻醉1',
+                            '麻醉2',
+                            {label: 'label1',value:'11'},
+                            {label: 'label2',value:'22',disabled:true},
+                        ],
+                        change(v){
+                            console.log('radio',v);
+                        }
+                    },
+                },
+                id: 'sssss',
+                parames: {
+                    id:'sdf',
+                },
+                iss: false,
+                searchForm: {},
+                searchData: [
+                    { type: "input", key: "goodsName", value: "" },
+                    { type: "input", key: "couponName", value: "", tips: "券名称",hide:true},
+                    // { type: "select",label:'sdf', key: "goodsOptStatus", list: [], tips: "全部"},
+                    { type: "button", label: "批量下线", is: "warning", show:true, render:this.click_BatchOption },
+                ],
+                lmldata:[],
+                dateList: [],
+                lmls: {
+                    switch: {
+                        // disabled: true,
+                        active: {
+                            text: '激活',
+                            value: 'a1',
+                            color: 'red',
+                        },
+                        inactive: {
+                            text: '关闭',
+                            value: 'b1',
+                            color: 'blue',
+                        },
+                        change(v){
+                            console.log('switch',v);
+                        }
+                    },
+                    'datetimerange':{
+                        // tips: [],
+                        range: 'daterange',
+                        change(val){
+                            console.log('datetimerange',val);
+                        }
+                    }
+                },
+                baseInfoList: [
+                    {label: '用户ID',slot:'id',key:'userId',value: '123456'},
+                    {label: '姓名', key:'name',value: '魔尊'},
+                    {label: '性别',key:'sex',slot: 'sex',value: '1'},
+                ],
+
+                apidata: [],
+                columns:[
+                    {type: 'index', title: '序号',align:'center'},
+                    {key: 'couponId', title: '券ID',tips:'魔尊'},
+                    {key: 'couponName', title: '券名称'},
+                    {key: 'newValue', title: '金额',align:'center'},
+                    {key: 'expenseThreshold', title: '限额',align:'center'},
+                    {key: 'periodEnd', title: '有效期',slot:'periodEnd',width:'110px',hide:1},
+                ],
+                descriptions_data: [],
+            }
+        },
+        created(){
+            this._customServiceTree();
+            this._applyDescriptions();
+            this._listCustomSmsTemplate();
+        },
+        methods: {
+            mon2now (date) {
+                const toady = new Date()
+                toady.setHours(0)
+                toady.setMinutes(0)
+                toady.setSeconds(0)
+                toady.setMilliseconds(0)
+                return date < +toady
+            },
+            click_submit(){
+                this.$refs['formValidate'].validate((valid,props) => {
+                    console.log('formValidate',valid,props);
+                })
+            },
+            //短信模板
+            _listCustomSmsTemplate(){
+                return this.$get('/mock/60dae3958621c72358c0d4d7/template/custom/main/listCustomSmsTemplate').then(data => {
+                    this.forms.smsTemplate.list = data;
+                }).catch((err)=>{});
+            },
+            //描述列表
+            _applyDescriptions(){
+                return this.$get('/mock/61543652e7c3d92230846257/tools/ele2Extend/applyDescriptions').then(data => {
+                    this.descriptions_data = data;
+                }).catch((err)=>{});
+            },
+            _customServiceTree(){
+                let code = '理赔'
+                return this.$get('/mock/60dae3958621c72358c0d4d7/template/api/common/customServiceTree').then(data => {
+                    let res = filterList(data,function(el,ps){
+                        // if(el.childNodeList && el.childNodeList.length==0) delete el.childNodeList
+                        return {label:el.nodeName,level:el.level};
+                    },'childNodeList',function(res,list){
+                        res = res.concat(list)
+                        return res;
+                    });
+                }).catch((err)=>{});
+            },
+            click_BatchOption(ev){
+                console.log('searchForm',this.searchForm);
+            },
+            click_com(){
+                let searchData = this.searchData
+                searchData[1].hide = !searchData[1].hide;
+                this.searchData = searchData
+
+                this.iss = !this.iss
+                // console.log(this.lmldata,this.checkdata,this.dateList);
+            }
+        }
+    });
+})();</script><style>.avatarUrl{
+    width: 24px;
+height: 24px;
+background: #D8D8D8;
+border-radius: 4px;
+}</style></html>

@@ -1,5 +1,5 @@
 ## versions() ⇒ <code>Object</code>
-<p>获取时间内所有基础信息</p>
+<p>获取移动端设备版本信息</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

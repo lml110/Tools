@@ -1,5 +1,5 @@
-## isChineseName(charValue) ⇒ <code>Boolean</code>
-<p>是否是中文名字</p>
+## 是否是中文名字(charValue) ⇒ <code>Boolean</code>
+<p>description</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

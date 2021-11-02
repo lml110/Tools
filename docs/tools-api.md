@@ -79,6 +79,14 @@
 >
 > **[numberComma](/src/numberComma)** - 分割数字-格式金额
 
+#### 颜色处理
+
+> **[getRandomColor](/src/getRandomColor)** - 获取随机颜色值
+>
+> **[colorHex](/src/colorHex)** - RGB颜色转换为16进制
+>
+> **[colorRgb](/src/colorRgb)** - 16进制颜色转为RGB格式
+
 #### 时间处理
 
 > **[_formatDate](/src/_formatDate)** - 格式化时间
@@ -92,6 +100,28 @@
 > **[_parseDate](/src/_parseDate)** - 时间格式反向解析
 >
 > **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+
+#### 文件处理
+
+> **[getFileURL](/src/getFileURL)** - 生成文件路径
+>
+> **[clearFileURL](/src/clearFileURL)** - 清除文件路径
+>
+> **[downloadBlob](/src/downloadBlob)** - 数据流下载
+>
+> **[downloadLink](/src/downloadLink)** - 地址文件下载
+>
+> **[loadResource](/src/loadResource)** - 加载页面资源文件
+>
+> **[loadResourceCode](/src/loadResourceCode)** - 加载页面代码
+>
+> **[loadScript](/src/loadScript)** - 加载脚本文件
+>
+> **[loadStyle](/src/loadStyle)** - 加载css样式表文件
+>
+> **[preLoadStyle](/src/preLoadStyle)** - 预加载link资源配置
+>
+> **[uploadFile](/src/uploadFile)** - 原生js上传多图
 
 #### `ifs`判断处理
 
@@ -111,37 +141,31 @@
 >
 > **[hasObjEqual](/src/hasObjEqual)** - 判断两个对象是否相等
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isArray](/src/isArray)** - 判断是否是数组数据
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isChinese](/src/isChinese)** - 判断是否是汉字
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isChineseName](/src/isChineseName)** - 是否是中文名字
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isEmptyObject](/src/isEmptyObject)** - 是否是空对象
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isIphone](/src/isIphone)** - 判断是否是phone
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isIphoneX](/src/isIphoneX)** - 判断是否是iphoneX和iphoneXS
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isNulls](/src/isNulls)** - 判断除对象外的空值
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isObject](/src/isObject)** - 判断是否是对象
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isScreenSzie](/src/isScreenSzie)** - 是否是屏幕尺寸
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isThisBoolean](/src/isThisBoolean)** - 过滤非boolean时的默认值设置
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isUndefined](/src/isUndefined)** - 是否为undefined
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isValidIP](/src/isValidIP)** - 是否是ip地址
 >
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
->
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
->
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
->
-> **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+> **[isWechat](/src/isWechat)** - 判断是否是微信环境
 
 
 ### HTTP处理
@@ -233,3 +257,30 @@
 > **[triggerEvent](/src/triggerEvent)** - 兼容性click元素触发
 
 ## Plugin
+
+### ele2Extend
+基于elementUI开发
+
+> **[applyBaseInfo](/plugin/ele2Extend/applyBaseInfo)** - 2.15.6 以下版本基础信息组件
+>
+> **[applyDescriptions](/plugin/ele2Extend/applyDescriptions)** - 2.15.6 以上版本基础信息组件
+>
+> **[applyDialog](/plugin/ele2Extend/applyDialog)** - 基础弹窗组件
+>
+> **[applyPage](/plugin/ele2Extend/applyPage)** - 基础分页组件
+>
+> **[applyTable](/plugin/ele2Extend/applyTable)** - 基础表格组件
+>
+> **[formButton](/plugin/ele2Extend/formButton)** - 表单按钮组件
+>
+> **[formCell](/plugin/ele2Extend/formCell)** - 表单单元控件
+>
+> **[formItem](/plugin/ele2Extend/formItem)** - 表单控制单元
+>
+> **[formPopup](/plugin/ele2Extend/formPopup)** - 表单弹窗
+>
+> **[pageContainer](/plugin/ele2Extend/pageContainer)** - 自动计算剩余高度
+>
+> **[searchControl](/plugin/ele2Extend/searchControl)** - 行内搜索筛选器
+>
+> **[searchForm](/plugin/ele2Extend/searchForm)** - 搜索列表页面集合组件

@@ -18,13 +18,13 @@ var obj = {
 };
 let pop = []
 console.log(obj?.a?.b); 
-console.log(nestedProperty.has(pop, "length"));
+console.log(nestedProperty.get(pop, "length"));
 //因`?.`不能使用
-console.log(nestedProperty.has(obj, "a.b.c.arr.+.c"));
+console.log(nestedProperty.get(obj, "a.b.c.arr.+.c"));
 // # 错误
-console.log(nestedProperty.has(obj,'+.c')); //undefined
-console.log(nestedProperty.has(obj, "a.d.c")); //undefined
-console.log(nestedProperty.has(obj)); //原值
+console.log(nestedProperty.get(obj,'+.c')); //undefined
+console.log(nestedProperty.get(obj, "a.d.c")); //undefined
+console.log(nestedProperty.get(obj)); //原值
 ```
 ## hasNestedProperty(object, property, options:) ⇒
 <p>Tell if a nested object has a given property (or array a given index)

@@ -6,9 +6,9 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| sRgb | <code>String</code> | <p>RGB(23, 245, 56)</p> |
+| sRgb | <code>String</code> | <p>RGB值</p> |
 
 **Example**  
 ```javascript
-colorHex(sRgb)
+console.log(colorHex('rgb(23, 245, 56)'));   // #17f538console.log(colorHex('#fff'));   // #ffffff
 ```

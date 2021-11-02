@@ -1,0 +1,94 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no,address=no,email=no"><title>itouch</title><style>html{
+    	-ms-touch-action: none;
+    	touch-action: none;
+    }
+    body{
+    	margin: 0;
+    }
+	.lml{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		width: 200px;
+		height: 200px;
+		background-color: red;
+	}
+	.lml img{
+		display: block;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+	.myCanvas{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}</style></head><body><div class="lml"><img src="http://testa.outdoorclub.com.cn//p1/GoodsDetail/shop/2018/11/17/24/1542422188062/1542422188063936.jpg" alt=""></div><canvas id="myCanvas" class="myCanvas"></canvas><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script src="./js/tools.js"></script><script src="./js/itouch.js"></script></body><script>(function(){
+    'use strict';
+    new VConsole();
+    const { typeOf, _deepCopy } = tools;
+
+    var lml = document.getElementsByClassName("lml")[0];
+    tools.stopTouch(true,false);
+    const offset = tools.getEleSize(lml).offset;
+    const touchs1 = new itouch(lml,{
+    	transform: tools.prefixStyle('transform'),
+    	// rotatable: false,
+    	endFn(obj){
+    		console.log(obj);
+    	},
+        orientFn(orient,objs){
+            console.log(orient,objs);
+        }
+    });
+
+    let params1 = {'k2':'aa','k1':'bb','1':'ss'}
+    let params2 = [11,'dd']
+    let params3 = new Map([['22','aa1'],['11','bb2']])
+    console.log(typeOf(params3.entries()),params3.values(),Array.from(params3.entries()));
+    
+    const { k1, ...res } = params1;
+    console.log('ss',res);
+    let a1 = {"100":"foo","2":"bar","7":"baz"};
+    console.log('aaaa',_deepCopy(a1),params3,...Object.values(params1));
+    console.log(new Map(Object.entries(params1)).keys(),Object.values(params1));
+
+    const winSize = tools.getAllWinSize();
+    var myCanvas = document.getElementById("myCanvas")
+    var ctx = myCanvas.getContext("2d");
+    myCanvas.width = winSize.clientW*2;
+    myCanvas.height = winSize.clientH*2;
+    myCanvas.style.width = winSize.clientW;
+    myCanvas.style.height = winSize.clientH;
+    let lastX = 0,lastY = 0;
+
+    const _draw = function(x, y, isDown){
+    	if (isDown) {
+	        ctx.beginPath();
+	        ctx.strokeStyle = '#8d510f';
+	        ctx.lineWidth = 7;
+	        ctx.lineJoin = "round";
+	        ctx.moveTo(lastX, lastY);
+	        ctx.lineTo(x, y);
+	        ctx.closePath();
+	        ctx.stroke();
+	    }
+	    lastX = x; lastY = y;
+    };
+    const touchs2 = new itouch('.myCanvas',{
+    	isSpinner: false,
+    	startFn(obj){
+    		let x = obj.size[0].x,y = obj.size[0].y;
+    		_draw(x,y,false)
+    	},
+    	moveFn(obj){
+    		let x = obj.size[0].x,y = obj.size[0].y;
+    		_draw(x,y,true)
+    	},
+    })
+    // console.log(touchs);
+})();</script></html>

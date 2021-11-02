@@ -5,7 +5,7 @@
 **Author**: liumouliang  
 **Example**  
 ```javascript
-const browser = new _browser();
+const browser = new browser();
 const versions = browser.getWechatVersion();
 console.log(versions);
 ```

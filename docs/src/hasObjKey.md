@@ -1,4 +1,30 @@
-## hasObjKey()
-<p>判断一个对象是否存在key，如果传入第二个参数key，则是判断这个obj对象是否存在key这个属性
-如果没有传入key这个参数，则判断obj对象是否有键值对</p>
+## hasObjKey(object, property, isOwn) ⇒ <code>Boolean</code>
+<p>查询对象key值是否存在</p>
 
+**Date**: 2017-11-23  
+**Author**: liumouliang  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| object | <code>Object</code> \| <code>Array</code> |  |
+| property | <code>String</code> | <p>属性key</p> |
+| isOwn | <code>Boolean</code> | <p>是否查询自身|默认：true</p> |
+
+**Example**  
+```javascript
+var array = [
+  { a: 0, b: 1, c: 2 },
+  { a: 10, b: 11, c: 12 },
+  { a: 20, b: 21, c: 22 }
+]
+var obj = {
+  a: {
+    b: {
+      c: {
+        d: 5,
+        arr: array
+      }
+    }
+  }
+};console.log(hasObjKey(obj, "a.b.c.arr.+.c")); // trueconsole.log(hasObjKey(obj, "a.b.c.arr.+.d")); // falseconsole.log(hasObjKey(array, "2"));	//trueconsole.log(hasObjKey(array, "+.c")); //trueconsole.log(hasObjKey(array, "+.d")); //false
+```
