@@ -1,4 +1,4 @@
-## Tools
+## 辅助函数库
 
 ### 常用
 
@@ -24,12 +24,29 @@
 #### `rjs`重构
 
 > **[_for](/src/_for)** - 遍历数据-包括对象
+>
+> **[_forEach](/src/_forEach)** - 遍历数组数据
+>
+> **[_forObject](/src/_forObject)** - 遍历对象数据
+>
+> **[_filter](/src/_filter)** - 重构filter-包括对象
+
+#### `rank`计算
+> **[getRandomArrayElements](/src/getRandomArrayElements)** - 随机获取数组中的元素组合
+> 
+> **[_swapArray](/src/_swapArray)** - 复杂数组数据交换
+> 
+> **[getCombine](/src/getCombine)** - 从数组中取出n个元素的所有组合
+> 
+> **[getPermutation](/src/getPermutation)** - 计算数组中所有的排列方式
+> 
+> **[getMaximin](/src/getMaximin)** - 获取数组最大最小值
 
 #### `business`复杂
 
 > **[treeToArray](/src/treeToArray)** - 树结构反向转换一维数组
 >
-> **[_filterList](/src/_filterList)** - 递归遍历数组数据
+> **[filterList](/src/filterList)** - 递归遍历数组数据
 > **[arrayToTree](/src/arrayToTree)** - 数组转树结构
 >
 > **[findTarget](/src/findTarget)** - 递归查询数据元素
@@ -40,14 +57,14 @@
 
 ### 数据处理
 
-> **[_filter](/src/_filter)** - 数据过滤-不递归-包括对象
->
 > **[_compareVersion](/src/_compareVersion)** - 比较字符串版本 - v1>v2 为1
 >
 > **[Cutsubstr](/src/Cutsubstr)** - 字符串截取 - 包含中文
 >
 > **[strlen](/src/strlen)** - 计算数据长度
 > **[strlenUnit](/src/strlenUnit)** - 转换带单位数据
+>
+> **[WordFirstUper](/src/WordFirstUper)** - 单词首字符大写
 
 #### 数据转换
 
@@ -89,6 +106,8 @@
 
 #### 时间处理
 
+> **[_getDate](/src/_getDate)** - 获取时间元数据
+>
 > **[_formatDate](/src/_formatDate)** - 格式化时间
 >
 > **[_getAllDate](/src/_getAllDate)** - 获取日期全部参数
@@ -167,20 +186,34 @@
 >
 > **[isWechat](/src/isWechat)** - 判断是否是微信环境
 
+#### 富文本数据处理
+
+> [_regAngle](/src/_regAngle)	- 替换英文字符为全角字符
+>
+> [_trimSpecial](/src/_trimSpecial)	- 去除特殊字符
+>
+> [_trimEmoji](/src/_trimEmoji)	- 去除表情符号
+>
+> [clearEmptyTags](/src/clearEmptyTags)	- 去除空标签
+
 
 ### HTTP处理
 
 #### 缓存处理
 
-> Cookies 不转码存储
-> cookie
+> [Cookies](/src/Cookies)  - Cookie集合-不转码
 >
-> Locals
-> local
-> localExpires 本地+生存周期
+> [cookie](/src/cookie)	- Cookies简化版
 >
-> Sessions
-> session
+> [Locals](/src/Locals) - 本地缓存集合
+>
+> [local](/src/local) - Locals简化版
+>
+> [localExpires](/src/localExpires) - 本地+生存周期
+>
+> [Sessions](/src/Sessions) - 会话缓存集合
+>
+> [session](/src/session) - Sessions简化版
 
 #### 参数处理
 
@@ -194,9 +227,9 @@
 >
 > **[_getHttpCodeMsg](/src/_getHttpCodeMsg)** - 获取http状态码的提示信息
 >
-> _encode - URL编码转换
+> [_encode](/src/_encode) - URL编码转换-只转中文
 > 
-> _decode
+> [_decode](/src/_decode) - URL编码解码
 
 ### 浏览器操作
 
@@ -256,10 +289,42 @@
 >
 > **[triggerEvent](/src/triggerEvent)** - 兼容性click元素触发
 
-## Plugin
+#### 图片处理
 
-### ele2Extend
-基于elementUI开发
+> **[_iosRepairImg](/src/_iosRepairImg)** - 修复IOS中图片旋转问题
+>
+> **[_rotateImg](/src/_rotateImg)** - 旋转图片
+>
+> **[downloadIamge](/src/downloadIamge)** - 下载图片
+>
+> **[getImgeInfo](/src/getImgeInfo)** - 获取图片元素信息
+>
+> **[getPixelRatio](/src/getPixelRatio)** - 获取canvas渲染的像素倍数
+>
+> **[imageLoaded](/src/imageLoaded)** - 处理图片加载完毕
+
+- 转码
+
+  > **[canvasToDataURL](/src/canvasToDataURL)** - canvas转DataURL
+  >
+  > **[imageToCanvas](/src/imageToCanvas)** - 图片链接转canvas
+  >
+  > **[imageToBlob](/src/imageToBlob)** - 图片链接转Blob
+  >
+  > **[fileToDataURL](/src/fileToDataURL)** - 文件流转DataURL
+  >
+  > **[dataURLToBuffer](/src/dataURLToBuffer)** - dataURL转Buffer
+  >
+  > **[dataURLToBlob](/src/dataURLToBlob)** - dataURL转Blob
+  >
+  > **[dataURLToFile](/src/dataURLToFile)** - dataURL转File
+	
+
+## 插件库
+
+### 饿了么拓展
+
+因多个管理后台是基于`elementUI`开发，同时布局相似
 
 > **[applyBaseInfo](/plugin/ele2Extend/applyBaseInfo)** - 2.15.6 以下版本基础信息组件
 >
@@ -284,3 +349,11 @@
 > **[searchControl](/plugin/ele2Extend/searchControl)** - 行内搜索筛选器
 >
 > **[searchForm](/plugin/ele2Extend/searchForm)** - 搜索列表页面集合组件
+
+### 微信拓展
+
+以微信H5为主，附加APP嵌入页
+兼容两套UI，因微易本身UI组件库bug太多，功能不具有拓展性，但很多项目有用到，并且其中有对一些业务做的专属组件，所以迫不得已，附加`vant`为辅，虽然可整合，但没啥意义，好处太少
+- 如果整合集成在一起，代码融入到新组件库中，那么对于之前的项目而言
+	1. 替换之前组件引用，这样改动大，同时容易出错，维护时如果只改一套，就会让原来的出现差异，如此递增下去，差异越大越难改
+	2. 组件集成兼容原来的组件库的引用，使效果一致，维护性较之高

@@ -2,14 +2,16 @@
 
 > 基础分页组件
 
+Author: liumouliang
+
 ## Props
 
 | Prop name | Description | Type   | Values | Default |
 | --------- | ----------- | ------ | ------ | ------- |
-| size      |             | null   | -      |         |
-| total     |             | number | -      | 0       |
-| pageIndex |             | number | -      | 1       |
-| pageSize  |             | number | -      | 20      |
+| size      | 尺寸        | null   | -      |         |
+| total     | 总数        | number | -      | 0       |
+| pageIndex | 当前索引    | number | -      | 1       |
+| pageSize  | 页数        | number | -      | 20      |
 
 ## Events
 

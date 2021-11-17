@@ -1,5 +1,18 @@
-## debounce()
+## debounce(func, wait, options) ⇒ <code>Null</code>
+<p>防抖函数</p>
+
+**Date**: 2017-11-23  
+**Author**: liumouliang  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| func | <code>Funcrion</code> |  |
+| wait | <code>Number</code> | <p>需要延迟的毫秒数</p> |
+| options | <code>Object</code> | <p>选项对象</p> |
+
 **Example**  
 ```javascript
-// 窗口变动事件jQuery(window).on('resize', debounce(calculateLayout, 150))// 点击事件jQuery(element).on('click', debounce(sendMail, 300, {  'leading': true,  'trailing': false}))// 通信事件const debounced = debounce(batchLog, 250, { 'maxWait': 1000 })const source = new EventSource('/stream')jQuery(source).on('message', debounced)// 返回事件 - 取消一个 trailing 的防抖动调用jQuery(window).on('popstate', debounced.cancel) // 检查是否还在调用const status = debounced.pending() ? "Pending..." : "Ready"
+//[options.leading=false] (boolean): 指定在延迟开始前调用。
+//[options.maxWait] (number): 设置 func 允许被延迟的最大值。
+//[options.trailing=true] (boolean): 指定在延迟结束后调用。debounce(func, wait)
 ```

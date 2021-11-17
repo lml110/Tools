@@ -2,20 +2,22 @@
 
 > 表单按钮组件
 
+Author: liumouliang
+
 ## Props
 
-| Prop name  | Description | Type   | Values | Default   |
-| ---------- | ----------- | ------ | ------ | --------- |
-| size       |             | string | -      | "small"   |
-| loading    |             | null   | -      |           |
-| disabled   |             | null   | -      |           |
-| icon       |             | null   | -      |           |
-| circle     |             | null   | -      |           |
-| plain      |             | null   | -      |           |
-| round      |             | null   | -      |           |
-| nativeType |             | null   | -      |           |
-| type       |             | string | -      | "primary" |
-| render     |             | func   | -      |           |
+| Prop name  | Description    | Type   | Values                                               | Default   |
+| ---------- | -------------- | ------ | ---------------------------------------------------- | --------- |
+| size       | 尺寸           | string | -                                                    | "small"   |
+| loading    | 加载状态       | null   | -                                                    |           |
+| disabled   | 禁用状态       | null   | -                                                    |           |
+| icon       | 图标类名       | null   | -                                                    |           |
+| circle     | 圆形样式       | null   | -                                                    |           |
+| plain      | 缕空样式       | null   | -                                                    |           |
+| round      | 圆角样式       | null   | -                                                    |           |
+| nativeType | 原生 type 属性 | null   | -                                                    |           |
+| type       | 类型           | string | `primary / success / warning / danger / info / text` | "primary" |
+| render     | 事件函数       | func   | -                                                    |           |
 
 ## Events
 

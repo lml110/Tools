@@ -2,17 +2,19 @@
 
 > 2.15.6 以上的 ele 的版本才有
 
+Author: liumouliang
+
 ## Props
 
-| Prop name | Description | Type    | Values | Default |
-| --------- | ----------- | ------- | ------ | ------- |
-| title     |             | string  | -      |         |
-| direction |             | string  | -      |         |
-| size      |             | string  | -      |         |
-| column    |             | number  | -      | 2       |
-| colon     |             | boolean | -      | false   |
-| border    |             | boolean | -      | true    |
-| apis      |             | array   | -      |         |
+| Prop name | Description                                                                                            | Type    | Values | Default |
+| --------- | ------------------------------------------------------------------------------------------------------ | ------- | ------ | ------- |
+| title     | 标题文本，显示在左上方                                                                                 | string  | -      |         |
+| direction | 排列的方向                                                                                             | string  | -      |         |
+| size      | 列表的尺寸                                                                                             | string  | -      |         |
+| column    | 一行 Descriptions Item 的数量                                                                          | number  | -      | 2       |
+| colon     | 是否显示冒号                                                                                           | boolean | -      | false   |
+| border    | 边框样式                                                                                               | boolean | -      | true    |
+| apis      | 选项：<br>value,<br>label,<br>hide：是否隐藏,<br>slot,<br>def：默认值：'无',<br>span：区分全局-spanNum | array   | -      |         |
 
 ## Slots
 

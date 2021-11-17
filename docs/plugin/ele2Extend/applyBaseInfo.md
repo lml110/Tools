@@ -2,13 +2,15 @@
 
 > 2.15.6 以下版本基础信息组件
 
+Author: liumouliang
+
 ## Props
 
-| Prop name  | Description | Type           | Values | Default |
-| ---------- | ----------- | -------------- | ------ | ------- |
-| spanNum    |             | number         | -      | 12      |
-| labelWidth |             | number\|string | -      | 86      |
-| apis       |             | array          | -      |         |
+| Prop name  | Description  | Type           | Values                                                                                   | Default |
+| ---------- | ------------ | -------------- | ---------------------------------------------------------------------------------------- | ------- |
+| spanNum    | 分割数量     | number         | -                                                                                        | 12      |
+| labelWidth | 展示标题宽度 | number\|string | -                                                                                        | 86      |
+| apis       | 类型数据     | array          | `value`, `label`, `hide：是否隐藏`, `slot`, `def：默认值-'无'`, `span：区分全局-spanNum` |         |
 
 ## Slots
 

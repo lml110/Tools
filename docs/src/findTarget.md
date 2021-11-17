@@ -4,7 +4,7 @@
 -查到后退出</p>
 <p>缺点：不能查询对象</p>
 
-## findTarget(sourceArr, queryFn, childKey) ⇒ <code>null</code>
+## findTarget(sourceArr, queryFn, childKey) ⇒ <code>Value</code>
 <p>遍历获取数组中的对应目标节点</p>
 
 **Date**: 2017-11-23  

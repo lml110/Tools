@@ -1,6 +1,8 @@
 # searchForm
 
-> 搜索列表页面集合组件
+> 搜索列表页面集成组件
+
+Author: liumouliang
 
 ## Props
 
@@ -10,7 +12,7 @@
 | value       |                                           | null           | -                                                                                                                           |         |
 | recover     |                                           | null           | -                                                                                                                           |         |
 | sizeSearch  | 微易-特殊搜索区尺寸                       | null           | `medium`                                                                                                                    |         |
-| size        | 总体尺寸                                  | string         | -                                                                                                                           | 'small' |
+| size        | 尺寸                                      | string         | -                                                                                                                           | 'small' |
 | maxHeight   | 表格最大高度                              | string\|number | -                                                                                                                           |         |
 | height      | 表格高度                                  | string\|number | -                                                                                                                           |         |
 | query       | 控制台数据                                | array          | -                                                                                                                           |         |

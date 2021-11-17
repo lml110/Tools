@@ -19,24 +19,26 @@
     window.$docsify = {
       name: '工具库',
       repo: 'https://github.com/lml110/Tools',
-      loadSidebar: false,
-      subMaxLevel: 1,
-      alias: {
-        '/*/_sidebar.md': '_sidebar.md',
-      },
+      
+      // subMaxLevel: 1,
+      // # 自定义导航
+      // loadSidebar: false,
+      // alias: {
+      //   '/*/_sidebar.md': '_sidebar.md',
+      // },
       auto2top: true,
       homepage: '/tools-api.md',
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      // search: {
-      //   maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      //   paths: 'auto', // or 'auto'
-      //   placeholder: '搜索',
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: '搜索',
 
-      //   noData: '找不到结果',
+        noData: '找不到结果',
 
-      //   // 搜索标题的最大程级, 1 - 6
-      //   depth: 2
-      // }
+        // 搜索标题的最大程级, 1 - 6
+        depth: 2
+      }
     }
   </script>
   <script src="dist/js/docsify.min_89199854a379406.js" type="text/javascript"></script>
