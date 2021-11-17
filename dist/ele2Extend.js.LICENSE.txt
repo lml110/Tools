@@ -1,12 +1,5 @@
 /**!
  *** athor liumouliang
- *** date 2017.11.17
- *** 工具库主体
- *** 纯属个人爱好
- **/
-
-/**!
- *** athor liumouliang
  *** date 2021.7.6
  *** VUE2扩展API-install版
  *** 纯属个人爱好
@@ -22,6 +15,6 @@
 /**!
  *** athor liumouliang
  *** date 2021.7.6
- *** 微信H5 + vue扩展
+ *** element-v2.15.2 + vue扩展
  *** 纯属个人爱好
  **/
