@@ -1,4 +1,4 @@
-## \_default(keyName, refs) ⇒ <code>Array</code>
+## mergeJson(keyName, refs) ⇒ <code>Array</code>
 <p>合并多个对象数组</p>
 
 **Date**: 2019-06-27  

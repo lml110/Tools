@@ -8,7 +8,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | date | <code>Date</code> \| <code>String</code> \| <code>Number</code> | <p>初始时间</p> |
-| diffMonth | <code>Number</code> | <p>相差月份</p> |
+| diffMonth | <code>Number</code> | <p>相差月份(可为负数)</p> |
 | diffMS | <code>Number</code> | <p>秒差距 || 场景：用于展示是否前一天:59</p> |
 
 **Example**  
@@ -20,4 +20,5 @@ console.log(endDate); // 1645977599000
 console.log(_formatDate(endDate)); // 2022-02-27 23:59:59
 
 getEndDateToMonth(new Date("2021-12-31 08:00:00"),2,1) //2022-02-27 23:59:59
+getEndDateToMonth(new Date("2021-5-31 08:00:00"),-3)
 ```

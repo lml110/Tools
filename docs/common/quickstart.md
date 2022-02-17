@@ -1,35 +1,41 @@
 # 快速上手
 ## 使用`npm`引入
 
-函数库发布在公司私有的npm仓库，需要切换成公司的npm源
 ```bash
-nrm add weiyi https://nexus.winbaoxian.cn/repository/bxsnpm-group/
-nrm use weiyi
-npm i weiyi-jax -S
+npm i -D lml-tools
 ```
 
 全局引入
 ```js
-import Jax from 'weiyi-jax'
-
-Jax.isApp()
+import tools from 'lml-tools'
+tools.isAndorIosNoWe()
 ```
 
 按需引入
 ```js
-import isApp from 'weiyi-jax/isApp'
+import { warning, _cloneObj, trace, _keyid } from 'tools';
 
-isApp()
+//import
+['import', {
+    libraryName: 'tools',
+    libraryDirectory: 'lib',
+}, 'tools']
+//component
+[
+  	'component', {
+    	libraryName: 'tools',
+    	libDir: 'lib',
+  	}
+]
 ```
 
 ## 使用CDN引入
 ```html
-<script src="xxx.js" type="text/javascript"></script>
+<script src="//res.wyins.net/autoUpload/common/xxx.js" type="text/javascript"></script>
 
 <script>
-  window.onload = function() {
-    Jax.isApp()
-  }
+tools.isAndorIosNoWe()
+const { typeOf, _getParams, setDocumentTitle, regHtmlRepImg, browser, cookie } = tools;
 </script>
 ```
 详细的JS-SDK链接请看 [发布历史](common/changelog)
