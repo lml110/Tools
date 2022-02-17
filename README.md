@@ -1,4 +1,4 @@
-## 辅助函数库
+# 辅助函数库
 
 ### 常用
 
@@ -50,6 +50,8 @@
 > **[arrayToTree](/src/arrayToTree)** - 数组转树结构
 >
 > **[findTarget](/src/findTarget)** - 递归查询数据元素
+> 
+> **[mergeJson](/src/mergeJson)** - 合并多个对象数组
 >
 > **[nestedProperty](/src/nestedProperty)** - 嵌套属性查询
 > **[hasObjKey](/src/hasObjKey)** - 查询对象key值是否存在
@@ -119,6 +121,8 @@
 > **[_parseDate](/src/_parseDate)** - 时间格式反向解析
 >
 > **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
+>
+> **[getServerTime](/src/getServerTime)** - 获取服务器时间
 
 #### 文件处理
 
@@ -126,9 +130,11 @@
 >
 > **[clearFileURL](/src/clearFileURL)** - 清除文件路径
 >
+> **[downloadFile](/src/downloadFile)** - 远程文件下载
+>
 > **[downloadBlob](/src/downloadBlob)** - 数据流下载
 >
-> **[downloadLink](/src/downloadLink)** - 地址文件下载
+> **[downloadLink](/src/downloadLink)** - 本地文件下载
 >
 > **[loadResource](/src/loadResource)** - 加载页面资源文件
 >
@@ -318,9 +324,12 @@
   > **[dataURLToBlob](/src/dataURLToBlob)** - dataURL转Blob
   >
   > **[dataURLToFile](/src/dataURLToFile)** - dataURL转File
-	
+	 
+# 拓展插件库
 
-## 插件库
+### VUE基础拓展
+
+> **[异步扩展](/plugin/vue2Extend/axiosExtend)** 
 
 ### 饿了么拓展
 
@@ -350,6 +359,9 @@
 >
 > **[searchForm](/plugin/ele2Extend/searchForm)** - 搜索列表页面集合组件
 
+#### 扩展函数
+> **[ele2Extend_util](/plugin/ele2Extend/ele2Extend_util)** 
+
 ### 微信拓展
 
 以微信H5为主，附加APP嵌入页
@@ -357,3 +369,5 @@
 - 如果整合集成在一起，代码融入到新组件库中，那么对于之前的项目而言
 	1. 替换之前组件引用，这样改动大，同时容易出错，维护时如果只改一套，就会让原来的出现差异，如此递增下去，差异越大越难改
 	2. 组件集成兼容原来的组件库的引用，使效果一致，维护性较之高
+
+### 小程序拓展
