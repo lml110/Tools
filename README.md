@@ -436,3 +436,5 @@ https://lml110.github.io/Tools/#/
 > **[日志管理](/plugin/miniWeixin/log)** 
 >
 > **[单元方法](/plugin/miniWeixin/util)** 
+>
+> **[config配置](/plugin/miniWeixin/config)** 
