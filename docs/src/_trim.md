@@ -11,5 +11,5 @@
 
 **Example**  
 ```javascript
-_trim(str)
+console.log(_trim([' dfd ds dd ','ss 是否'],true));
 ```

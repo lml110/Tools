@@ -10,4 +10,8 @@ eb.once('event1',params=>console.log(11,params));
 eb.on('event1',params=>console.log('event1-1',params));
 eb.on('event1',params=>console.log('event1-2',params));
 eb.emit('event1',33)
+setTimeout(()=>{
+  eb.emit('event1',54)
+},1000)
+console.log(eb);
 ```

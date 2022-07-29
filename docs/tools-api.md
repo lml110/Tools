@@ -1,3 +1,7 @@
+# 文档网址-ss
+
+https://lml110.github.io/Tools/#/
+
 # 辅助函数库
 
 ### 常用
@@ -30,6 +34,8 @@
 > **[_forObject](/src/_forObject)** - 遍历对象数据
 >
 > **[_filter](/src/_filter)** - 重构filter-包括对象
+>
+> **[_toString](/src/_filter)** - 重构toString-转字符串
 
 #### `rank`计算
 > **[getRandomArrayElements](/src/getRandomArrayElements)** - 随机获取数组中的元素组合
@@ -56,6 +62,9 @@
 > **[nestedProperty](/src/nestedProperty)** - 嵌套属性查询
 > **[hasObjKey](/src/hasObjKey)** - 查询对象key值是否存在
 > **[getObjVal](/src/getObjVal)** - 获取对象val
+>
+> **[_tco](/src/_tco)** - 尾递归优化
+
 
 ### 数据处理
 

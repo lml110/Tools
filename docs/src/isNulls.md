@@ -18,5 +18,7 @@ console.log(isNulls(false));
 console.log(isNulls([]));
 console.log(isNulls(' '));
 console.log(isNulls([0]));
+
+//false
 console.log(isNulls({}));
 ```

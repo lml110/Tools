@@ -25,7 +25,7 @@ Author: liumouliang
 | ------- | ----------- | -------- |
 | prepend |             |          |
 | append  |             |          |
-| default |             | <br>     |
+| default |             | <br/>    |
 
 ---
 

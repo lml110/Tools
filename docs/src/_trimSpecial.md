@@ -1,5 +1,5 @@
 ## \_trimSpecial(str, regStr) ⇒ <code>String</code>
-<p>去除特殊字符</p>
+<p>去除特殊占位符号</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

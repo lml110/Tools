@@ -1,6 +1,7 @@
 ## \_getAllDate(date, weekEnArr) ⇒ <code>Object</code>
 <p>获取时间内所有基础信息</p>
 
+**Returns**: <code>Object</code> - <p>String Object 不足补0</p>  
 **Date**: 2017-11-23  
 **Author**: liumouliang  
 

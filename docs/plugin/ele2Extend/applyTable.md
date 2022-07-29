@@ -21,6 +21,6 @@ Author: liumouliang
 
 | Name    | Description | Bindings |
 | ------- | ----------- | -------- |
-| default |             | <br>     |
+| default |             | <br/>    |
 
 ---

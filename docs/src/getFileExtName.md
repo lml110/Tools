@@ -1,4 +1,4 @@
-## getFileExtName(std) ⇒ <code>String</code>
+## getFileExtName(std, 是否包含文件名) ⇒ <code>String</code>
 <p>获取后缀名并转换小写</p>
 
 **Date**: 2017-11-23  
@@ -7,8 +7,9 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | std | <code>str</code> | <p>文件地址</p> |
+| 是否包含文件名 | <code>isName</code> |  |
 
 **Example**  
 ```javascript
-getFileExtName('04/2019110405043483.JPG') == 04/2019110405043483.jpg
+console.log(getFileExtName('04/2019110405043483.JPG')); // == jpgconsole.log(getFileExtName('04/2019110405043483.JPG',true)); // === 2019110405043483.jpg
 ```

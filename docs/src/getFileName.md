@@ -10,5 +10,5 @@
 
 **Example**  
 ```javascript
-getFileName(a/b/c.js)
+console.log(getFileName('a/b/c.js')); // === c
 ```

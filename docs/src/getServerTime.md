@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| path | <code>String</code> | <p>请求路径|默认‘/’</p> |
+| path | <code>String</code> | <p>请求路径|默认‘当前文件’ - 优化根路径403禁止访问</p> |
 
 **Example**  
 ```javascript
