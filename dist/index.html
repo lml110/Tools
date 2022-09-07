@@ -11,10 +11,55 @@
         -ms-transform: translateY(y);
         -o-transform: translateY(y);
         transform: translateY(y);
-    }</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
+    }</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>new VConsole();
 (function(){
     'use strict';
     // console.log(tools);
+	var testStr="\"dsad'''''\"asdsadf\"";
+
+var reg
+
+    const removeURLParameter = function(url, parameter) {
+  var urlparts = url.split('?');
+  if (urlparts.length >= 2) {
+    //参数名前缀
+    var prefix = encodeURIComponent(parameter) + '=';
+    var pars = urlparts[1].split(/[&;]/g);
+
+    //循环查找匹配参数
+    for (var i = pars.length; i-- > 0;) {
+      if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+        //存在则删除
+        pars.splice(i, 1);
+      }
+    }
+
+    return urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
+  }
+  return url;
+}
+console.log(removeURLParameter("https://broker-2a.winbaoxian.cn/account-merge.html?q=1&mg=1&pop=3","mg"));
+//const DiscernReg = /([“])(.+[?^“])([”])/g;
+const DiscernReg = /(?<=[“]).*?(?=[”])/g;
+//const DiscernReg = /([“].*?[”])/g
+const getDiscernContent = function (str) {
+    if (!str) return "";
+	var aa = str.replace(DiscernReg,function($0,$1,$2,$3){
+		//console.log("魔尊11",$0,$1,$2,$3)
+		return `<span class="fb">${$0}</span>`
+	})
+
+	console.log("魔尊",str.match(DiscernReg),aa)
+	$(".red").html(aa)
+    let list = str.split(DiscernReg);
+    //console.log("魔尊",str.replace(DiscernReg,"$1"))
+    let content = "",
+        discs = "";
+    console.log(list)
+
+};
+getDiscernContent("如您无异议，请回答“同意”")
+getDiscernContent(`请回答“清楚”/ “不清楚”`)
     if(tools) {
         console.log(tools);
         console.log(tools.getRandomColor('#345'));

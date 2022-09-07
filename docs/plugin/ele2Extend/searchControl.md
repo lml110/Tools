@@ -9,7 +9,7 @@ Author: liumouliang
 | Prop name | Description  | Type            | Values | Default |
 | --------- | ------------ | --------------- | ------ | ------- |
 | value     | 操作数据     | object          | -      |         |
-| data      | 筛选数据     | array           | -      |         |
+| data      | 筛选数据     | array           | -      | []      |
 | search    | 搜索按钮配置 | boolean\|object | -      | true    |
 | reset     | 重置按钮配置 | boolean\|object | -      | true    |
 | size      | 尺寸         | string          | -      | 'small' |

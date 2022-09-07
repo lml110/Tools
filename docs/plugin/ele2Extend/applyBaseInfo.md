@@ -10,7 +10,7 @@ Author: liumouliang
 | ---------- | ------------ | -------------- | ---------------------------------------------------------------------------------------- | ------- |
 | spanNum    | 分割数量     | number         | -                                                                                        | 12      |
 | labelWidth | 展示标题宽度 | number\|string | -                                                                                        | 86      |
-| apis       | 类型数据     | array          | `value`, `label`, `hide：是否隐藏`, `slot`, `def：默认值-'无'`, `span：区分全局-spanNum` |         |
+| apis       | 类型数据     | array          | `value`, `label`, `hide：是否隐藏`, `slot`, `def：默认值-'无'`, `span：区分全局-spanNum` | []      |
 
 ## Slots
 

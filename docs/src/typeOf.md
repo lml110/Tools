@@ -10,5 +10,9 @@
 
 **Example**  
 ```javascript
-//原生typeOf  判断数组和null时都是objecttypeOf(obj)==='array'Symbol：Symbol.for('test') === Symbol.for('test')Symbol('test') === Symbol('test')
+//原生typeOf  判断数组和null时都是object
+typeOf(obj)==='array'
+Symbol：
+Symbol.for('test') === Symbol.for('test')
+Symbol('test') === Symbol('test')
 ```

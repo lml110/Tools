@@ -6,27 +6,28 @@ Author: liumouliang
 
 ## Props
 
-| Prop name   | Description                               | Type           | Values                                                                                                                      | Default |
-| ----------- | ----------------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- | ------- |
-| pages       | 初始分页数据                              | object         | `{size: 'pageSize'`, `index: 'page'`, `total: 'total'`, `list: 'list'`, `meth: '$get'`, `pageSize: 20`, `pageIndex: 1`, `}` |         |
-| value       |                                           | null           | -                                                                                                                           |         |
-| recover     |                                           | null           | -                                                                                                                           |         |
-| sizeSearch  | 微易-特殊搜索区尺寸                       | null           | `medium`                                                                                                                    |         |
-| size        | 尺寸                                      | string         | -                                                                                                                           | 'small' |
-| maxHeight   | 表格最大高度                              | string\|number | -                                                                                                                           |         |
-| height      | 表格高度                                  | string\|number | -                                                                                                                           |         |
-| query       | 控制台数据                                | array          | -                                                                                                                           |         |
-| hasPage     | 是否有分页                                | boolean        | -                                                                                                                           | true    |
-| noSearch    | 是否一开始不需要搜索                      | boolean        | -                                                                                                                           | false   |
-| columns     | 表格类型数据                              | array          | -                                                                                                                           | []      |
-| url         | 请求地址                                  | string         | -                                                                                                                           |         |
-| params      | 请求参数                                  | object         | -                                                                                                                           |         |
-| recoveryFn  | 重置函数                                  | null           | -                                                                                                                           |         |
-| listApiFn   | 列表数据重置函数                          | null           | -                                                                                                                           |         |
-| resApiFn    | 数据处理后执行函数                        | null           | -                                                                                                                           |         |
-| beforeApiFn | 数据处理前执行函数                        | null           | -                                                                                                                           |         |
-| isLoaded    | 基础数据是否已经加载完成-等待数据加载完成 | boolean        | -                                                                                                                           | true    |
-| isCompute   | 是否需要计算剩余高度给表格                | boolean        | -                                                                                                                           | false   |
+| Prop name   | Description                               | Type           | Values                                                                                                                      | Default                                      |
+| ----------- | ----------------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| pages       | 初始分页数据                              | object         | `{size: 'pageSize'`, `index: 'page'`, `total: 'total'`, `list: 'list'`, `meth: '$get'`, `pageSize: 20`, `pageIndex: 1`, `}` | {}                                           |
+| value       |                                           | null           | -                                                                                                                           |                                              |
+| recover     |                                           | null           | -                                                                                                                           |                                              |
+| sizeSearch  | 微易-特殊搜索区尺寸                       | null           | `medium`                                                                                                                    |                                              |
+| size        | 尺寸                                      | string         | -                                                                                                                           | 'small'                                      |
+| maxHeight   | 表格最大高度                              | string\|number | -                                                                                                                           |                                              |
+| height      | 表格高度                                  | string\|number | -                                                                                                                           |                                              |
+| query       | 控制台数据                                | array          | -                                                                                                                           | []                                           |
+| hasPage     | 是否有分页                                | boolean        | -                                                                                                                           | true                                         |
+| noSearch    | 是否一开始不需要搜索                      | boolean        | -                                                                                                                           | false                                        |
+| columns     | 表格类型数据                              | array          | -                                                                                                                           | []                                           |
+| url         | 请求地址                                  | string         | -                                                                                                                           |                                              |
+| params      | 请求参数                                  | object         | -                                                                                                                           |                                              |
+| recoveryFn  | 重置函数                                  | null           | -                                                                                                                           |                                              |
+| listApiFn   | 列表数据重置函数                          | null           | -                                                                                                                           |                                              |
+| resApiFn    | 数据处理后执行函数                        | null           | -                                                                                                                           |                                              |
+| beforeApiFn | 数据处理前执行函数                        | null           | -                                                                                                                           |                                              |
+| isLoaded    | 基础数据是否已经加载完成-等待数据加载完成 | boolean        | -                                                                                                                           | true                                         |
+| isCompute   | 是否需要计算剩余高度给表格                | boolean        | -                                                                                                                           | false                                        |
+| controls    |                                           | object         | -                                                                                                                           | {<br/> reset: true,<br/> search: true,<br/>} |
 
 ## Methods
 

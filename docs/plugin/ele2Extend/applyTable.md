@@ -14,7 +14,7 @@ Author: liumouliang
 | stripe    | 条纹        | boolean        | -      | true    |
 | border    | 边框        | boolean        | -      | true    |
 | size      | 尺寸        | string         | -      | 'small' |
-| columns   | 格式数据    | array          | -      |         |
+| columns   | 格式数据    | array          | -      | []      |
 | loading   | 加载状态    | boolean        | -      | false   |
 
 ## Slots

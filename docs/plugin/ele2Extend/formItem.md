@@ -13,7 +13,7 @@ Author: liumouliang
 | required   | 是否必填    | boolean | -      | false   |
 | labelWidth | 标题宽度    | string  | -      |         |
 | infos      | 操作数据    | object  | -      |         |
-| forms      | 类型数据    | object  | -      |         |
+| forms      | 类型数据    | object  | -      | {}      |
 
 ## Slots
 

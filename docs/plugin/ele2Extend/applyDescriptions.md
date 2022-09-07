@@ -14,7 +14,7 @@ Author: liumouliang
 | column    | 一行 Descriptions Item 的数量                                                                                | number  | -      | 2       |
 | colon     | 是否显示冒号                                                                                                 | boolean | -      | false   |
 | border    | 边框样式                                                                                                     | boolean | -      | true    |
-| apis      | 选项：<br/>value,<br/>label,<br/>hide：是否隐藏,<br/>slot,<br/>def：默认值：'无',<br/>span：区分全局-spanNum | array   | -      |         |
+| apis      | 选项：<br/>value,<br/>label,<br/>hide：是否隐藏,<br/>slot,<br/>def：默认值：'无',<br/>span：区分全局-spanNum | array   | -      | []      |
 
 ## Slots
 

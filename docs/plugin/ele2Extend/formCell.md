@@ -6,12 +6,12 @@ Author: liumouliang
 
 ## Props
 
-| Prop name | Description  | Type          | Values | Default    |
-| --------- | ------------ | ------------- | ------ | ---------- |
-| value     |              | null          | -      |            |
-| type      | 控件类型     | null          | -      |            |
-| row       | 控件类型数据 | object        | -      |            |
-| list      | 控件源数据   | array\|object | -      | () => ([]) |
+| Prop name | Description  | Type          | Values | Default |
+| --------- | ------------ | ------------- | ------ | ------- |
+| value     |              | null          | -      |         |
+| type      | 控件类型     | null          | -      |         |
+| row       | 控件类型数据 | object        | -      | {}      |
+| list      | 控件源数据   | array\|object | -      |         |
 
 ## Events
 

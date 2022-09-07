@@ -18,5 +18,6 @@
     childrenProperty: 'children',
     customID: 'id',
     rootID: 0 //默认根-父id的值
-}const result = arrayToTree(menuList, { parentProperty: 'pid', customID: 'id' },routerSort);
+}
+const result = arrayToTree(menuList, { parentProperty: 'pid', customID: 'id' },routerSort);
 ```

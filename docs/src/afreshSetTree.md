@@ -1,5 +1,7 @@
 ## 一维数组生成一次性树结构
-**Author**: liumouliang 2019-11-15通过parent一次性查询reduce 累加器  
+**Author**: liumouliang 2019-11-15
+通过parent一次性查询
+reduce 累加器  
 ### new 一维数组生成一次性树结构(list, parentFN, ifFN, childKey)
 
 | Param | Type | Description |

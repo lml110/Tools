@@ -106,6 +106,8 @@ https://lml110.github.io/Tools/#/
 > **[numberPad](/src/numberPad)** - 补充差值
 >
 > **[numberComma](/src/numberComma)** - 分割数字-格式金额
+>
+> **[numberClamp](/src/numberClamp)** - 限制数值范围
 
 #### 颜色处理
 
@@ -333,7 +335,8 @@ https://lml110.github.io/Tools/#/
   > **[dataURLToBlob](/src/dataURLToBlob)** - dataURL转Blob
   >
   > **[dataURLToFile](/src/dataURLToFile)** - dataURL转File
-	 
+	
+ 
 # 拓展插件库
 
 ### VUE基础拓展
