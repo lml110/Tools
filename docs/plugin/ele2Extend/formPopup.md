@@ -39,6 +39,162 @@ Since: 部分 props 引入 apply-dialog
 ```vue
 <template>
   <form-popup
+    v-model="decrease_visible"
+    ok-text="提交"
+    isFooter
+    width="750px"
+    label-width="120px"
+    :info="decreaseData"
+    :loading="save_loading"
+    @ok="decreaseData_ok"
+  >
+    <template #header>
+      <div style="margin-bottom:18px;">
+        操作提示：当前只支持短险，因处理后，不管犹豫期内还是犹豫期外，根据剩余保费比例，进行佣金扣除。（包含佣金、任务、红包，不包含基本法）
+      </div>
+    </template>
+    <form-item required prop="newInsuredList" :forms="newInsuredList_form" />
+    <form-item>
+      <apply-table v-model="orderInsuredList" :columns="columns">
+        <template slot-scope="{ row }" slot="optionId">
+          <form-button type="text" @click="delete_Insured(row)"
+            >删除</form-button
+          >
+        </template>
+      </apply-table>
+    </form-item>
+    <form-item prop="totalPremium" :forms="decreaseForm.totalPremium" />
+    <form-item
+      required
+      prop="afterPreservationPremium"
+      :forms="decreaseForm.afterPreservationPremium"
+    />
+    <form-item
+      required
+      prop="preservationDate"
+      :forms="decreaseForm.preservationDate"
+    />
+    <form-item prop="proof" :forms="decreaseForm.proof">
+      <cUploadButton
+        @ossFileList="handleFileList"
+        @onRemove="onRemove"
+        :limit="1"
+        :fileList="decreaseData.proof"
+      >
+      </cUploadButton>
+    </form-item>
+  </form-popup>
+</template>
+```
+
+```js
+import { relationToApplicantJson } from "_libs/static";
+import cUploadButton from "@/components/Upload/c-upload-button";
+export default {
+  props: {
+    value: Boolean,
+    uuid: String
+  },
+  components: { cUploadButton },
+  data() {
+    return {
+      filed: "",
+      decrease_visible: false,
+      decreaseData: {
+        filed: "decreaseInsured",
+        moduleKey: "insured",
+        newInsuredList: [],
+        afterPreservationPremium: void 0,
+        totalPremium: void 0,
+        preservationDate: "",
+        proof: []
+      },
+      newInsuredList_form: {
+        type: "select",
+        label: "选择减人",
+        tips: "选择被保人",
+        list: [],
+        multiple: true,
+        "list-name": "name",
+        change: this.newInsuredList_change
+      },
+      decreaseForm: {
+        totalPremium: {
+          label: "原保费",
+          type: "input-number",
+          pre: 2,
+          disabled: true
+        },
+        afterPreservationPremium: {
+          label: "保全后的保费",
+          tips: "请输入数字，不能大于原总保费",
+          type: "input-number",
+          pre: 2
+        },
+        preservationDate: {
+          label: "保全时间",
+          tips: "请选择保全时间",
+          type: "date"
+        },
+        proof: {
+          label: "上传凭证"
+        }
+      },
+
+      save_loading: false,
+      orderInsuredList: [], //保全人信息 - 删除表格
+      orderSummary: {}, //概要信息
+      columns: [
+        { key: "name", title: "被保人姓名", align: "center" },
+        { key: "relationToApplicant", title: "与投保人关系", align: "center" },
+        { key: "idNo", title: "被保人证件号码", align: "center" }
+        // {title: '操作',slot:"optionId",width:80,align:'center'},
+      ]
+    };
+  },
+  created() {},
+  computed: {},
+  methods: {
+    decreaseData_ok() {
+      return this.$tipsMessage("提交成功", 1);
+    },
+    newInsuredList_change(val) {
+      const list = this.newInsuredList_form.list;
+      this.orderInsuredList = val.map(el => {
+        return list[el];
+      });
+      // console.log(list.slice(index,1));
+    },
+    delete_Insured(row) {},
+    getPolicyPreservationDetail() {
+      return this.$get("preservation/getPolicyPreservationDetail", {
+        policyUuid: this.uuid
+      })
+        .then((data = {}) => {
+          const { orderInsuredList, orderSummary } = data;
+          this.newInsuredList_form.list = orderInsuredList.map(el => {
+            el.relationToApplicant =
+              relationToApplicantJson[el.relationToApplicant];
+            return el;
+          });
+          this.decreaseData.totalPremium = +orderSummary.totalPremium;
+          this.orderSummary = orderSummary;
+        })
+        .catch(err => {});
+    },
+    handleFileList(fileList) {
+      this.decreaseData.proof = fileList;
+    },
+    onRemove(fileList) {
+      this.decreaseData.proof = fileList;
+    }
+  }
+};
+```
+
+```vue
+<template>
+  <form-popup
     v-model="isShow"
     title="发送短信"
     ok-text="发送"
