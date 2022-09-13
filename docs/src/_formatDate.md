@@ -11,5 +11,7 @@
 
 **Example**  
 ```javascript
-console.log(_formatDate()); //当前时间格式化console.log(_formatDate(new Date()));console.log(_formatDate(1638288000000)); //2021-12-01 00:00:00
+console.log(_formatDate()); //当前时间格式化
+console.log(_formatDate(new Date()));
+console.log(_formatDate(1638288000000)); //2021-12-01 00:00:00
 ```

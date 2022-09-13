@@ -134,6 +134,10 @@ https://lml110.github.io/Tools/#/
 > **[_getMonthDays](/src/_getMonthDays)** - 获取某月的总天数
 >
 > **[getServerTime](/src/getServerTime)** - 获取服务器时间
+>
+> **[setTimeStamp](/src/setTimeStamp)** - 设置不同地区的时间戳
+>
+> **[getTimeStamp](/src/getTimeStamp)** - 获取不同地区的时间戳
 
 #### 文件处理
 

@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-parseDate('2016-08-11'); // Thu Aug 11 2016 00:00:00 GMT+0800parseDate('2016-08-11 13:28:43', 'yyyy-MM-DD hh:mm:ss') // Thu Aug 11 2016 13:28:43 GMT+0800
+parseDate('2016-08-11'); // Thu Aug 11 2016 00:00:00 GMT+0800
+parseDate('2016-08-11 13:28:43', 'yyyy-MM-DD hh:mm:ss') // Thu Aug 11 2016 13:28:43 GMT+0800
 ```
