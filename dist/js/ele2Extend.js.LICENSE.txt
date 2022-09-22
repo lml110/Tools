@@ -1,28 +1,8 @@
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
 /**!
  *** athor liumouliang
  *** date 2017.11.17
  *** 工具库主体
  *** 纯属个人爱好
- **/
-
-/**!
- *** athor liumouliang
- *** date 2021.7.6
- *** VUE2扩展API-install版
- *** 纯属个人爱好
- **/
-
-/**!
- *** athor liumouliang
- *** date 2021.7.6
- *** axios扩展API
- *** 纯属个人爱好
- **/
-
-/**!
- *** athor liumouliang
- *** date 2021.7.6
- *** element-v2.15.2 + vue扩展
- *** 纯属个人爱好
-//res.wyins.net/autoUpload/admin/dc76c9f4-45ed-4761-85fb-8dc678c414d9.js
  **/

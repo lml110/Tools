@@ -20,4 +20,10 @@ Author: liumouliang
 | current    |            |
 | change     |            |
 
+## Slots
+
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             |          |
+
 ---

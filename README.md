@@ -1,4 +1,4 @@
-# 文档网址-ss
+# 文档网址
 
 https://lml110.github.io/Tools/#/
 
@@ -36,6 +36,8 @@ https://lml110.github.io/Tools/#/
 > **[_filter](/src/_filter)** - 重构filter-包括对象
 >
 > **[_toString](/src/_filter)** - 重构toString-转字符串
+>
+> **[installModuleClass](/src/installModuleClass)** - class类绑定this指向
 
 #### `rank`计算
 > **[getRandomArrayElements](/src/getRandomArrayElements)** - 随机获取数组中的元素组合

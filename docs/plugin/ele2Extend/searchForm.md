@@ -53,6 +53,7 @@ Author: liumouliang
 | ------- | ------------------- | -------- |
 | header  | 头部扩展            |          |
 | default | 中间扩展-可放置 tab | <br/>    |
+| page    |                     |          |
 
 ---
 
