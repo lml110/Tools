@@ -164,6 +164,8 @@ https://lml110.github.io/Tools/#/
 > **[preLoadStyle](/src/preLoadStyle)** - 预加载link资源配置
 >
 > **[uploadFile](/src/uploadFile)** - 原生js上传多图
+>
+> **[reFileName](/src/reFileName)** - 重命文件名称
 
 #### `ifs`判断处理
 
@@ -253,6 +255,9 @@ https://lml110.github.io/Tools/#/
 > [_encode](/src/_encode) - URL编码转换-只转中文
 > 
 > [_decode](/src/_decode) - URL编码解码
+> 
+> [removeURLParameter](/src/removeURLParameter) - 移除URL某个参数
+
 
 ### 浏览器操作
 

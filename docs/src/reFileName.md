@@ -1,0 +1,16 @@
+## reFileName(str, tag) ⇒ <code>String</code>
+<p>重命文件名称</p>
+
+**Date**: 2017-11-23  
+**Author**: liumouliang  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>String</code> |  |
+| tag | <code>String</code> | <p>替换值</p> |
+
+**Example**  
+```javascript
+console.log(reFileName('工号导入模板.1221.sa.xlsx')); //工号导入模板.1221.sa_2y954rg58x6000.xlsx
+console.log(reFileName('工号导入模板.1221.sa.xlsx','-tag')); //工号导入模板.1221.sa-tag.xlsx
+```
