@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>租房合同</title>
+    <!-- <link rel="stylesheet" href="lml.css"> -->
+    <style>
+    @media screen {
+        body {
+            background: #eee;
+            padding: 0;
+            margin: 0;
+        }
+
+        #printcontent {
+            background: #fff;
+            margin: 0 auto;
+            /*width:21cm;*/
+            width: 840px;
+            box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
+            border-radius: 0px;
+            margin-bottom: 10px;
+            padding: 2.54cm 2cm;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        #title p {
+            padding-top: 0;
+            margin-top: 0
+        }
+    }
+
+    @page {
+        margin: 2cm;
+    }
+    .tian {
+        border-bottom: 1px solid #000;
+        padding: 0 30px 2px;
+        text-align: center;
+        margin: 0 0;
+        overflow: hidden;
+    }
+    .hide {
+        opacity: 0;
+    }
+    .print_btn {
+        height: 48px;
+        color: #E62417;
+        background: #fff;
+        border: 1px solid #E62417;
+        font-size: 16px;
+        border-radius: 25px;
+        width: 220px;
+        display: block;
+        margin: 20px auto 30px auto;
+    }
+
+    .print_btn .icon {
+        width: 22px;
+        height: 22px;
+        float: left;
+        display: block;
+        margin: 14px 15px 0 40px;
+    }
+
+    .print_btn .icon path {
+        fill: #E62417;
+    }
+
+    .print_btn .print_btn_right {
+        float: left;
+        color: #E62417;
+        font-size: 16px;
+        line-height: 48px;
+    }
+
+    .print_btn .print_btn_right p {
+        font-size: 12px;
+        margin: 2px 0 0 0;
+    }
+
+    a.print_btn:link {
+        text-decoration: none;
+        background: #fff;
+    }
+
+    a.print_btn:visited {
+        text-decoration: none;
+        background: #fff;
+    }
+
+    a.print_btn:hover {
+        text-decoration: underline;
+        background: #fbeeed;
+    }
+
+    a.print_btn:active {
+        text-decoration: none;
+        background: #fbeeed;
+    }
+
+
+    body {
+        font-size: 12pt;
+        line-height: 22pt;
+    }
+
+    #title {
+        font-size: 24px;
+        font-family: 'é»‘ä½“';
+        font-weight: bold;
+        text-align: center;
+        margin: 0px 0 15px 0;
+        padding: 0px;
+    }
+
+    p {
+        padding: 5px 0px;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: #000
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a:active {
+        text-decoration: none;
+        color: #000
+    }
+
+    /*éšè—æ–‡ç« ç›®å½•*/
+    #menu,
+    .sub-info {
+        display: none;
+    }
+
+    /*æˆè¯­*/
+    #cytable {
+        border-collapse: collapse;
+        width: 620px;
+        clear;
+        both;
+        margin: 0 auto;
+    }
+
+    #cytable td {
+        border: 1px solid #C0C0C0;
+        padding: 3px 10px;
+        font-size: 12px;
+        background: #FFF;
+        line-height: 20px;
+    }
+
+    #cytable .title {
+        color: #f00;
+        background: #E9ECEF;
+        text-align: center;
+    }
+
+    #cytable .t {
+        background: #E9ECEF;
+        text-align: center;
+        width: 15%;
+        padding: 0px;
+    }
+
+    #cytable .py {
+        width: 35%;
+    }
+
+    #chengyu #RelateNews {
+        margin-top: 10px;
+        padding-top: 5px;
+    }
+
+    @media print {
+        .noprint {
+            display: none;
+        }
+    }
+
+    ul,
+    li,
+    form {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /*å¤åˆ¶å¼¹å‡ºçª—å£*/
+    .webchat-zw8 {
+        background-color: rgba(0, 0, 0, .7);
+        display: none;
+        z-index: 99998;
+        width: 100%;
+        height: 100%;
+        font: 12px 'Microsoft YaHei';
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+    }
+
+    .webchat-zw8 .zoomIn {
+        position: absolute;
+        z-index: 99999;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -230px;
+        background-color: #fff;
+        border-radius: 4px;
+        -webkit-animation: .4s .1s ease both;
+        -moz-animation: .4s .1s ease both;
+        background: #fff;
+        text-align: center;
+    }
+
+    .zoomwebchat {
+        width: 50%;
+        float: left;
+        height: 100%;
+        text-align: center;
+    }
+
+    .paybox {
+        float: left;
+        width: 38%;
+        border-right: 1px solid #ccc;
+        text-align: center;
+        margin: 4% 0 4% 5%;
+        padding-right: 6%;
+        margin-right: 0;
+    }
+
+    .paybox-title {
+        color: #44b549;
+        font-size: 30px;
+        display: inline-block;
+        font-weight: 700;
+        line-height: 40px;
+        height: 40px;
+        width: 100%;
+    }
+
+    .paybox-art {
+        color: #a0a0a0;
+        font-size: 18px;
+        line-height: 50px;
+        height: 50px;
+        float: left;
+        width: 100%;
+    }
+
+    .paybox-img {
+        width: 100px;
+        display: inline-block;
+        margin: 20% 0 5%;
+    }
+
+    .paybox-img img {
+        width: 100%;
+    }
+
+    .paybox-money {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .current-price-box {
+        color: #ff6600;
+        font-size: 16px;
+        display: inline;
+        font-weight: 700;
+    }
+
+    .original-price-box {
+        text-decoration: line-through;
+        color: #949494;
+        padding-left: 10px;
+        font-size: 14px;
+        display: inline;
+    }
+
+    .paybox-bottom {
+        cursor: pointer;
+        background: #44b549;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 4px;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .paybox .paybox-customer-service {
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #a2a2a2;
+    }
+
+    .webchat-zw8 .zoomIn .zoomwebchat img {
+        border-radius: 4px
+    }
+
+    @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale3d(.3, .3, .3)
+        }
+
+        50% {
+            opacity: 1
+        }
+    }
+
+    .webchat-zw8-top {
+        text-indent: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .webchat-zw8-top span {
+        text-indent: 0;
+        color: #44B449;
+        font-size: 24px;
+        display: inline-block;
+        font-weight: 700;
+        line-height: 30px;
+        height: 30px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .webchat-zw8-info {
+        text-indent: 0;
+        color: #44B449;
+        font-size: 22px;
+        line-height: 32px;
+        height: 32px;
+        width: 100%;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .webchat-zw8-time {
+        text-indent: 0;
+        color: #999;
+        font-size: 18px;
+        line-height: 24px;
+        height: 24px;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .webchat-zw8-from {
+        display: inline-block;
+        margin-top: 7px;
+        width: 74%;
+        border: 1px solid #44B449;
+        height: 32px;
+        line-height: 32px;
+        overflow: hidden;
+    }
+
+    .webchat-zw8-input {
+        width: 74%;
+        font-size: 16px;
+        float: left;
+        border: none;
+        color: #bdbdbd;
+        line-height: 32px;
+        padding-left: 3%;
+        outline: none;
+        height: 32px;
+        display: inline-block;
+    }
+
+    .webchat-zw8-submit {
+        width: 19%;
+        background: #44B449;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        border: 0 none;
+        cursor: pointer;
+        float: right;
+        line-height: 32px;
+        outline: none;
+    }
+
+    .webchat-zw8-submit:hover {
+        opacity: .8;
+        text-decoration: none;
+    }
+
+    .webchat-zw8 .error {
+        border-color: #ff2f2f;
+    }
+
+    .webchat-zw8 .error .webchat-zw8-submit {
+        background: #ff2f2f;
+    }
+
+    .webchat-zw8-close {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        background-image: url(/down/images/wxclose.png);
+        background-position: 1px 0;
+    }
+
+    .webchat-zw8-close:hover {
+        background-position: 30px 0;
+    }
+
+    .down-box {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .down-box a {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        margin: 0 20px;
+        color: #00a2ca;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #00a2ca;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 12px;
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .down-box a:hover,
+    .down-box a.action {
+        color: #fff;
+        background-color: #00a2ca;
+    }
+
+    /*payandserver*/
+    .modal {
+        display: none;
+    }
+
+    .modal-qrcode .wx_pic_img {
+        width: 365px;
+        height: 415px
+    }
+
+    .wx_pic_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        ;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background: #fff;
+        visibility: visible;
+        opacity: 1;
+        cursor: auto;
+        z-index: 150;
+        border-radius: 20px;
+        margin-left: -182px;
+        margin-top: -207px;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8)
+    }
+
+    .modal-close {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        background-image: url(/down/images/wxclose.png);
+        background-position: 1px 0;
+        cursor: pointer
+    }
+
+    .modal-close:hover {
+        background-position: 30px 0px
+    }
+
+    .paybox-title {
+        color: #44b549;
+        font-size: 30px;
+        display: inline-block;
+        line-height: 40px;
+        height: 40px;
+        width: 100%
+    }
+
+    .paybox-art,
+    .paybox-bottom {
+        line-height: 50px;
+        height: 50px
+    }
+
+    .paybox .get-server {
+        color: #666;
+        margin-top: 5px;
+        cursor: pointer
+    }
+
+    /*.paybox span {text-decoration: line-through;color: #949494;margin-left: 10px;font-size: 14px}*/
+    .paybox-bottom {
+        cursor: pointer;
+        background: #44b549;
+        border-radius: 4px;
+        font-size: 22px;
+        color: #fff
+    }
+
+    .paybox-art {
+        color: #a0a0a0;
+        font-size: 18px;
+        float: left;
+        width: 100%
+    }
+
+    .paybox .paybox-customer-service {
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #a2a2a2
+    }
+
+    .wx_top {
+        background: #38AD3A;
+        height: 78px;
+        color: #fff;
+        font-size: 28px;
+        line-height: 78px;
+        border-radius: 20px 20px 0 0
+    }
+
+    .payqr_box .sm {
+        color: red;
+        font-size: 12px;
+        line-height: 24px
+    }
+
+    .payqr_box .sm2 {
+        color: gray;
+        font-size: 12px;
+        line-height: 24px
+    }
+
+    .hc {
+        margin-top: 10px
+    }
+
+    .hc img {
+        width: 160px;
+        margin: 15px;
+    }
+
+    .zhifu {
+        width: 100%
+    }
+
+    .zhifu img {
+        width: 170px;
+        height: 170px
+    }
+
+    /*.modal-server .wx_pic_img {width: 330px;height: 310px}*/
+    /*æ”¯ä»˜æ£€æŸ¥*/
+    .payed-txt {
+        float: left;
+        margin-right: 40px;
+        text-indent: 35px;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #a2a2a2;
+        color: #ff6600;
+    }
+
+    .paybox-customer-service {
+        float: left;
+    }
+
+    .modal-payed .wx_pic_img {
+        width: 365px;
+        height: 415px
+    }
+
+    .payed-success,
+    .payed-error,
+    .loading {
+        padding-top: 30px;
+    }
+
+    .payed-success,
+    .payed-error {
+        display: none;
+    }
+
+    .payed-success span.text {
+        display: block;
+        font-size: 30px;
+        color: #44b549;
+        margin: 26px auto;
+    }
+
+    .payed-button {
+        background: #38ad3a;
+        border: none;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #fff;
+        border-radius: 6px;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+    }
+
+    .payed-success-tips {
+        font-size: 12px;
+        margin: 10px auto;
+        width: 250px;
+        line-height: 20px;
+        color: #989898;
+        padding-left: 20px;
+        text-align: left
+    }
+
+    .payed-success-tips span {
+        color: #ff6600;
+        font-weight: 700;
+    }
+
+    .payed-error-tips {
+        margin: 10px auto;
+        width: 250px;
+        line-height: 20px;
+        color: #989898;
+        padding-left: 20px;
+        text-align: left
+    }
+
+    .payed-error span.text {
+        display: block;
+        font-size: 20px;
+        color: #a2a2a2;
+        margin: 6px auto;
+    }
+
+    /*å¸¸è§é—®é¢˜*/
+    .modal-server>.wx_pic_img {
+        border-radius: 10px
+    }
+
+    .modal-server .wx_pic_img {
+        width: 730px;
+        height: 485px;
+        margin-left: -365px;
+        margin-top: -242px;
+    }
+
+    .payqr_box .sm {
+        color: red;
+        font-size: 12px;
+        line-height: 20px
+    }
+
+    .cj_title {
+        font-size: 18px;
+        color: #20ad48;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 700
+    }
+
+    .customer_service_box {
+        padding: 0 20px;
+        text-align: left
+    }
+
+    .customer_service_box>li {
+        margin-top: 10px;
+        border: 1px solid #333;
+        box-shadow: 4px 4px 0 2px #61c57d;
+        padding: 10px
+    }
+
+    .customer_service_box .que {
+        font-size: 14px;
+        color: #090;
+        font-weight: 700
+    }
+
+    .customer_service_box .ans {
+        font-size: 14px;
+        color: #666;
+        margin: 8px 10px 0;
+        line-height: 20px;
+        border-top: 1px dashed #eee;
+        padding-top: 6px
+    }
+
+    .check-payed-a {
+        color: #f00;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /*fix-ie*/
+    .webchat-zw8,
+    .modal {
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#d0000000, endcolorstr=#d0000000);
+    }
+
+    :root .webchat-zw8 {
+        filter: none;
+    }
+
+    :root .modal {
+        filter: none;
+    }
+
+    #article-content p {
+        text-indent: 2em;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div id="printcontent">
+            <div id="title">
+                <p>租赁房屋合同</p>
+            </div>
+            <div id="article-content">
+                <p>出租方：(以下简称甲方) <span class="tian">刘贻高</span> 身份证：<span class="tian">330523196504203019</span> </p>
+                <p>承租方：(以下简称乙方) <span class="tian"><span class="hide">刘贻高</span></span> 身份证：<span class="tian"><span class="hide">330523196504203019</span></span></p>
+                <p>经甲、乙双方协商一致签订房屋租赁合同如下：</p>
+                <p>一、出租物业坐落地点及现有情况</p>
+                <p>1、甲方将其位于 <span class="tian">湖州市天子湖镇良朋馨居9栋1单元101</span> 的房屋(以下简称“该房屋”)租给乙方使用，用途为 <span class="tian">居住</span>，房屋面积为 <span class="tian">八十</span> 平方米。</p>
+                <p>2、该房屋现有情况 <span class="tian">两室一厅带厨房和卫生间</span></p>
+                <p>二、租金及支付方式</p>
+                <p>1、该房屋租金为人民币 <span class="tian"><span class="hide">700</span></span> 元整/月(此价格不含相关税费)</p>
+                <p>2、该房屋租金按 <span class="tian"><span class="hide">月</span></span> 支付，支付时间为 <span class="tian"><span class="hide">月底</span></span> ，以甲方实际收到为准。</p>
+                <p>3、租赁期内，水电费由乙方负责，电费单价按供电所收费单据平均价计，物业费由甲方负责</p>
+                <p>4、租赁期间，若乙方拖欠租金超过一个月，甲方有权收回此出租房，乙方须按实际居住日交纳租金并承担违约责任。</p>
+                <p>5、当甲方有需要时，甲方有权收回此出租房，并退还当月房租</p>
+                <p>三、租赁条件</p>
+                <p>1、乙方不得在该房屋内进行违反法律法规及政府对出租房屋用途有关规定的行为，不做违法乱纪的活动。</p>
+                <p>2、乙方应注意居住安全，自行采取防火、防盗等安全措施。加强用电安全，不得乱拉、乱接电线；对于防盗、防火、用电安全进行经常检查。租赁使用期间所发生的一切安全事故，其损失均由乙方自行承担；造成甲方房屋财产损失，由乙方全额赔偿给甲方；造成第三方房屋财产损失，由乙方负责处理，由乙方全额赔偿对方，并按违约处理。</p>
+                <p>3、因乙方使用不当或不合理使用致使该房屋或其内部设施出现损坏或发生故障，乙方应及时联络进行维修并负担所发生的费用。</p>
+                <p>4、租赁期内乙方因使用需要对出租房屋或屋内设施进行装修或改动，须经甲方同意并经政府有关部门批准，甲方有权对装修或改动情况进行监督。合同期满时乙方不得移走自行添加的结构性设施，甲方也无须对以上设施进行补偿。</p>
+                <p>5、租赁期内乙方不得转让或转租该房屋</p>
+                <p>四、合同的终止</p>
+                <p>1、租赁期限届满或经甲、乙双方协商一致本合同终止。</p>
+                <p>2、乙方应在期满当日将房屋钥匙及正常使用状态下的附件中所列物品交给甲方。租赁期满，乙方应将房屋留置物品统统搬走，若逾期滞留屋内，在房屋留置的一切物品均视为放弃，甲方有权处置，乙方绝无异议。</p>
+                <p>3、租赁期满且房屋设施与设备均未出现损坏</p>
+                <!-- <p>五、租赁期间，发生下列违反合同情况与行为之一时，甲方有权解除租赁关系，由此发生的一切经济损失，由乙方负责：</p>
+                <p>1、未经甲方同意，乙方擅自拆改结构或改变用途的；利用该房屋进行违法活动的；</p>
+                <p>2、乙方应注意居住安全，自行采取防火、防盗等安全措施。加强用电安全，不得乱拉、乱接电线；对于防盗、防火、用电安全进行经常检查。如乙方措施不当造成损失，其损失由乙方自行承担；造成甲方房屋财产损失，由乙方全额赔偿给甲方；造成第三方房屋财产损失，由乙方负责处理，由乙方全额赔偿对方，并按违约处理。</p>
+                <p>3、拖欠房租壹个月以上的；不按时交纳租金及水、电费。</p>
+                <p>4、租赁期限届满，若乙方未能将设施完好的房屋及时交给甲方，乙方应支付相关设备的赔偿金额，具体费用可根据设施的损坏程度以及维修评估价。</p> -->
+                <p>五、本合同一式二份，甲方执一份，乙方执一份，双方签字后生效，合同执行中如有争议，由双方协商解决，双方协商不能解决的，可直接向人民法院提起诉讼。</p>
+                <p>甲方：________________________ 乙方：_________________________</p>
+                <p>签署日期：____________年_______月_______日</p>
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>
