@@ -18,7 +18,7 @@
 // https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/AuthSetting.html
 
 //授权设备
-//微信推出新政策，部分不能使用
+//微信推出新政策，部分不能使用(wxGetSetting)
 //有限额
 handAuth({ commit, state }) {
     commit('setSysInfo')
