@@ -13,5 +13,12 @@
 
 **Example**  
 ```javascript
-uploadFile(url,{file1: [file],file2:[]},{})
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'}}
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'},{contentTypeNum:3,prossFn({loaded,total}){}})
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'},{
+    formDataFn(requedata, filedata){
+        return JSON.stringify(requedata);
+    }
+})
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile?aa=11',{file1: ['测试1','测试2']},{lml:'11'},{method: 'get'})
 ```

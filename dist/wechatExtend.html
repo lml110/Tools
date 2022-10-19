@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no,address=no,email=no"><title>微信H5</title><script src="https://res.winbaoxian.com/auto_upload_ci/sdk/app-bridge-common_1.0.13-beta.1.js"></script><script src="https://res.winbaoxian.com/auto_upload_ci/lib-analytics/weiyi-stat-auto-inject-1_0_3-581170b.js"></script><style>html{
+    	-ms-touch-action: none;
+    	touch-action: none;
+    }
+    body{
+    	margin: 0;
+    }
+    [v-cloak] {
+        display: none;
+    }</style></head><body><div class="lml">就的双方各</div><div id="app" v-cloak></div><script src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script src="//assets.winbaoxian.com/vue/2.6.10/vue.runtime.min.js"></script><script src="./js/tools.js"></script><script src="./js/wechatExtend.js"></script></body><script>(function(){
+    'use strict';
+    // new VConsole();
+    if(wechat) Vue.use(wechat);
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {}
+        },
+        created(){
+            // this.lml2();
+            // this.lml1()
+            // this.lml()
+            console.log(this.typeOf('as'));
+        },
+        methods: {
+            async lml2(){
+                let res = await this.$get('mock',{lml:0});
+                console.log('mock',res);
+            },
+            lml1(){
+                this.$post('mock2',{lml:1}).then(data => {
+                    console.log('then1',data);
+                }).catch((err)=>{
+                    console.log('catch',err);
+                });
+            },
+            async lml(){
+                let res = await this.$post('mock2');
+                console.log('then2',res);
+            }
+        }
+    });
+})();</script></html>

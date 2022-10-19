@@ -2,12 +2,12 @@
 ## 使用`npm`引入
 
 ```bash
-npm i -D lml-tools
+npm i -D @mohun/tools
 ```
 
 全局引入
 ```js
-import tools from 'lml-tools'
+import tools from '@mohun/tools'
 tools.isAndorIosNoWe()
 ```
 

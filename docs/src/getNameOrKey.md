@@ -1,5 +1,5 @@
 ## getNameOrKey(arr, queryFn, queryKey) ⇒ <code>Array</code>
-<p>过滤数据查询某一个值的集合</p>
+<p>过滤数据查询某一个值的集合 -- filterList重合 - 废弃</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

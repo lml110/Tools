@@ -10,6 +10,8 @@
 
 **Example**  
 ```javascript
+// 判断 [0,null,undefined,false,[],' ',[0]]
+// 场景：列表页，必须有值
 console.log(isNulls(0));
 console.log(isNulls(null));
 console.log(isNulls(undefined));

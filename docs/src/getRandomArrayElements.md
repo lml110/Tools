@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-let list = Array.from({length:30}, (v, i) => i+1)console.log(getRandomArrayElements(list,10));
+let list = Array.from({length:30}, (v, i) => i+1)
+console.log(getRandomArrayElements(list,10));
 ```

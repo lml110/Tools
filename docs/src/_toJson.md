@@ -10,5 +10,6 @@
 
 **Example**  
 ```javascript
-console.log(_toJson('[{a:1}]'));	// 字符串console.log(_toJson('[{"a":1}]'));	// json
+console.log(_toJson('[{a:1}]'));	// 字符串
+console.log(_toJson('[{"a":1}]'));	// json
 ```

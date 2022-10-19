@@ -10,5 +10,6 @@
 
 **Example**  
 ```javascript
-//高性能getPermutation(arr)
+//高性能
+getPermutation(arr)
 ```

@@ -23,7 +23,7 @@
 ```javascript
 let res = filterList(data,function(el,ps){
     // if(el.childNodeList && el.childNodeList.length==0) delete el.childNodeList
-    return {label:el.nodeName,level:el.level};
+    if(el.level) return {label:el.nodeName,level:el.level};
 },'childNodeList',function(res,list){
     res = res.concat(list)
     return res;

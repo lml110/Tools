@@ -1,5 +1,5 @@
 ## specPermutation(list, data, filter, ...refs) ⇒ <code>Array</code>
-<p>二维数组中数组元素的全排列 == 规格</p>
+<p>二维数组中数组元素的全排列 == 规格 废弃 与arrayToTree相同</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

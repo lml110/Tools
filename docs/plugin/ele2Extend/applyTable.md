@@ -19,8 +19,8 @@ Author: liumouliang
 
 ## Slots
 
-| Name    | Description | Bindings |
-| ------- | ----------- | -------- |
-| default |             | <br/>    |
+| Name    | Description | Bindings        |
+| ------- | ----------- | --------------- |
+| default |             | <br/><br/><br/> |
 
 ---

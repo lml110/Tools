@@ -58,6 +58,8 @@ https://lml110.github.io/Tools/#/
 > **[getPermutation](/src/getPermutation)** - 计算数组中所有的排列方式
 > 
 > **[getMaximin](/src/getMaximin)** - 获取数组最大最小值
+> 
+> **[arr2Merger](/src/arr2Merger)** - 两个简单数组合并
 
 #### `business`复杂
 

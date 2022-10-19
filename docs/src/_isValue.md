@@ -10,5 +10,6 @@
 
 **Example**  
 ```javascript
+//类似 !_noValue(val)
 console.log(_isValue(0)); // true
 ```
