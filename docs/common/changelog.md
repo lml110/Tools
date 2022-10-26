@@ -1,13 +1,16 @@
 ##  全局链接
 ======================================
 
-📎[Tools](https://res.wyins.net/autoUpload/common/6d4b8a40-3e75-498a-b60a-ec317cb54eb8.js)
+📎[Tools](https://res.wyins.net/autoUpload/common/4b03b275-d105-4ab0-adf7-62b54a4b50f6.js)
 
 **H5-扩展：**
-📎[wechatExtend](https://res.wyins.net/autoUpload/common/wechatExtend_5f4e7528863272b.js)
+📎[wechatExtend](https://res.wyins.net/autoUpload/common/65f04353-ff82-4b78-95ee-5ddc9f67a8fb.js)
 
 **element-扩展：**
-📎[ele2Extend](//res.wyins.net/autoUpload/common/c916225d-3804-48ae-8ff2-da6517b9d5c0.js)
+📎[ele2Extend](https://res.wyins.net/autoUpload/common/ac61fb07-bffb-4583-aad7-03760b616af1.js)
+
+**小程序-扩展：**
+📎[小程序](https://res.wyins.net/autoUpload/common/miniWeixin_5af8e269a54a111.js)
 
 ======================================
 

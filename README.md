@@ -237,7 +237,7 @@ https://lml110.github.io/Tools/#/
 
 #### 缓存处理
 
-> [Cookies](/src/Cookies)  - Cookie集合-不转码
+> [Cookies](/src/Cookies)  - Cookie集合
 >
 > [cookie](/src/cookie)	- Cookies简化版
 >

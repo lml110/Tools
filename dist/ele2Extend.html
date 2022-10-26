@@ -14,21 +14,23 @@
     }
     .lml{
         display: flex;
-    }</style></head><body><div class="lml"><p>production</p><p>//assets.winbaoxian.com/vue/2.6.10/vue.runtime.min.js</p></div><div id="app" v-cloak><form-button @click="click_submit">保存</form-button><el-form ref="formValidate" label-width="76px" size="small" :model="formInfo"><el-row :gutter="7"><el-col :span="6"><form-item required prop="serviceType" :forms="forms.serviceType"/></el-col><el-col :span="6"><form-item required prop="serviceId" :forms="forms.serviceId"/></el-col><el-col :span="6"><form-item required prop="returnVisitTime" :forms="forms.returnVisitTime"/></el-col><el-col :span="6"><form-item required prop="id" :forms="forms.id"/></el-col><el-col :span="6"><form-item required prop="je" :forms="forms.je"/></el-col><el-col :span="6"><form-item required prop="smsTemplate" :forms="forms.smsTemplate"/></el-col><el-col :span="12"><form-item required prop="check" :forms="forms.check"/></el-col><el-col :span="12"><form-item required prop="radio" :forms="forms.radio"/></el-col></el-row><form-item required prop="content" :forms="forms.content"/></el-form><form-button @click="click_com" icon="el-icon-edit" plain round>22</form-button><form-cell v-model="lmldata[4]" type="radio" :row="lmls.radio"></form-cell><form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell><form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell><form-cell v-model="lmldata[6]" type="date"></form-cell><page-container style="height:360px;" is-compute compute-load-state v-model="isCompute"><search-form v-model="searchForm" is-compute :query="searchData" :isloaded="false" :iss="iss" :columns="columns" :pages="pageParams" url="/mock/60dae3958621c72358c0d4d7/template/custom/coupon/getUsableCouponList"><template slot="periodEnd" slot-scope="{row}">2021-09-06 ~ 2021-10-06</template></search-form></page-container><apply-descriptions :apis="descriptions_data"><template slot="id" slot-scope="{row}"><form-button type="text">{{row.value}}</form-button></template><template slot="avatarUrl" slot-scope="{row}"><div class="imgbox avatarUrl" v-if="row.value"><img :src="row.value" alt="" class="imgbox-img"></div></template><template slot="sex" slot-scope="{row}"><div>{{row.value==1?'男':'女'}}</div></template><template slot="isMerge" slot-scope="{row}"><div>{{row.value?'是':'否'}}</div></template></apply-descriptions></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="//res.wyins.net/autoUpload/activity/vconsole.min_40fd7e9234606a3.js"></script><script src="//assets.winbaoxian.com/vue/2.6.10/vue.runtime.min.js"></script><script src="//assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
+    }</style></head><body><div class="lml"><p></p><p>production</p><p>https://assets.winbaoxian.com/vue/2.6.10/vue.min.js</p></div><div id="appWrapper" v-cloak><form-button @click="click_submit">保存</form-button><el-form ref="formValidate" label-width="76px" size="small" :model="formInfo"><el-row :gutter="7"><el-col :span="6"><form-item required prop="serviceType" :forms="forms.serviceType"/></el-col><el-col :span="6"><form-item required prop="serviceId" :forms="forms.serviceId"/></el-col><el-col :span="6"><form-item required prop="returnVisitTime" :forms="forms.returnVisitTime"/></el-col><el-col :span="6"><form-item required prop="id" :forms="forms.id"/></el-col><el-col :span="6"><form-item required prop="je" :forms="forms.je"/></el-col><el-col :span="6"><form-item required prop="smsTemplate" :forms="forms.smsTemplate"/></el-col><el-col :span="12"><form-item required prop="check" :forms="forms.check"/></el-col><el-col :span="12"><form-item required prop="radio" :forms="forms.radio"/></el-col></el-row><form-item required prop="content" :forms="forms.content"/></el-form><form-button @click="click_com" icon="el-icon-edit" plain round>22</form-button><form-cell v-model="lmldata[4]" type="radio" :row="lmls.radio"></form-cell><form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell><form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell><form-cell v-model="lmldata[6]" type="date"></form-cell><page-container style="height:360px;" is-compute compute-load-state v-model="isCompute"><search-form v-model="searchForm" is-compute :query="searchData" :isloaded="false" :iss="iss" :columns="columns" :pages="pageParams" :url='MockURL+"/60dae3958621c72358c0d4d7/template/custom/coupon/getUsableCouponList"'><template slot="periodEnd" slot-scope="{row}">2021-09-06 ~ 2021-10-06</template></search-form></page-container><apply-descriptions :apis="descriptions_data"><template slot="id" slot-scope="{row}"><form-button type="text">{{row.value}}</form-button></template><template slot="avatarUrl" slot-scope="{row}"><div class="imgbox avatarUrl" v-if="row.value"><img :src="row.value" alt="" class="imgbox-img"></div></template><template slot="sex" slot-scope="{row}"><div>{{row.value==1?'男':'女'}}</div></template><template slot="isMerge" slot-scope="{row}"><div>{{row.value?'是':'否'}}</div></template></apply-descriptions></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://res.wyins.net/autoUpload/activity/vconsole.min_40fd7e9234606a3.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
     'use strict';
     // new VConsole();
-    if(ele2Extend) Vue.use(ele2Extend);
+    Vue.use(ele2Extend, {API:{
+        APIURL: {}
+    }})
     const {
         findTarget,
         filterList,
         getClientSize
     } = tools
-    let file = '../plugin/ele2Extend/lml/apply-base-info/apply-base-info.vue'
-    console.log(file.split('/')[2]);
+    const MockURL = 'http://lml.com:7301' + '/mock'
     new Vue({
-        el: '#app',
+        // el: '#app',
         data: function() {
             return {
+                MockURL,
                 isCompute: true,
                 pageParams: {
                     total: 'totalElements',
@@ -60,6 +62,7 @@
                         list: [],
                         multiple:true,
                         allowCreate: true,
+                        icons: '地方',
                         // clearable: '',
                         'list-name': 'templateName',
                     },
@@ -210,19 +213,19 @@
             },
             //短信模板
             _listCustomSmsTemplate(){
-                return this.$get('/mock/60dae3958621c72358c0d4d7/template/custom/main/listCustomSmsTemplate').then(data => {
+                return this.$get(MockURL+'/60dae3958621c72358c0d4d7/template/custom/main/listCustomSmsTemplate').then(data => {
                     this.forms.smsTemplate.list = data;
                 }).catch((err)=>{});
             },
             //描述列表
             _applyDescriptions(){
-                return this.$get('/mock/61543652e7c3d92230846257/tools/ele2Extend/applyDescriptions').then(data => {
+                return this.$get(MockURL+'/61543652e7c3d92230846257/tools/ele2Extend/applyDescriptions').then(data => {
                     this.descriptions_data = data;
                 }).catch((err)=>{});
             },
             _customServiceTree(){
                 let code = '理赔'
-                return this.$get('/mock/60dae3958621c72358c0d4d7/template/api/common/customServiceTree').then(data => {
+                return this.$get(MockURL+'/60dae3958621c72358c0d4d7/template/api/common/customServiceTree').then(data => {
                     let res = filterList(data,function(el,ps){
                         // if(el.childNodeList && el.childNodeList.length==0) delete el.childNodeList
                         return {label:el.nodeName,level:el.level};
@@ -244,7 +247,7 @@
                 // console.log(this.lmldata,this.checkdata,this.dateList);
             }
         }
-    });
+    }).$mount('#appWrapper');
 })();</script><style>.avatarUrl{
     width: 24px;
 height: 24px;
