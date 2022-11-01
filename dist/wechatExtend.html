@@ -13,26 +13,29 @@
         'mock': ' http://lml.com:7301/mock/60b9b0b942aac2223026c217/toa/poster/getPosterList',
         'mock2': 'http://lml.com:7301/mock/609e658d6f8aac2298a5f974/miniapp_wx/wx/ma/wxbf841866344fbae6/saveUserInfo'
     }
-    Vue.use(wechatExtend,{
-        API: {
-            APIURL: APIURL,
-            config: {
-                postApi: null,
-                instanceRequest(config) {
-                    if (!config.params) config.params = {}
-                    config.params.token = 'lml1'
-                    config.params.appId = 'lml2'
-                },
-                openLoading: () => {
-                    if (window.appBridge && appBridge.showLoading) window.appBridge.showLoading()
-                },
-                closeLoading: () => {
-                    if (window.appBridge && appBridge.hideLoading) window.appBridge.hideLoading()
-                },
-                isResOk: res => res.code === 200
-            }
+    const API = {
+        config: {
+            postApi: null,
+            instanceRequest(config) {
+                if (!config.params) config.params = {}
+                config.params.token = 'lml1'
+                config.params.appId = 'lml2'
+            },
+            openLoading: () => {
+                if (window.appBridge && appBridge.showLoading) window.appBridge.showLoading()
+            },
+            closeLoading: () => {
+                if (window.appBridge && appBridge.hideLoading) window.appBridge.hideLoading()
+            },
+            isResOk: res => res.code === 200
         }
+    }
+    Vue.use(wechatExtend,{
+        API
     })
+    API.setInit(null,APIURL)
+
+    console.log(API.getUrl('mock2'));
     const MockURL = 'http://lml.com:7301' + '/mock'
     // new VConsole();
     // if(wechatExtend) Vue.use(wechatExtend,{});
