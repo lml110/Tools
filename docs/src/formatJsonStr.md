@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-console.log(formatJsonStr('[{a:1}]'));	// 字符串console.log(formatJsonStr('[{"a":1}]'));	// json
+console.log(formatJsonStr('[{a:1}]'));	// 字符串
+console.log(formatJsonStr('[{"a":1}]'));	// json
 ```

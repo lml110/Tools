@@ -12,34 +12,50 @@
         -o-transform: translateY(y);
         transform: translateY(y);
     }</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
-(function(){
+(function() {
     'use strict';
     // console.log(tools);
-	var testStr="\"dsad'''''\"asdsadf\"";
+    var testStr = "\"dsad'''''\"asdsadf\"";
 
-//const DiscernReg = /([“])(.+[?^“])([”])/g;
-const DiscernReg = /(?<=[“]).*?(?=[”])/g;
-//const DiscernReg = /([“].*?[”])/g
-const getDiscernContent = function (str) {
-    if (!str) return "";
-	var aa = str.replace(DiscernReg,function($0,$1,$2,$3){
-		//console.log("魔尊11",$0,$1,$2,$3)
-		return `<span class="fb">${$0}</span>`
-	})
+    //const DiscernReg = /([“])(.+[?^“])([”])/g;
+    const DiscernReg = /(?<=[“]).*?(?=[”])/g;
+    //const DiscernReg = /([“].*?[”])/g
+    const getDiscernContent = function(str) {
+        if (!str) return "";
+        var aa = str.replace(DiscernReg, function($0, $1, $2, $3) {
+            //console.log("魔尊11",$0,$1,$2,$3)
+            return `<span class="fb">${$0}</span>`
+        })
 
-	// console.log("魔尊",str.match(DiscernReg),aa)
-	$(".red").html(aa)
-    let list = str.split(DiscernReg);
-    //console.log("魔尊",str.replace(DiscernReg,"$1"))
-    let content = "",
-        discs = "";
+        // console.log("魔尊",str.match(DiscernReg),aa)
+        $(".red").html(aa)
+        let list = str.split(DiscernReg);
+        //console.log("魔尊",str.replace(DiscernReg,"$1"))
+        let content = "",
+            discs = "";
 
-};
-// getDiscernContent("如您无异议，请回答“同意”")
-// getDiscernContent(`请回答“清楚”/ “不清楚”`)
-// console.log("tools",tools);
-    if(tools) {
-        console.log(tools);
-        console.log(tools.getRandomColor('#345'));
+    };
+    // getDiscernContent("如您无异议，请回答“同意”")
+    // getDiscernContent(`请回答“清楚”/ “不清楚”`)
+    // console.log("tools",tools);
+    if (tools) {
+        const { imageToBlob, getImgeInfo, imageToCanvas, canvasToDataURL, _float, getImgSize, blobToCanvas, fileToDataURL } = tools
+
+
+        const imgSrc = 'https://media.wyins.net/contract_online/1598867983_z1598867383100y.jpg'
+        // imageToCanvas(imgSrc).then(canvas => {
+        //     console.log('then',canvas);
+        //     const type = 'image/jpeg'
+        //     let base64 = canvas.toDataURL(type, 0.7)
+        //     // console.log(base64);
+        //     console.log(getImgSize(base64));
+        // }).catch((err)=>{});
+        imageToBlob(imgSrc).then(blob => {
+            blobToCanvas(blob).then(canvas => {
+                const type = 'image/jpeg'
+                let base64 = canvas.toDataURL(type, 1)
+                console.log(getImgSize(base64));
+            }).catch((err)=>{});
+        }).catch((err) => {});
     }
 })();</script><script></script></html>

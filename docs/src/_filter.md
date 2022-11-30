@@ -12,5 +12,6 @@
 
 **Example**  
 ```javascript
-_filter(source,callback)
+const list = [{id:112,name:'lml1'},{id:113,name:'lml1'}]
+console.log(_filter(list,_=>_.id==113));
 ```

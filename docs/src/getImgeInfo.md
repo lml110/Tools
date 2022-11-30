@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-# 对需要上传图片的解析信息getImgeInfo(file,true).then(({files:res,base64})
+# 对需要上传图片的解析信息
+getImgeInfo(file,true).then(({files:res,base64})
 ```

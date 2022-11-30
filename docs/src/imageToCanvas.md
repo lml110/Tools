@@ -1,4 +1,4 @@
-## imageToCanvas(src, isBase64) ⇒ <code>Promise</code>
+## imageToCanvas(src, options) ⇒ <code>Promise</code>
 <p>图片链接转canvas</p>
 
 **Date**: 2017-11-23  
@@ -7,9 +7,12 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | src | <code>String</code> | <p>图片链接</p> |
-| isBase64 | <code>Boolean</code> | <p>可选-是否转base64</p> |
+| options | <code>Object</code> | <p>配置项</p> |
 
 **Example**  
 ```javascript
-imageToCanvas(src)
+imageToCanvas(blob,{
+    width: 210,
+    height: 270,
+}).then
 ```

@@ -11,4 +11,20 @@
 **Example**  
 ```javascript
 _getAllParams('https://www.baidu.com:888/uuid/uuid2/demo.php?aaa=111&bbb=222&ccc=333#username')
+
+// 多页面之间的跳转
+function getWebPath() {
+    const { authority, protocol, directory } = _getAllParams();
+    let path = protocol + '://' + authority + directory;
+    return path;
+};
+export function $go(url, params) {
+    if (!url) _error('跳转地址不存在');
+
+    let pageUrl = getWebPath() + url + '.html'
+    let paramsUrl = _paramsToString(params, '?')
+
+    pageUrl += paramsUrl;
+    window.location.href = pageUrl;
+};
 ```

@@ -12,5 +12,6 @@
 
 **Example**  
 ```javascript
-console.log('_paramsToString',_paramsToString({11:'21','22':'就梵蒂冈'},''));_paramsToString(requedata,'')
+console.log('_paramsToString',_paramsToString({11:'21','22':'就梵蒂冈'},''));
+_paramsToString(requedata,'')
 ```

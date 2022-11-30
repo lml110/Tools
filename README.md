@@ -33,6 +33,9 @@ https://lml110.github.io/Tools/#/
 > **[throttle](/src/throttle)** - 节流
 >
 > **[_trim](/src/_trim)** - 默认首尾去空格
+>
+> **[getOneObj](/src/getOneObj)** - 获取单层级对象
+
 
 #### `rjs`重构
 
@@ -59,13 +62,19 @@ https://lml110.github.io/Tools/#/
 > 
 > **[getMaximin](/src/getMaximin)** - 获取数组最大最小值
 > 
-> **[arr2Merger](/src/arr2Merger)** - 两个简单数组合并
+> **[arr2Merger](/src/arr2Merger)** - 合并成一维数组并去重
+> 
+> **[deepMerge](/src/deepMerge)** - 深层合并对象
+> 
+> **[arr2Union](/src/arr2Union)** - 获取数组的并集
+
 
 #### `business`复杂
 
+> **[filterList](/src/filterList)** - 递归查询数组数据
 > **[treeToArray](/src/treeToArray)** - 树结构反向转换一维数组
 >
-> **[filterList](/src/filterList)** - 递归遍历数组数据
+> **[afreshSetTree](/src/afreshSetTree)** - 一维数组生成一次性树结构
 > **[arrayToTree](/src/arrayToTree)** - 数组转树结构
 >
 > **[findTarget](/src/findTarget)** - 递归查询数据元素
@@ -338,6 +347,8 @@ https://lml110.github.io/Tools/#/
 >
 > **[getImgeInfo](/src/getImgeInfo)** - 获取图片元素信息
 >
+> **[getImgSize](/src/getImgSize)** - 获取base64图片储存大小
+>
 > **[getPixelRatio](/src/getPixelRatio)** - 获取canvas渲染的像素倍数
 >
 > **[imageLoaded](/src/imageLoaded)** - 处理图片加载完毕
@@ -357,6 +368,8 @@ https://lml110.github.io/Tools/#/
   > **[dataURLToBlob](/src/dataURLToBlob)** - dataURL转Blob
   >
   > **[dataURLToFile](/src/dataURLToFile)** - dataURL转File
+  >
+  > **[blobToCanvas](/src/blobToCanvas)** - 文件流转Canvas
 	
  
 # 拓展插件库

@@ -1,13 +1,13 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no,address=no,email=no"><title>微信H5</title><script src="https://res.winbaoxian.com/auto_upload_ci/sdk/app-bridge-common_1.0.13-beta.1.js"></script><script src="https://res.winbaoxian.com/auto_upload_ci/lib-analytics/weiyi-stat-auto-inject-1_0_3-581170b.js"></script><style>html{
-    	-ms-touch-action: none;
-    	touch-action: none;
+        -ms-touch-action: none;
+        touch-action: none;
     }
     body{
-    	margin: 0;
+        margin: 0;
     }
     [v-cloak] {
         display: none;
-    }</style></head><body><div class="lml">就的双方各</div><div id="appWrapper" v-cloak><div>{{MockURL}}</div></div><script src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><script src="./js/tools.js"></script><script src="./js/wechatExtend.js"></script></body><script>(function(){
+    }</style></head><body><div class="lml">就的双方各</div><div id="appWrapper" v-cloak><div>{{MockURL}}</div></div><script src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><script src="./js/tools.js"></script><script src="./js/wechatExtend.js"></script></body><script>(function() {
     'use strict';
     const APIURL = {
         'mock': ' http://lml.com:7301/mock/60b9b0b942aac2223026c217/toa/poster/getPosterList',
@@ -30,10 +30,10 @@
             isResOk: res => res.code === 200
         }
     }
-    Vue.use(wechatExtend,{
+    Vue.use(wechatExtend, {
         API
     })
-    API.setInit(null,APIURL)
+    API.setInit(null, APIURL)
 
     console.log(API.getUrl('mock2'));
     const MockURL = 'http://lml.com:7301' + '/mock'
@@ -46,34 +46,56 @@
                 MockURL
             }
         },
-        created(){
-            this.lml2();
-            this.lml1()
-            this.lml()
-            console.log(this.typeOf('as'));
+        created() {
+            // this.lml2();
+            // this.lml1()
+            // this.lml()
+            const generator = this.bar()
+
+            // console.log(generator.next());
+            // console.log(generator.return());
+            // console.log(generator.next());
+            // console.log(generator.next());
         },
         methods: {
             //短信模板
-            _listCustomSmsTemplate(){
-                return this.$get(MockURL+'/60dae3958621c72358c0d4d7/template/custom/main/listCustomSmsTemplate').then(data => {
-                    console.log('短信模板',data);
-                }).catch((err)=>{});
+            _listCustomSmsTemplate() {
+                return this.$get(MockURL + '/60dae3958621c72358c0d4d7/template/custom/main/listCustomSmsTemplate').then(data => {
+                    console.log('短信模板', data);
+                }).catch((err) => {});
             },
-            async lml2(){
-                let res = await this.$get('mock',{lml:0});
-                console.log('mock',res);
+            async lml2() {
+                let res = await this.$get('mock', { lml: 0 });
+                console.log('mock', res);
             },
-            lml1(){
-                this.$post('mock2',{lml:1}).then(data => {
-                    console.log('then1',data);
-                }).catch((err)=>{
-                    console.log('catch',err);
+            lml1() {
+                this.$post('mock2', { lml: 1 }).then(data => {
+                    console.log('then1', data);
+                }).catch((err) => {
+                    console.log('catch', err);
                 });
             },
-            async lml(){
+            async lml() {
                 let res = await this.$post('mock2');
-                console.log('then2',res);
+                console.log('then2', res);
+            },
+            * bar() {
+                console.log('fn run start')
+                yield 100
+                console.log('fn run...')
+                yield 200
+                console.log('fn run end')
+                return 300
             }
         }
     }).$mount('#appWrapper');
-})();</script></html>
+})();</script></html><!--
+# 异步执行：
+mock ==> mock1
+1. async await
+2. promise.then
+3. yield - 生成器
+// 通过return提前结束生成器
+console.log(generator.return("name2")) // {value: 'name2', done: true}
+// return之后再通过next调用不会继续生成值
+ -->

@@ -13,5 +13,10 @@
 
 **Example**  
 ```javascript
-//数量太多时容易使浏览器卡顿 - 最好10以内getCombine(lmlarr, 3);
+getCombine(lmlarr, 3);
+
+//深度不要太大，比如
+ getCombine(Array.from({length:100}),4) //3921225
+ getCombine(Array.from({length:100}),3) //161700
+ getCombine(Array.from({length:100}),5) //内存崩溃
 ```
