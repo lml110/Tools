@@ -26,7 +26,6 @@ Author: liumouliang
 ## 示例
 
 ```vue
-<form-button @click="click_submit">保存</form-button>
 <el-form ref="formValidate" label-width="76px" size="small" :model="formInfo">
     <el-row :gutter="7">
         <el-col :span="6">
@@ -54,6 +53,10 @@ Author: liumouliang
             <form-item required prop="radio" :forms="formManege.radio" />
         </el-col>
     </el-row>
+    <form-item required prop="000001" :forms="formManege['000001']" />
+    <form-item>
+        <form-button @click="click_submit">保存</form-button>
+    </form-item>
     <form-item required prop="content" :forms="formManege.content" />
 </el-form>
 ```
@@ -63,6 +66,15 @@ export default {
   name: "formItem",
   data() {
     return {
+      formInfo: {
+        serviceType: "",
+        serviceId: "",
+        content: "",
+        returnVisitTime: "",
+        je: void 0,
+        check: [],
+        smsTemplate: []
+      },
       formManege: {
         id: {
           label: "用户ID",
@@ -153,7 +165,7 @@ export default {
   methods: {
     click_submit() {
       this.$refs["formValidate"].validate((valid, props) => {
-        console.log("formValidate", valid, props);
+        if (valid) console.log("formValidate", valid, props);
       });
     }
   },

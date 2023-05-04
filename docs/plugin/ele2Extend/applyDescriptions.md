@@ -18,10 +18,10 @@ Author: liumouliang
 
 ## Slots
 
-| Name    | Description | Bindings |
-| ------- | ----------- | -------- |
-| extra   |             |          |
-| default |             | <br/>    |
+| Name     | Description | Bindings |
+| -------- | ----------- | -------- |
+| extra    |             |          |
+| row.slot |             | <br/>    |
 
 ---
 

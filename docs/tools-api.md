@@ -67,6 +67,10 @@ https://lml110.github.io/Tools/#/
 > **[deepMerge](/src/deepMerge)** - 深层合并对象
 > 
 > **[arr2Union](/src/arr2Union)** - 获取数组的并集
+> 
+> **[mergeJson](/src/mergeJson)** - 根据标识合并多个单层数组或对象
+> 
+> **[mergeJsonMixed](/src/mergeJsonMixed)** - 根据标识获取多个单层数组的交集
 
 
 #### `business`复杂
@@ -78,14 +82,17 @@ https://lml110.github.io/Tools/#/
 > **[arrayToTree](/src/arrayToTree)** - 数组转树结构
 >
 > **[findTarget](/src/findTarget)** - 递归查询数据元素
-> 
-> **[mergeJson](/src/mergeJson)** - 合并多个对象数组
 >
 > **[nestedProperty](/src/nestedProperty)** - 嵌套属性查询
 > **[hasObjKey](/src/hasObjKey)** - 查询对象key值是否存在
 > **[getObjVal](/src/getObjVal)** - 获取对象val
 >
 > **[_tco](/src/_tco)** - 尾递归优化
+>
+> **[filterData](/src/filterData)** - 深度过滤数据
+
+
+
 
 
 ### 数据处理
@@ -240,6 +247,8 @@ https://lml110.github.io/Tools/#/
 > [_trimEmoji](/src/_trimEmoji)	- 去除表情符号
 >
 > [clearEmptyTags](/src/clearEmptyTags)	- 去除空标签
+>
+> [regHtmlBreakList](/src/regHtmlBreakList) - 替换回车换行符
 
 
 ### HTTP处理
@@ -277,6 +286,8 @@ https://lml110.github.io/Tools/#/
 > [_decode](/src/_decode) - URL编码解码
 > 
 > [removeURLParameter](/src/removeURLParameter) - 移除URL某个参数
+> 
+> [setURLParams](/src/setURLParams) - 设置url中参数覆盖
 
 
 ### 浏览器操作
@@ -336,6 +347,8 @@ https://lml110.github.io/Tools/#/
 > **[stopTouch](/src/stopTouch)** - 弹窗显示时禁止页面滑动
 >
 > **[triggerEvent](/src/triggerEvent)** - 兼容性click元素触发
+>
+> **[copyHandler](/src/copyHandler)** - 复制文本
 
 #### 图片处理
 

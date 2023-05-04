@@ -11,9 +11,29 @@
         -ms-transform: translateY(y);
         -o-transform: translateY(y);
         transform: translateY(y);
-    }</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
+    }
+    .h-label {
+        display: block;
+        width: 50px;
+        height: 16px;
+        line-height: 1;
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+        border-radius: 3px;
+        border: 1px solid #4AE6FF;
+        background: rgba(74,230,255,0.1);
+        color: #4AE6FF;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    html[theme="dark"] {
+   --color: #FFF;
+   --background: #333;
+}</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div class="h-label">保险师</div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
 (function() {
     'use strict';
+    document.documentElement.setAttribute('theme', 'dark');
     // console.log(tools);
     var testStr = "\"dsad'''''\"asdsadf\"";
 
@@ -35,13 +55,21 @@
             discs = "";
 
     };
+
     // getDiscernContent("如您无异议，请回答“同意”")
     // getDiscernContent(`请回答“清楚”/ “不清楚”`)
     // console.log("tools",tools);
     if (tools) {
-        const { imageToBlob, getImgeInfo, imageToCanvas, canvasToDataURL, _float, getImgSize, blobToCanvas, fileToDataURL } = tools
+        const { imageToBlob, getImgeInfo, imageToCanvas, canvasToDataURL, _float, getImgSize, blobToCanvas, fileToDataURL, copyHandler } = tools
 
 
+        $('#lml1').click(function(event) {
+            copyHandler('魔尊').then(data => {
+                console.log('then',data);
+            }).catch((err)=>{
+                console.log(err);
+            });
+        });
         const imgSrc = 'https://media.wyins.net/contract_online/1598867983_z1598867383100y.jpg'
         // imageToCanvas(imgSrc).then(canvas => {
         //     console.log('then',canvas);

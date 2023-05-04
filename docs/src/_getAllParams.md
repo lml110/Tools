@@ -10,6 +10,8 @@
 
 **Example**  
 ```javascript
+// 对SPA中带#的链接取的参数值有问题
+console.log(_getAllParams('https://brokerage-admin.wyins.net.cn/#/home?nw=1&productId=880'));
 _getAllParams('https://www.baidu.com:888/uuid/uuid2/demo.php?aaa=111&bbb=222&ccc=333#username')
 
 // 多页面之间的跳转

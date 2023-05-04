@@ -12,5 +12,7 @@
 
 **Example**  
 ```javascript
-downloadLink(getFileURL(dataURLToBlob || imageToBlob),saveName)//其他： window.location.href(如果错误返回，页面跳转失败) || window.open(url) mp3之类是打开播放//场景：静态链接中返回数据流
+downloadLink(getFileURL(dataURLToBlob || imageToBlob),saveName)
+//其他： window.location.href(如果错误返回，页面跳转失败) || window.open(url,'_blank') mp3之类是打开播放
+//场景：静态链接中返回数据流
 ```

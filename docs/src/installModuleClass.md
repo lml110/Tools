@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | that | <code>Object</code> | <p>this</p> |
 | store | <code>Object</code> | <p>class</p> |
-| includes | <code>Array</code> | <p>选填 是否包含</p> |
+| includes | <code>Array</code> | <p>选填 只绑定包含内的方法 否则全部重新绑定一遍</p> |
 
 **Example**  
 ```javascript

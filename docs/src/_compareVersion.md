@@ -12,5 +12,5 @@
 
 **Example**  
 ```javascript
-_compareVersion('要验证的','最小版本')
+_compareVersion('要验证的','最小版本') >= 0
 ```

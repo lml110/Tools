@@ -12,7 +12,7 @@ Author: liumouliang
 | value       |                                           | null           | -                                                                                                                           |                                              |
 | recover     |                                           | null           | -                                                                                                                           |                                              |
 | sizeSearch  | 微易-特殊搜索区尺寸                       | null           | `medium`                                                                                                                    |                                              |
-| size        | 尺寸                                      | string         | -                                                                                                                           | 'small'                                      |
+| size        | 尺寸                                      | string         | -                                                                                                                           | 'medium'                                     |
 | maxHeight   | 表格最大高度                              | string\|number | -                                                                                                                           |                                              |
 | height      | 表格高度                                  | string\|number | -                                                                                                                           |                                              |
 | query       | 控制台数据                                | array          | -                                                                                                                           | []                                           |
@@ -43,17 +43,19 @@ Author: liumouliang
 
 ## Events
 
-| Event name | Properties | Description |
-| ---------- | ---------- | ----------- |
-| input      |            |
+| Event name            | Properties | Description |
+| --------------------- | ---------- | ----------- |
+| input                 |            |
+| handleSelectionChange |            |
 
 ## Slots
 
-| Name    | Description         | Bindings        |
-| ------- | ------------------- | --------------- |
-| header  | 头部扩展            |                 |
-| default | 中间扩展-可放置 tab | <br/><br/><br/> |
-| page    | 分页                |                 |
+| Name     | Description         | Bindings        |
+| -------- | ------------------- | --------------- |
+| header   | 头部扩展            |                 |
+| default  | 中间扩展-可放置 tab |                 |
+| col.slot |                     | <br/><br/><br/> |
+| page     | 分页                |                 |
 
 ---
 
@@ -63,6 +65,7 @@ Author: liumouliang
 <template>
   <page-container isCompute>
     <search-form
+      ref="searchFrom"
       v-model="queryForm"
       isCompute
       sizeSearch="medium"
@@ -124,6 +127,12 @@ export default {
           key: "refundPremiumStatus",
           list: refundPremiumStatusList,
           tips: "退款状态"
+        },
+        {
+          type: "button",
+          label: "实收导入",
+          show: true,
+          render: () => (this.show_importPaid = true)
         }
       ],
       columns: [
@@ -165,6 +174,57 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    getNameOrKey,
+    ...mapMutations(["closeNoTag"]),
+    GetList() {
+      if (this.$refs.searchFrom) return this.$refs.searchFrom.GetList();
+    },
+    //查看详情
+    go_detail(state = 2, id = "new") {
+      this.$go(
+        {
+          name: "PayHelpListDetail",
+          replace: false,
+          params: { id: id },
+          query: { s: state }
+        },
+        this.$router,
+        1
+      );
+    },
+    _resApiFn(res) {
+      res.content.map((el, ix) => {
+        el.refundStatusDesc = findTarget(
+          this.refundStatusList,
+          el,
+          "refundStatus",
+          "value"
+        );
+        el.refundPremiumStatusDesc = findTarget(
+          refundPremiumStatusList,
+          el,
+          "refundPremiumStatus"
+        );
+        el.productName = findTarget(
+          this.productList,
+          el,
+          "productId",
+          "productId",
+          "productName"
+        );
+        el.applicantTime = formatDate(el.applicantTime);
+        el.refundTypeDesc = findTarget(
+          refundConservationList_Type,
+          el,
+          "refundType"
+        );
+        return el;
+      });
+      return res;
+    },
+    _tips: _tips2
   }
 };
 ```

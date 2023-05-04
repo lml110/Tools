@@ -8,7 +8,7 @@ Author: liumouliang
 
 | Prop name  | Description    | Type   | Values                                               | Default   |
 | ---------- | -------------- | ------ | ---------------------------------------------------- | --------- |
-| size       | 尺寸           | string | -                                                    | "small"   |
+| size       | 尺寸           | string | -                                                    | "medium"  |
 | loading    | 加载状态       | null   | -                                                    |           |
 | disabled   | 禁用状态       | null   | -                                                    |           |
 | icon       | 图标类名       | null   | -                                                    |           |
