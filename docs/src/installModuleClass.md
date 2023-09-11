@@ -12,5 +12,10 @@
 
 **Example**  
 ```javascript
-installModuleClass(this, ActionStore.prototype)
+class ActionStore extends ReduceStore{
+    constructor() {
+        super();
+        installModuleClass(this, ActionStore.prototype)
+    }
+}
 ```

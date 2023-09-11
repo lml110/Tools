@@ -28,16 +28,21 @@ Author: liumouliang
 
 ## Slots
 
-| Name      | Description | Bindings        |
-| --------- | ----------- | --------------- |
-| item.slot |             | <br/><br/><br/> |
+| Name    | Description | Bindings             |
+| ------- | ----------- | -------------------- |
+| header  |             | <br/><br/>           |
+| default |             | <br/><br/><br/><br/> |
 
 ---
 
 ## 示例
 
 ```vue
-<apply-table v-model="apidata" :columns="columns">
+<apply-table
+  v-model="apidata"
+  :columns="columns"
+  @handleSelectionChange="handleSelectionChange"
+>
     <template slot-scope="{ row }" slot="optionId">
         <form-button type="text" @click="delete_Insured(row)" >删除</form-button>
     </template>
@@ -57,9 +62,15 @@ export default {
     return {
       apidata: [],
       columns: [
-        { type: "selection", align: "center", width: 36 },
+        { type: "selection", align: "center", width: 42 },
         { type: "index", title: "序号", align: "center", width: 60 },
         { key: "name", title: "被保人姓名", align: "center" },
+        {
+          key: "modifyTimeStr",
+          title: "更新时间",
+          align: "center",
+          width: 100
+        },
         { key: "relationToApplicant", title: "与投保人关系", align: "center" },
         { key: "idNo", title: "被保人证件号码", align: "center" },
         {
@@ -75,7 +86,10 @@ export default {
   created() {},
   computed: {},
   methods: {
-    delete_Insured(row) {}
+    delete_Insured(row) {},
+    handleSelectionChange(res) {
+      this.idListSelection = res.map(_ => _.id);
+    }
   }
 };
 ```

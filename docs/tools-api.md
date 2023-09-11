@@ -92,9 +92,6 @@ https://lml110.github.io/Tools/#/
 > **[filterData](/src/filterData)** - 深度过滤数据
 
 
-
-
-
 ### 数据处理
 
 > **[_compareVersion](/src/_compareVersion)** - 比较字符串版本 - v1>v2 为1
@@ -155,6 +152,8 @@ https://lml110.github.io/Tools/#/
 > **[_getAllDate](/src/_getAllDate)** - 获取日期全部参数
 >
 > **[formatDurationToFriendly](/src/formatDurationToFriendly)** - 秒转换成友好格式
+>
+> **[_timeout](/src/_timeout)** - 通用等待函数类
 >
 > **[_isLeapYear](/src/_isLeapYear)** - 判断某一年是否是闰年
 >
@@ -237,6 +236,13 @@ https://lml110.github.io/Tools/#/
 > **[isValidIP](/src/isValidIP)** - 是否是ip地址
 >
 > **[isWechat](/src/isWechat)** - 判断是否是微信环境
+>
+> **[isValidIDCard](/src/isValidIDCard)** - 是否为身份证号
+>
+> **[envWxMiniApp](/src/envWxMiniApp)** - 微信小程序环境环境
+>
+> **[isPromise](/src/isPromise)** - 是否是promise
+
 
 #### 富文本数据处理
 
@@ -279,6 +285,8 @@ https://lml110.github.io/Tools/#/
 >
 > **[_paramsToString](/src/_paramsToString)** - 对象参数转url字符串
 >
+> [_paramsToSimpleList](/src/_paramsToSimpleList) - 对象完全转换简单列表
+>
 > **[_getHttpCodeMsg](/src/_getHttpCodeMsg)** - 获取http状态码的提示信息
 >
 > [_encode](/src/_encode) - URL编码转换-只转中文
@@ -288,6 +296,10 @@ https://lml110.github.io/Tools/#/
 > [removeURLParameter](/src/removeURLParameter) - 移除URL某个参数
 > 
 > [setURLParams](/src/setURLParams) - 设置url中参数覆盖
+> 
+> [setUrlHttps](/src/setUrlHttps) - 设置链接协议为https
+> 
+> [getOneEncode](/src/getOneEncode) - 获取encodeURIComponent后的字符串(单次判断)
 
 
 ### 浏览器操作
@@ -333,6 +345,8 @@ https://lml110.github.io/Tools/#/
 > **[getSrcollH](/src/getSrcollH)** - 获取元素的整体高度
 > 
 > **[prefixStyle](/src/prefixStyle)** - 自动添加适配浏览器样式前缀
+> 
+> **[createCover](/src/createCover)** - 创建透明蒙层(应用场景：点击触发后其他操作不可触发)
 
 #### 事件处理
 

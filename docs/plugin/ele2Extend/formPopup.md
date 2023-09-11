@@ -14,6 +14,7 @@ Since: 部分 props 引入 apply-dialog
 | labelPosition | 标题位置             | string  | -      | 'right' |
 | info          | 操作数据             | object  | -      | {}      |
 | isFooter      | 是否展示底部按钮区域 | boolean | -      | true    |
+| showMessage   |                      | boolean | -      | false   |
 
 ## Events
 
@@ -22,7 +23,7 @@ Since: 部分 props 引入 apply-dialog
 | input      |                                   |
 | cancel     |                                   | 取消按钮点击触发 |
 | ok         | **requedata** `Object` - 请求数据 | 验证成功后触发   |
-| err        |                                   | 验证失败后触发   |
+| err        | **props** `Object` - 验证数据     | 验证失败后触发   |
 
 ## Slots
 
@@ -30,7 +31,8 @@ Since: 部分 props 引入 apply-dialog
 | ------- | ----------- | -------- |
 | header  | 头部扩展    |          |
 | default |             |          |
-| bottom  | 底部扩展    |          |
+| bottom  | 尾部扩展    |          |
+| footer  |             |          |
 
 ---
 
@@ -40,13 +42,16 @@ Since: 部分 props 引入 apply-dialog
 <template>
   <form-popup
     v-model="decrease_visible"
+    title="测试"
     ok-text="提交"
     isFooter
     width="750px"
     label-width="120px"
     :info="decreaseData"
     :loading="save_loading"
-    @ok="decreaseData_ok"
+    @cancel="modal_cencel"
+    @ok="Modal_ok"
+    @err="decreaseData_err"
   >
     <template #header>
       <div style="margin-bottom:18px;">
@@ -155,9 +160,7 @@ export default {
   created() {},
   computed: {},
   methods: {
-    decreaseData_ok() {
-      return this.$tipsMessage("提交成功", 1);
-    },
+    Modal_ok(formInfo) {},
     newInsuredList_change(val) {
       const list = this.newInsuredList_form.list;
       this.orderInsuredList = val.map(el => {
@@ -292,6 +295,53 @@ export default {
     this._BusinessType();
   },
   methods: {
+    //确认按钮
+    decreaseData_ok(requedata) {
+      const { productAllList, productEditId, type, formPopupTitle } = this;
+      requedata.productList = requedata.productList.map(id => {
+        let el = productAllList.find(_ => _.productId == id) || {};
+        return {
+          productId: id,
+          productName: el._productName
+        };
+      });
+      Object.assign(requedata, { type });
+      let url = "product/createGroupProductVerification";
+      if (productEditId) {
+        url = "product/updateGroupProductVerification";
+        requedata["id"] = productEditId;
+      }
+      return this.$post(url, requedata)
+        .then(data => {
+          this.$tipsMessage(`${formPopupTitle}成功`, 1);
+          this.verification_show = false;
+          return this.GetList();
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    //验证错误
+    decreaseData_ok(props) {
+      this.$tipsMessage("必填信息不能为空");
+    },
+    //新增
+    create_group() {
+      this.productEditId = 0;
+      this.productList_data.productList = [];
+      this.verification_show = true;
+    },
+    //编辑
+    edit_item({ id, productList }) {
+      this.productEditId = id;
+      this.verification_show = true;
+      //编辑时防止重置数据被覆盖
+      this.$nextTick(() => {
+        this.productList_data.productList = productList.map(
+          _ => "" + _.productId
+        );
+      });
+    },
     BusinessTypeData_change(val) {
       this.SMS_Info.businessIndex = "";
       if (val) this._SmsTemplate();

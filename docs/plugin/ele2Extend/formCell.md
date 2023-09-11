@@ -18,14 +18,13 @@ Author: liumouliang
 | Event name | Properties | Description |
 | ---------- | ---------- | ----------- |
 | input      |            |
+| change     |            |
 
 ## Slots
 
 | Name    | Description | Bindings |
 | ------- | ----------- | -------- |
-| prepend |             |          |
-| append  |             |          |
-| default |             | <br/>    |
+| default |             |          |
 
 ---
 
@@ -69,7 +68,8 @@ export default {
           multiple: true,
           allowCreate: true,
           // clearable: '',
-          "list-name": "templateName"
+          "list-name": "templateName",
+          "list-key": "templateKey"
         },
         serviceType: {
           type: "select",
@@ -127,6 +127,22 @@ export default {
           type: "radio",
           size: "small",
           list: [
+            { label: "需要", value: 1 },
+            { label: "不需要", value: 0 }
+            // '麻醉1',
+            // '麻醉2',
+            // {label: 'label1',value:'11'},
+            // {label: 'label2',value:'22',disabled:true},
+          ],
+          change(v) {
+            console.log("radio", v);
+          }
+        }
+      },
+      lmls: {
+        radio: {
+          type: "radio",
+          list: [
             "麻醉1",
             "麻醉2",
             { label: "label1", value: "11" },
@@ -135,9 +151,7 @@ export default {
           change(v) {
             console.log("radio", v);
           }
-        }
-      },
-      lmls: {
+        },
         switch: {
           // disabled: true,
           active: {
@@ -155,8 +169,11 @@ export default {
           }
         },
         datetimerange: {
-          // tips: [],
-          range: "daterange",
+          // tips: ['开始','结束'],
+          value: [],
+          separator: "到",
+          // range: 'daterange',
+          dateType: "datetimerange",
           change(val) {
             console.log("datetimerange", val);
           }

@@ -25,5 +25,10 @@ var obj = {
       }
     }
   }
-};console.log(getObjVal(obj, "a.b.c.arr.+.c")); // trueconsole.log(getObjVal(obj, "a.b.c.arr.+.d")); // falseconsole.log(getObjVal(array, "2"));  //trueconsole.log(getObjVal(array, "+.c")); //trueconsole.log(getObjVal(array, "+.d")); //false
+};
+console.log(getObjVal(obj, "a.b.c.arr.+.c")); // [2, 12, 22]
+console.log(getObjVal(obj, "a.b.c.arr.+.d")); // [undefined, undefined, undefined]
+console.log(getObjVal(array, "a.b.c.d"));  //5
+console.log(getObjVal(array, "+.c")); //undefined
+console.log(getObjVal(array, "+.d")); //undefined
 ```

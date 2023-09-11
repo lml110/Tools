@@ -30,9 +30,9 @@
     html[theme="dark"] {
    --color: #FFF;
    --background: #333;
-}</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div class="h-label">保险师</div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
+}</style></head><body><button id="lml1">缓存</button><div id="lml1-html"></div><div class="red">dsf</div><div class="circle"></div><div class="h-label">保险师</div><div class="pageList h-label">分页</div><div style="height:3000px;"></div><script src="./js/tools.js"></script></body><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://resj.outdoorclub.com.cn/jss/shopMall/vconsole.min.js"></script><script>// new VConsole();
 (function() {
-    'use strict';
+    // 'use strict';
     document.documentElement.setAttribute('theme', 'dark');
     // console.log(tools);
     var testStr = "\"dsad'''''\"asdsadf\"";
@@ -58,9 +58,11 @@
 
     // getDiscernContent("如您无异议，请回答“同意”")
     // getDiscernContent(`请回答“清楚”/ “不清楚”`)
-    // console.log("tools",tools);
+    console.log("tools",tools);
     if (tools) {
-        const { imageToBlob, getImgeInfo, imageToCanvas, canvasToDataURL, _float, getImgSize, blobToCanvas, fileToDataURL, copyHandler } = tools
+        const { imageToBlob, getImgeInfo, imageToCanvas, canvasToDataURL, _float, getImgSize, blobToCanvas, fileToDataURL, copyHandler,
+            PageList,
+        } = tools
 
 
         $('#lml1').click(function(event) {
@@ -85,5 +87,19 @@
                 console.log(getImgSize(base64));
             }).catch((err)=>{});
         }).catch((err) => {});
+
+
+        /*分页逻辑*/
+        const page_list = new PageList();
+        page_list.getParams = function(){
+            console.log('ss');
+            let ps = page_list._getParams();
+            ps[11] = '22'
+            return ps;
+        };
+        $('.pageList').click(function(event) {
+            page_list.getList();
+        });
+
     }
 })();</script><script></script></html>

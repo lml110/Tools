@@ -12,7 +12,8 @@
 
 **Example**  
 ```javascript
-// 使用场景：小程序的cookie模拟
+// 使用场景：小程序的cookie模拟
+
 localExpires('lml','魔尊',1) //当前过期时间增加一天
 localExpires('lml',null)
 localExpires('lml','魔尊',true)

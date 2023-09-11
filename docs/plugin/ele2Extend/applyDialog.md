@@ -6,18 +6,22 @@ Author: liumouliang
 
 ## Props
 
-| Prop name    | Description            | Type    | Values | Default  |
-| ------------ | ---------------------- | ------- | ------ | -------- |
-| value        |                        | boolean | -      |          |
-| title        | 标题文本               | string  | -      | ''       |
-| width        | 全局宽度               | string  | -      | '50%'    |
-| size         | 尺寸                   | string  | -      | 'medium' |
-| top          | 位置 top               | string  | -      | '8vh'    |
-| appendToBody | 是否插入至 body 元素上 | boolean | -      | false    |
-| loading      | 加载状态               | boolean | -      | false    |
-| isFooter     | 是否需要底部区域       | boolean | -      | false    |
-| cancelText   | 取消按钮文本           | string  | -      | '取消'   |
-| okText       | 确认按钮文本           | string  | -      | '确认'   |
+| Prop name    | Description            | Type    | Values | Default                                                                      |
+| ------------ | ---------------------- | ------- | ------ | ---------------------------------------------------------------------------- |
+| value        |                        | boolean | -      |                                                                              |
+| customClass  | 自定义类名             | string  | -      |                                                                              |
+| title        | 标题文本               | string  | -      | ''                                                                           |
+| titleIcon    | 标题图标               | string  | -      | ''                                                                           |
+| width        | 全局宽度               | string  | -      | '50%'                                                                        |
+| size         | 尺寸                   | string  | -      | 'medium'                                                                     |
+| top          | 位置 top               | string  | -      | '8vh'                                                                        |
+| appendToBody | 是否插入至 body 元素上 | boolean | -      | false                                                                        |
+| loading      | 加载状态               | boolean | -      | false                                                                        |
+| isFooter     | 是否需要底部区域       | boolean | -      | false                                                                        |
+| cancelText   | 取消按钮文本           | string  | -      | '取消'                                                                       |
+| okText       | 确认按钮文本           | string  | -      | '确认'                                                                       |
+| options      |                        | object  | -      | {<br/> close_on_press_escape: false,<br/> close_on_click_modal: false,<br/>} |
+| notCencel    | 是否取消触发时隐藏     | boolean | -      | false                                                                        |
 
 ## Events
 
@@ -31,7 +35,9 @@ Author: liumouliang
 
 | Name    | Description | Bindings |
 | ------- | ----------- | -------- |
+| title   |             |          |
 | default |             |          |
+| footer  |             |          |
 
 ---
 
@@ -188,6 +194,7 @@ export default {
         },
         {
           type: "date",
+          key: "allTime",
           dateType: "datetimerange",
           key: "lml",
           label: "应收时间",
@@ -264,4 +271,20 @@ export default {
     }
   }
 };
+```
+
+```css
+<style lang="less">
+@import "~_css/theme.less";
+.submit-import-tips.applyDialog{
+    .applyDialog-title{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .el-icon-warning{
+        color: #F43030;
+        font-size: 22px;
+    }
+}
+</style>
 ```

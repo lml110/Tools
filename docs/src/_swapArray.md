@@ -13,10 +13,16 @@
 
 **Example**  
 ```javascript
-//拖动: 拖动到新位置，其他元素按顺序递增或递减
+//拖动: 拖动到新位置，其他元素按顺序递增或递减 | 移动
 //交换：其他元素不变，只交换要改变的位置
 let arr = Array.from({length:10},(_,i)=>(i+1))
 console.log(arr);
 console.log(_swapArray(arr,2,7)); //[1, 2, 8, 4, 5, 6, 7, 3, 9, 10]
 console.log(_swapArray(arr,2,7,1)); //[1, 2, 4, 5, 6, 7, 8, 3, 9, 10]
+
+//1-上移 2-下移
+move_item(index, type){
+    let newi = type===1 ? index-1 : index+1;
+    this.form.otherProtocalList = _swapArray(this.apidata,index,newi,1);
+},
 ```

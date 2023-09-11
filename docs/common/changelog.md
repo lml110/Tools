@@ -4,10 +4,10 @@
 📎[Tools](https://res.wyins.net/autoUpload/common/a03eebe9-666d-4f91-88cf-596549f31ef0.js)
 
 **H5-扩展：**
-📎[wechatExtend](https://res.wyins.net/autoUpload/common/f0c0a24c-2a0e-4903-b57b-544f365b1b2a.js)
+📎[wechatExtend](https://res.wyins.net/autoUpload/common/c1e92b63-9db7-4d2a-ae00-76becf02e092.js)
 
 **element-扩展：**
-📎[ele2Extend](https://res.wyins.net/autoUpload/common/ac61fb07-bffb-4583-aad7-03760b616af1.js)
+📎[ele2Extend](https://res.wyins.net/autoUpload/common/9c39917b-3417-4425-83e8-2368baaf81a7.js)
 
 **小程序-扩展：**
 📎[小程序](https://res.wyins.net/autoUpload/common/miniWeixin_5af8e269a54a111.js)
@@ -28,6 +28,30 @@
 ======================================
 
 # 改动日志
+
+## 1.0.1.20230818
+
+- 新增 `v-transition`动画指令
+- 修复 `_addClass`样式赋值问题
+
+## 1.0.1.20230724
+
+- 新增 `createCover`创建透明蒙层方法
+- 修复 ele扩展中`form-item`的`required`的默认规则
+- 增加 ele扩展中`cell-date-picker`的`tips`为空判断
+
+## 1.0.1.20221020
+
+- 升级 webpack5,修复dev模式umd无法添加到window中
+- 修复 排除多文件目录中js，html除外的文件入口
+- 优化 ele扩展中`page-container`自动计算高度事件
+- 新增 ele扩展中表格的`$index`属性
+- 新增 ele扩展中表单控件的`tooltip`组件
+
+## 1.1.7.20221008
+
+- 新增 vue本地文件变量
+- 新增 git小徽章
 
 ## 1.1.5.20220231
 

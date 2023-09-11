@@ -30,10 +30,10 @@ this.$tipsMessage('asf',1) // 成功提示
 **Example**  
 ```javascript
 click_delProduct(){
-  this.$tips2('永久删除该产品','product/deleteProduct',{productId:this.exportImportObj.id}).then((data,lml,sdfsd) => {
+  this.$tips2('永久删除该产品','product/deleteProduct',{productId:this.exportImportObj.id}).then((data) => {
     this.exportImportObj.exportImportVisible = false;
     this.fetchData();
-  }).catch((err,lml,kdkfdk)=>{
+  }).catch((err)=>{
     console.log('catch',err);
   });
 },

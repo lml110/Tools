@@ -12,5 +12,7 @@
 
 **Example**  
 ```javascript
-// 场景：动态链接中数据流处理下载downloadBlob([response.data],name,'application/vnd.ms-excel')
+// 场景：动态链接中数据流处理下载
+downloadBlob([response.data],name,'application/vnd.ms-excel')
+//其他: window.open(`${process.env.BASE_API}/orderListExcel?${params}`, '_blank');
 ```

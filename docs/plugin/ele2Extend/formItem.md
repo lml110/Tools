@@ -6,20 +6,29 @@ Author: liumouliang
 
 ## Props
 
-| Prop name  | Description | Type    | Values | Default |
-| ---------- | ----------- | ------- | ------ | ------- |
-| value      |             | null    | -      |         |
-| prop       | 属性字段    | string  | -      | ''      |
-| required   | 是否必填    | boolean | -      | false   |
-| labelWidth | 标题宽度    | string  | -      |         |
-| infos      | 操作数据    | object  | -      |         |
-| forms      | 类型数据    | object  | -      | {}      |
+| Prop name  | Description | Type          | Values | Default |
+| ---------- | ----------- | ------------- | ------ | ------- |
+| value      |             | null          | -      |         |
+| prop       | 属性字段    | string        | -      | ''      |
+| required   | 是否必填    | boolean       | -      | false   |
+| labelWidth | 标题宽度    | string        | -      |         |
+| infos      | 操作数据    | object        | -      |         |
+| forms      | 类型数据    | object        | -      | {}      |
+| list       |             | array\|object | -      |         |
+
+## Events
+
+| Event name | Properties | Description |
+| ---------- | ---------- | ----------- |
+| change     |            |
 
 ## Slots
 
-| Name    | Description | Bindings |
-| ------- | ----------- | -------- |
-| default |             |          |
+| Name          | Description | Bindings |
+| ------------- | ----------- | -------- |
+| extend-header |             |          |
+| default       |             |          |
+| extend-bottom |             |          |
 
 ---
 
@@ -28,11 +37,20 @@ Author: liumouliang
 ```vue
 <el-form ref="formValidate" label-width="76px" size="small" :model="formInfo">
     <el-row :gutter="7">
+        <!-- select控件为空 -->
         <el-col :span="6">
-            <form-item required prop="serviceType" :forms="formManege.serviceType" />
+            <form-item required prop="serviceType" :forms="forms.serviceType" >
+                <template slot="empty">
+                    <form-button type="text" >添加</form-button>
+                </template>
+            </form-item>
         </el-col>
         <el-col :span="6">
-            <form-item required prop="serviceId" :forms="formManege.serviceId"/>
+            <form-item required prop="serviceId" :forms="forms.serviceId">
+                <template slot="suffix" v-if="forms.serviceId.slot">
+                    <form-button type="text" >添加</form-button>
+                </template>
+            </form-item>
         </el-col>
         <el-col :span="6">
             <form-item required prop="returnVisitTime" :forms="formManege.returnVisitTime" />
@@ -97,6 +115,7 @@ export default {
         serviceType: {
           type: "select",
           label: "服务类型",
+          slot: "empty",
           list: {
             "1": "客户来电",
             "2": "电话回访",
@@ -105,7 +124,8 @@ export default {
         },
         serviceId: {
           label: "关联服务",
-          type: "input"
+          type: "input",
+          slot: "suffix"
         },
         content: {
           label: "反馈内容",

@@ -1,5 +1,5 @@
 ## \_timeout() ⇒ <code>new</code>
-<p>通用等待函数</p>
+<p>通用等待函数类</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

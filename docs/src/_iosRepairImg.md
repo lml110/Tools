@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-//新版的ios不需要修复_iosRepairImg(img,orient).then
+//新版的ios不需要修复
+_iosRepairImg(img,orient).then
 ```

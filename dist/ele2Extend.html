@@ -14,9 +14,9 @@
     }
     .lml{
         display: flex;
-    }</style></head><body><div class="lml"><p></p><p>production</p><p>https://assets.winbaoxian.com/vue/2.6.10/vue.min.js</p></div><div id="appWrapper" v-cloak><form-button @click="click_submit">保存</form-button><el-form ref="formValidate" label-width="76px" size="small" :model="formInfo"><el-row :gutter="7"><el-col :span="6"><form-item required prop="serviceType" :forms="forms.serviceType"/></el-col><el-col :span="6"><form-item required prop="serviceId" :forms="forms.serviceId"/></el-col><el-col :span="6"><form-item required prop="returnVisitTime" :forms="forms.returnVisitTime"/></el-col><el-col :span="6"><form-item required prop="id" :forms="forms.id"/></el-col><el-col :span="6"><form-item required prop="je" :forms="forms.je"/></el-col><el-col :span="6"><form-item required prop="smsTemplate" :forms="forms.smsTemplate"/></el-col><el-col :span="12"><form-item required prop="check" :forms="forms.check"/></el-col><el-col :span="12"><form-item required prop="radio" :forms="forms.radio"/></el-col></el-row><form-item required prop="content" :forms="forms.content"/></el-form><form-button @click="click_com" icon="el-icon-edit" plain round>22</form-button><form-cell v-model="lmldata[4]" type="radio" :row="lmls.radio"></form-cell><form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell><form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell><form-cell v-model="lmldata[6]" type="date"></form-cell><page-container style="height:360px;" is-compute compute-load-state v-model="isCompute"><search-form v-model="searchForm" is-compute :query="searchData" :isloaded="false" :iss="iss" :columns="columns" :pages="pageParams" :url='MockURL+"/60dae3958621c72358c0d4d7/template/custom/coupon/getUsableCouponList"'><template slot="periodEnd" slot-scope="{row}">2021-09-06 ~ 2021-10-06</template></search-form></page-container><apply-descriptions :apis="descriptions_data"><template slot="id" slot-scope="{row}"><form-button type="text">{{row.value}}</form-button></template><template slot="avatarUrl" slot-scope="{row}"><div class="imgbox avatarUrl" v-if="row.value"><img :src="row.value" alt="" class="imgbox-img"></div></template><template slot="sex" slot-scope="{row}"><div>{{row.value==1?'男':'女'}}</div></template><template slot="isMerge" slot-scope="{row}"><div>{{row.value?'是':'否'}}</div></template></apply-descriptions></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/eruda/2.11.3/eruda.min.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
+    }</style></head><body><div class="lml"><p></p><p>production</p><p>https://assets.winbaoxian.com/vue/2.6.10/vue.min.js</p></div><div id="appWrapper" v-cloak><form-button @click="click_submit">保存</form-button><el-form ref="formValidate" label-width="76px" size="small" :model="formInfo"><el-row :gutter="7"><el-col :span="6"><form-item required prop="serviceType" :forms="forms.serviceType" @change="change_content"><template slot="extend-header"><span>魔尊</span></template><template slot="empty"><form-button type="text">添加</form-button></template></form-item></el-col><el-col :span="6"><form-item required prop="serviceId" :forms="forms.serviceId"><template slot="suffix" v-if="forms.serviceId.slot"><form-button type="text">添加</form-button></template></form-item></el-col><el-col :span="6"><form-item required prop="returnVisitTime" :forms="forms.returnVisitTime"></form-item></el-col><el-col :span="6"><form-item required prop="birthDay" :forms="forms.birthDay"></form-item></el-col><el-col :span="6"><form-item required prop="id" :forms="forms.id"/></el-col><el-col :span="6"><form-item required prop="je" :forms="forms.je"/></el-col><el-col :span="6"><form-item required prop="smsTemplate" :forms="forms.smsTemplate"/></el-col><el-col :span="12"><form-item required prop="check" :forms="forms.check"/></el-col><el-col :span="12"><form-item required prop="radio" :forms="forms.radio"/></el-col></el-row><el-row><el-col><form-item required prop="change_content" :forms="{}"/></el-col><el-col><form-item>魔尊-保存按钮</form-item></el-col></el-row><form-item required prop="content" :forms="forms.content"/></el-form><form-button @click="click_com" icon="el-icon-edit" plain round>22</form-button><form-cell v-model="lmldata[4]" type="radio" :row="lmls.radio"></form-cell><form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell><form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell><form-cell v-model="lmldata[6]" type="date"></form-cell><page-container style="height:360px;" is-compute compute-load-state v-model="isCompute"><search-form v-model="searchForm" is-compute :query="searchData" :isloaded="false" :iss="iss" :columns="columns" :pages="pageParams" :url='MockURL+"/60dae3958621c72358c0d4d7/template/custom/coupon/getUsableCouponList"'><template slot="periodEnd" slot-scope="{row}">2021-09-06 ~ 2021-10-06</template></search-form></page-container><apply-descriptions :apis="descriptions_data"><template slot="id" slot-scope="{row}"><form-button type="text">{{row.value}}</form-button></template><template slot="avatarUrl" slot-scope="{row}"><div class="imgbox avatarUrl" v-if="row.value"><img :src="row.value" alt="" class="imgbox-img"></div></template><template slot="sex" slot-scope="{row}"><div>{{row.value==1?'男':'女'}}</div></template><template slot="isMerge" slot-scope="{row}"><div>{{row.value?'是':'否'}}</div></template></apply-descriptions></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/eruda/2.11.3/eruda.min.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
     'use strict';
-    window.eruda.init();
+    // window.eruda.init();
     // new VConsole();
     Vue.use(ele2Extend, {API:{
         APIURL: {}
@@ -45,12 +45,21 @@
                     returnVisitTime: '',
                     je: void 0,
                     check: [],
+                    radio: 0,
                     smsTemplate: [],
+                    birthDay: '',
                 },
                 forms: {
                     id: {
                         label: '用户ID',
                         rule: 'number'
+                    },
+                    birthDay: {
+                        label: '生日',
+                        type: "date",
+                        dateType: "date",
+                        format: "yyyy-MM-dd", //显示
+                        vformat: "yyyy-MM-dd", //返回值
                     },
                     je: {
                         label: '金额',
@@ -70,6 +79,7 @@
                     serviceType: {
                         type: 'select',
                         label: '服务类型',
+                        slot: 'empty',
                         list: {
                             '1': '客户来电',
                             '2': '电话回访',
@@ -78,7 +88,7 @@
                     },
                     serviceId: {
                         label: '关联服务',
-                        type: 'input',
+                        slot: 'suffix'
                     },
                     content: {
                         label: '反馈内容',
@@ -123,10 +133,12 @@
                         type: 'radio',
                         size: 'small',
                         list: [
-                            '麻醉1',
-                            '麻醉2',
-                            {label: 'label1',value:'11'},
-                            {label: 'label2',value:'22',disabled:true},
+                            {label: '需要',value: 1},
+                            {label: '不需要', value: 0},
+                            // '麻醉1',
+                            // '麻醉2',
+                            // {label: 'label1',value:'11'},
+                            // {label: 'label2',value:'22',disabled:true},
                         ],
                         change(v){
                             console.log('radio',v);
@@ -141,6 +153,7 @@
                 searchForm: {},
                 searchData: [
                     { type: "input", key: "goodsName", value: "" },
+                    { type: "date",key:'allTime', dateType: "datetimerange", label: "起止时间", tips:['开始日期','结束日期'], start:'startTime', end:'endTime', value:[]},
                     { type: "input", key: "couponName", value: "", tips: "券名称",hide:true},
                     // { type: "select",label:'sdf', key: "goodsOptStatus", list: [], tips: "全部"},
                     { type: "button", label: "批量下线", is: "warning", show:true, render:this.click_BatchOption },
@@ -148,6 +161,18 @@
                 lmldata:[],
                 dateList: [],
                 lmls: {
+                    radio: {
+                        type: 'radio',
+                        list: [
+                            '麻醉1',
+                            '麻醉2',
+                            {label: 'label1',value:'11'},
+                            {label: 'label2',value:'22',disabled:true},
+                        ],
+                        change(v){
+                            console.log('radio',v);
+                        }
+                    },
                     switch: {
                         // disabled: true,
                         active: {
@@ -165,8 +190,11 @@
                         }
                     },
                     'datetimerange':{
-                        // tips: [],
-                        range: 'daterange',
+                        // tips: ['开始','结束'],
+                        value: [],
+                        separator: '到',
+                        // range: 'daterange',
+                        dateType:'datetimerange',
                         change(val){
                             console.log('datetimerange',val);
                         }
@@ -246,6 +274,10 @@
 
                 this.iss = !this.iss
                 // console.log(this.lmldata,this.checkdata,this.dateList);
+            },
+            //测试form-item == change事件
+            change_content(v){
+                console.log('测试form-item == change事件',v);
             }
         }
     }).$mount('#appWrapper');

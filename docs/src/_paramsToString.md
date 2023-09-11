@@ -12,6 +12,7 @@
 
 **Example**  
 ```javascript
+应用场景：转换为适用于url字符串的场景
 console.log('_paramsToString',_paramsToString({11:'21','22':'就梵蒂冈'},''));
 _paramsToString(requedata,'?')
 ```

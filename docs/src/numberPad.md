@@ -11,5 +11,6 @@
 
 **Example**  
 ```javascript
-console.log(numberPad(2));console.log(numberPad(-2));
+console.log(numberPad(2));  //'02'
+console.log(numberPad(-2)); //'-02'
 ```

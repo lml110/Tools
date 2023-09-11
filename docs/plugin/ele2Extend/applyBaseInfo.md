@@ -14,9 +14,9 @@ Author: liumouliang
 
 ## Slots
 
-| Name     | Description | Bindings |
-| -------- | ----------- | -------- |
-| row.slot |             | <br/>    |
+| Name    | Description | Bindings |
+| ------- | ----------- | -------- |
+| default |             | <br/>    |
 
 ---
 

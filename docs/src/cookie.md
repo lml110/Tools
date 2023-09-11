@@ -17,8 +17,11 @@
 /// cookie('key',null) //删除
 
 cookie('lml',null)
+
 cookie('lml','魔尊')
 console.log(cookie('lml'),Cookies.keys(),Cookies.info());
+
+cookie('token',null,{domain:'.wyins.net.cn'})
 cookie('lml','123',{
 	path: '/',
 	domain: '.wyins.net.cn',

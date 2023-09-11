@@ -36,5 +36,6 @@ Author: liumouliang
 ## 示例
 
 ```vue
-<form-button type>{{txt}}22</form-button>
+<form-button type size="medium">{{txt}}22</form-button>
+<form-button type="text">获取验证码</form-button>
 ```

@@ -12,6 +12,13 @@
 
 **Example**  
 ```javascript
-const list = [{id:112,name:'lml1'},{id:113,name:'lml1'}]
-console.log(_filter(list,_=>_.id==113));
+const list = [{id:112,name:'lml1'},{id:113,name:'lml1'},{id:113,name:'lml2'}]
+console.log(_filter(list,_=>_.id==113)); //[{id:113,name:'lml1'},{id:113,name:'lml2'}]
+const obj = {
+    '112': {id:112,name:'lml1'},
+    '113': {id:113,name:'lml1'},
+    '114': {id:114,name:'lml2'}
+}
+console.log(_filter(obj,_=>_.name=='lml1'));  // {"112":{"id":112,"name":"lml1"},"113":{"id":113,"name":"lml1"}}
+console.log(_filter(obj,['112','114'])); // {"112":{"id":112,"name":"lml1"},"114":{"id":114,"name":"lml2"}}
 ```
