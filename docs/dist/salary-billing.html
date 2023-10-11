@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no,address=no,email=no"><title>工资计算汇总</title></head><body><div id="appWrapper" v-cloak><apply-table v-model="apidata" :columns="columns" height="560" :row-class-name="tableRowClassName" :summary-method="summaryMethod"></apply-table></div><script src="https://resj.outdoorclub.com.cn/jss/js/jquery-1.9.1/jquery-1.9.1.min.js"></script><script src="https://res.wyins.net/autoUpload/activity/vconsole.min_40fd7e9234606a3.js"></script><script src="https://assets.winbaoxian.com/vue/2.6.10/vue.min.js"></script><script src="https://assets.winbaoxian.com/axios/0.19.2/axios.min.js"></script><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/theme-chalk/index.min.css"><script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.6/index.min.js"></script><script src="./js/tools.js"></script><script src="./js/ele2Extend.js"></script></body><script>(function(){
+    'use strict';
+    // new VConsole();
+    Vue.use(ele2Extend, {API:{
+        APIURL: {}
+    }})
+    const {
+        findTarget,
+        filterList,
+        getClientSize,
+        _for,
+        _float,
+        typeOf,
+    } = tools
+    new Vue({
+        // el: '#app',
+        data: function() {
+            return {
+                columns: [
+                    { key: "id", title: "ID", align: "center" },
+                    { key: "price", title: "单价", align: "center" },
+                    { key: "number", title: "数量", align: "center" },
+                    { key: "pay", title: "计件工资", align: "center", sortable:true },
+                    { key: "perk_work", title: "加班费", align: "center" },
+                    { key: "perk_meal", title: "餐补", align: "center" },
+                    { key: "amount", title: "合计", align: "center" },
+                    // {title: '操作',slot:"optionId",width:80,align:'center'},
+                ],
+                apidata: [],
+                countKeys: ['pay','perk_work','perk_meal','amount']
+            }
+        },
+        created(){
+            this.initData();
+        },
+        methods: {
+            tableRowClassName({row, rowIndex}){
+                if(row.price != 0.85) return 'red';
+                return '';
+            },
+            _summaryCount(values){
+                if (values.every(_=>isNaN(_))) return 'N/A';  //每一项
+                // if(values.some(_=>isNaN(_))) return 'N/A'; //任意一项
+                let sums = 0
+                return values.reduce((prev, curr) => {
+                    const value = +(curr);
+                    if (!isNaN(value)) {
+                    return _float(prev + curr,3);
+                    } else {
+                    return prev;
+                    }
+                }, sums);
+            },
+            summaryMethod(param){
+                const { columns, data } = param;
+                const sums = [];
+                const countKeys = this.countKeys;
+                columns.forEach((column, index) => {
+                    const property = column.property;
+                    if (index === 0) {
+                        sums[index] = '总价';
+                        return;
+                    }
+                    if(countKeys.includes(property)){
+                        const values = data.map(item => (+item[property])); //全部数值
+                        sums[index] = this._summaryCount(values)
+                    }
+                });
+                return sums;
+            },
+            initData(){
+                let apidata = [];
+                const price = 0.85;
+                const perk_meal = 3.5;
+                const countKeys = this.countKeys;
+                const numbers = [
+                    225,225,194,176.5,230,239,235.5,200,280,257,0,0,216,292.3,[4463,0.043],253,
+                    0,205,211.5,211.6,217.3,198.2,211.7,205,214,192.2,262,165,212,200,222,
+                ]
+                //加班
+                const perk_works = [
+                    39,39,36,0,39,39,32.5,39,39,39,0,0,0,0,13,13,
+                    0,36,0,36,0,0,0,0,36,39,0,0,39,39,39,
+                ]
+                
+                _for(numbers,(el,ix)=>{
+                    let pay_cont = 0;
+                    const t = typeOf(el);
+                    let res_obj = {id: ix+1}
+                    if(t==='number'){
+                        res_obj['pay'] = _float(price*el,3);
+                        res_obj['price'] = price;
+                        res_obj['number'] = el;
+                    }else if(t==='array'){
+                        res_obj['pay'] = _float(el[0]*el[1],3);
+                        res_obj['price'] = el[1];
+                        res_obj['number'] = el[0];
+                    }
+                    
+                    res_obj['perk_work'] = perk_works[ix];
+                    res_obj['perk_meal'] = perk_works[ix] ? perk_meal : 0;
+
+
+                    _for(res_obj,(_,key)=>{
+                        if(countKeys.includes(key)) pay_cont = _float(pay_cont+res_obj[key],3);
+                    })
+                    res_obj['amount'] = pay_cont
+                    // pay_cont = _float(pay_cont+res_obj['pay'],3);
+                    apidata.push(res_obj);
+                });
+                // console.log(pay_cont);
+                this.apidata = apidata
+            },
+            
+        }
+    }).$mount('#appWrapper');
+})();</script><style>html{
+    -ms-touch-action: none;
+    touch-action: none;
+}
+body{
+    margin: 0;
+}
+[v-cloak] {
+    display: none;
+}
+.ellipsis{
+    width: 200px;
+    word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.lml{
+    display: flex;
+}
+.red {
+    color: red
+}
+.el-table__footer-wrapper, .el-table__header-wrapper{
+    font-weight: bold;
+}</style></html>
