@@ -59,19 +59,19 @@ export default {
           label: "新增",
           is: "warning",
           show: true,
-          render: this.click_new
-        }
+          render: this.click_new,
+        },
       ],
       queryForm: {},
       resetOption: {
         icon: "el-icon-refresh-right",
-        show: true
+        show: true,
       },
       searchOption: {
         icon: "el-icon-search",
         show: true,
-        label: "搜索"
-      }
+        label: "搜索",
+      },
     };
   },
   created() {},
@@ -80,17 +80,17 @@ export default {
     click_search(row) {
       const {
         apiList,
-        queryForm: { standardName }
+        queryForm: { standardName },
       } = this;
       if (!standardName) return this.click_reset();
-      this.apiList = apiList.filter(_ => _.standardName === standardName);
+      this.apiList = apiList.filter((_) => _.standardName === standardName);
     },
     click_reset() {
       this.apiList = this.res;
     },
-    click_new() {}
+    click_new() {},
   },
   computed: {},
-  components: {}
+  components: {},
 };
 ```

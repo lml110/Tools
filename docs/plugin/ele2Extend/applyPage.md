@@ -49,16 +49,16 @@ export default {
     return {
       resetOption: {
         icon: "el-icon-refresh-right",
-        show: true
+        show: true,
       },
       searchOption: {
         icon: "el-icon-search",
         show: true,
-        label: "搜索"
+        label: "搜索",
       },
       totalPage: 0,
       pageSize: 20,
-      pageIndex: 1
+      pageIndex: 1,
     };
   },
   created() {},
@@ -78,10 +78,10 @@ export default {
     pageChange(value) {
       this.pageIndex = value;
       return this.GetList && this.GetList();
-    }
+    },
   },
   computed: {},
   watch: {},
-  components: {}
+  components: {},
 };
 ```

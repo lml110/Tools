@@ -1,13 +1,13 @@
 ##  全局链接
 ======================================
 
-📎[Tools](https://res.wyins.net/autoUpload/common/a03eebe9-666d-4f91-88cf-596549f31ef0.js)
+📎[Tools](https://res.wyins.net/autoUpload/common/ccf4e1f6-2626-4c1e-b4a8-34ca330030c8.js)
 
 **H5-扩展：**
-📎[wechatExtend](https://res.wyins.net/autoUpload/common/c1e92b63-9db7-4d2a-ae00-76becf02e092.js)
+📎[wechatExtend](https://res.wyins.net/autoUpload/common/ac4c3cdf-9956-406b-8254-656a7f0fa7dd.js)
 
 **element-扩展：**
-📎[ele2Extend](https://res.wyins.net/autoUpload/common/9c39917b-3417-4425-83e8-2368baaf81a7.js)
+📎[ele2Extend](https://res.wyins.net/autoUpload/common/06fbc59f-c90f-4b65-8638-dbf8cfa3a5f0.js)
 
 **小程序-扩展：**
 📎[小程序](https://res.wyins.net/autoUpload/common/miniWeixin_5af8e269a54a111.js)
@@ -28,6 +28,27 @@
 ======================================
 
 # 改动日志
+
+## 1.0.1.20231010
+
+- 恢复 `getEndDateToMonth`方法
+- 修复 `_float`方法
+- 重置 `classDiffDate`方法 为 `classEndDate`方法
+
+## 1.0.1.20231008
+
+- 修改 `parseAboutTime`方法
+- 优化 `_getMonthDays`方法
+- 新增 `classDiffDate`方法
+- 新增 `getAllLeftTime`方法
+- 删除 `getEndDateToMonth`方法
+
+## 1.0.1.20230925
+
+- 新增 `isPromise`方法
+- 新增 `domIsHidden`方法
+- 新增 `cacheFnParams`方法
+- 新增 `cacheCalculate`方法
 
 ## 1.0.1.20230818
 

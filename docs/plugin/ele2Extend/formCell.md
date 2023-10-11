@@ -22,9 +22,9 @@ Author: liumouliang
 
 ## Slots
 
-| Name    | Description | Bindings |
-| ------- | ----------- | -------- |
-| default |             |          |
+| Name     | Description | Bindings |
+| -------- | ----------- | -------- |
+| row.slot |             |          |
 
 ---
 
@@ -54,12 +54,12 @@ export default {
       forms: {
         id: {
           label: "用户ID",
-          rule: "number"
+          rule: "number",
         },
         je: {
           label: "金额",
           pre: 2,
-          type: "input-number"
+          type: "input-number",
         },
         smsTemplate: {
           type: "select",
@@ -69,34 +69,34 @@ export default {
           allowCreate: true,
           // clearable: '',
           "list-name": "templateName",
-          "list-key": "templateKey"
+          "list-key": "templateKey",
         },
         serviceType: {
           type: "select",
           label: "服务类型",
           list: {
-            "1": "客户来电",
-            "2": "电话回访",
-            "3": "运营外呼"
-          }
+            1: "客户来电",
+            2: "电话回访",
+            3: "运营外呼",
+          },
         },
         serviceId: {
           label: "关联服务",
-          type: "input"
+          type: "input",
         },
         content: {
           label: "反馈内容",
           disabled: false,
           autosize: true,
           type: "textarea",
-          max: 500
+          max: 500,
         },
         returnVisitTime: {
           type: "date",
           label: "预约回访",
           options: {
-            disabledDate: this.mon2now
-          }
+            disabledDate: this.mon2now,
+          },
         },
         check: {
           isButton: true,
@@ -112,11 +112,11 @@ export default {
             "麻醉1",
             "麻醉2",
             { label: "label1", value: "11" },
-            { label: "label2", value: "22", disabled: true }
+            { label: "label2", value: "22", disabled: true },
           ],
           change(v) {
             console.log("check", v);
-          }
+          },
         },
         radio: {
           // isButton: true,
@@ -128,7 +128,7 @@ export default {
           size: "small",
           list: [
             { label: "需要", value: 1 },
-            { label: "不需要", value: 0 }
+            { label: "不需要", value: 0 },
             // '麻醉1',
             // '麻醉2',
             // {label: 'label1',value:'11'},
@@ -136,8 +136,8 @@ export default {
           ],
           change(v) {
             console.log("radio", v);
-          }
-        }
+          },
+        },
       },
       lmls: {
         radio: {
@@ -146,27 +146,27 @@ export default {
             "麻醉1",
             "麻醉2",
             { label: "label1", value: "11" },
-            { label: "label2", value: "22", disabled: true }
+            { label: "label2", value: "22", disabled: true },
           ],
           change(v) {
             console.log("radio", v);
-          }
+          },
         },
         switch: {
           // disabled: true,
           active: {
             text: "激活",
             value: "a1",
-            color: "red"
+            color: "red",
           },
           inactive: {
             text: "关闭",
             value: "b1",
-            color: "blue"
+            color: "blue",
           },
           change(v) {
             console.log("switch", v);
-          }
+          },
         },
         datetimerange: {
           // tips: ['开始','结束'],
@@ -176,10 +176,10 @@ export default {
           dateType: "datetimerange",
           change(val) {
             console.log("datetimerange", val);
-          }
-        }
-      }
+          },
+        },
+      },
     };
-  }
+  },
 };
 ```

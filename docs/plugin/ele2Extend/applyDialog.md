@@ -64,7 +64,7 @@ import { relationToApplicantJson } from "_libs/static";
 export default {
   props: {
     value: Boolean,
-    uuid: String
+    uuid: String,
   },
   components: {},
   data() {
@@ -72,8 +72,8 @@ export default {
       filed: "",
       form_radio: {
         listName: "保全减人",
-        listKey: "decreaseInsured"
-      }
+        listKey: "decreaseInsured",
+      },
     };
   },
   created() {},
@@ -84,8 +84,8 @@ export default {
       },
       set(v) {
         this.$emit("input", v);
-      }
-    }
+      },
+    },
   },
   methods: {
     dialog_ok() {
@@ -96,8 +96,8 @@ export default {
     },
     dialog_cancel() {
       this.filed = "";
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -169,7 +169,7 @@ export default {
 ```js
 export default {
   props: {
-    value: Boolean
+    value: Boolean,
   },
   data() {
     return {
@@ -181,7 +181,7 @@ export default {
         total: "totalElements",
         list: "content",
         index: "pageNum",
-        pageIndex: 0
+        pageIndex: 0,
         // meth: '$post',
       },
       from_query: [
@@ -190,7 +190,7 @@ export default {
           type: "select",
           label: "险种名称",
           key: "activityStatus",
-          selectList: []
+          selectList: [],
         },
         {
           type: "date",
@@ -198,8 +198,8 @@ export default {
           dateType: "datetimerange",
           key: "lml",
           label: "应收时间",
-          value: []
-        }
+          value: [],
+        },
       ],
       columns: [
         { type: "index", title: "编号", align: "center", width: 50 },
@@ -209,13 +209,13 @@ export default {
         { key: "name", title: "险种名称", align: "center" },
         { key: "name", title: "险种状态", align: "center" },
         { key: "name", title: "续期期数", align: "center" },
-        { key: "name", title: "当期应收保费", align: "center" }
+        { key: "name", title: "当期应收保费", align: "center" },
       ],
       from_query2: [],
       columns1: [],
       columns2: [],
       confirmShow: false,
-      confirmLoading: false
+      confirmLoading: false,
     };
   },
   created() {
@@ -224,14 +224,14 @@ export default {
       type: "input",
       label: "操作人",
       key: "activityNo",
-      value: ""
+      value: "",
     });
     this.columns1.push(...this.columns, {
       title: "操作",
       slot: "optionId",
       align: "center",
       width: 72,
-      fixed: "right"
+      fixed: "right",
     });
     this.columns2.push(
       ...this.columns,
@@ -246,11 +246,11 @@ export default {
       },
       set(v) {
         this.$emit("input", v);
-      }
+      },
     },
     recheckActiveFirst({ recheckActive }) {
       return recheckActive === "first";
-    }
+    },
   },
   methods: {
     click_option(row) {
@@ -268,8 +268,8 @@ export default {
     },
     dialog_ok() {
       this.confirmLoading = true;
-    }
-  }
+    },
+  },
 };
 ```
 

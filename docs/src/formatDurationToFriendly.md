@@ -1,5 +1,5 @@
 ## formatDurationToFriendly(second) ⇒ <code>String</code>
-<p>秒转换成友好格式</p>
+<p>秒转换成友好格式 (四舍五入)</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  
@@ -11,4 +11,5 @@
 **Example**  
 ```javascript
 console.log(formatDurationToFriendly(123)); //2分3秒
+console.log(formatDurationToFriendly(33460)); //9小时18分
 ```

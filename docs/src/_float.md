@@ -12,4 +12,5 @@
 **Example**  
 ```javascript
 _float(2.3*.3)
+_float(1.235, 0) //1
 ```

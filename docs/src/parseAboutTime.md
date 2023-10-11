@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>Date</code> | <p>时间</p> |
+| date | <code>Date</code> | <p>时间-秒</p> |
 | aboutFn | <code>function</code> | <p>7天后的自定义返回函数</p> |
 
 **Example**  

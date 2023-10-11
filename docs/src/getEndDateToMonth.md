@@ -14,11 +14,14 @@
 **Example**  
 ```javascript
 //- 当初始月份的天数大于结束月份的天数时 == 结束月份最后一天
-let endDate = getEndDateToMonth(new Date("2021-12-31 00:00:00"),2,1) //bug
+let endDate = getEndDateToMonth(new Date("2021-12-31 00:00:00"),2,1) //2022-02-27 23:59:59
 let endDate = getEndDateToMonth("2021-12-31 00:00:00",2,1)
 console.log(endDate); // 1645977599000
 console.log(_formatDate(endDate)); // 2022-02-27 23:59:59
 
 getEndDateToMonth(new Date("2021-12-31 08:00:00"),2,1) //2022-02-27 23:59:59
-getEndDateToMonth(new Date("2021-5-31 08:00:00"),-3)
+getEndDateToMonth(new Date("2021-5-31 08:00:00"),-3) //2021-02-28 08:00:00
+
+console.log(_formatDate(getEndDateToMonth(new Date("2021-12-12 08:00:00"),2))); //2022-02-12 08:00:00
+console.log(_formatDate(getEndDateToMonth(new Date("2021-12-31 08:00:00"),2))); //2022-02-28 08:00:00
 ```

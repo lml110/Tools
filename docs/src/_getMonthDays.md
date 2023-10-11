@@ -11,5 +11,7 @@
 
 **Example**  
 ```javascript
-方式一：$.getMonthDays();方式二：$.getMonthDays(new Date());方式三：$.getMonthDays(2013, 12);
+方式一：$.getMonthDays();
+方式二：$.getMonthDays(new Date());
+方式三：$.getMonthDays(2013, 12);
 ```

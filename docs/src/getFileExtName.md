@@ -12,6 +12,6 @@
 **Example**  
 ```javascript
 console.log(getFileExtName('04/2019110405043483.PNG.JPG')); // == jpg
-
 console.log(getFileExtName('04/2019110405043483.PNG.JPG',true)); // === 2019110405043483.png.jpg
+console.log(getFileExtName('04/2019110405043483.PNG.JPG?v=1&32')); // == jpg
 ```

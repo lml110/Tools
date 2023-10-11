@@ -28,10 +28,10 @@ Author: liumouliang
 
 ## Slots
 
-| Name    | Description | Bindings             |
-| ------- | ----------- | -------------------- |
-| header  |             | <br/><br/>           |
-| default |             | <br/><br/><br/><br/> |
+| Name      | Description | Bindings             |
+| --------- | ----------- | -------------------- |
+| header    |             | <br/><br/>           |
+| item.slot |             | <br/><br/><br/><br/> |
 
 ---
 
@@ -55,7 +55,7 @@ import cUploadButton from "@/components/Upload/c-upload-button";
 export default {
   props: {
     value: Boolean,
-    uuid: String
+    uuid: String,
   },
   components: { cUploadButton },
   data() {
@@ -69,7 +69,7 @@ export default {
           key: "modifyTimeStr",
           title: "更新时间",
           align: "center",
-          width: 100
+          width: 100,
         },
         { key: "relationToApplicant", title: "与投保人关系", align: "center" },
         { key: "idNo", title: "被保人证件号码", align: "center" },
@@ -78,9 +78,9 @@ export default {
           slot: "optionId",
           width: 80,
           align: "center",
-          fixed: "right"
-        }
-      ]
+          fixed: "right",
+        },
+      ],
     };
   },
   created() {},
@@ -88,8 +88,8 @@ export default {
   methods: {
     delete_Insured(row) {},
     handleSelectionChange(res) {
-      this.idListSelection = res.map(_ => _.id);
-    }
-  }
+      this.idListSelection = res.map((_) => _.id);
+    },
+  },
 };
 ```

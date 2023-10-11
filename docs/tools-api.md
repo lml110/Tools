@@ -9,7 +9,9 @@
   <a href="https://lml110.github.io/Tools/#/"><img src="https://res.wyins.net/autoUpload/common/4762872c-b3e2-42cf-a2a4-6839d8c54450.svg" alt="Doc"></a>
 </p>
 
-https://lml110.github.io/Tools/#/
+- https://lml110.github.io/Tools/#/
+- http://lmlmyfok.gitee.io/lmltools/#/
+- https://docs.winbaoxian.cn/tools/#/
 
 # 辅助函数库
 
@@ -90,6 +92,10 @@ https://lml110.github.io/Tools/#/
 > **[_tco](/src/_tco)** - 尾递归优化
 >
 > **[filterData](/src/filterData)** - 深度过滤数据
+>
+> **[cacheCalculate](/src/cacheCalculate)** - 缓存计算值
+>
+> **[cacheFnParams](/src/cacheFnParams)** - 缓存函数参数
 
 
 ### 数据处理
@@ -166,6 +172,14 @@ https://lml110.github.io/Tools/#/
 > **[setTimeStamp](/src/setTimeStamp)** - 设置不同地区的时间戳
 >
 > **[getTimeStamp](/src/getTimeStamp)** - 获取不同地区的时间戳
+>
+> **[parseAboutTime](/src/parseAboutTime)** - 解析当前时间的大致差时
+>
+> **[getAllLeftTime](/src/getAllLeftTime)** - 获取剩余时间的方法类（友好格式）
+>
+> **[getEndDateToMonth](/src/getEndDateToMonth)** - 通过月份获取截止时间
+>
+> **[classEndDate](/src/classEndDate)** - 获取截止时间的方法类
 
 #### 文件处理
 
@@ -347,6 +361,8 @@ https://lml110.github.io/Tools/#/
 > **[prefixStyle](/src/prefixStyle)** - 自动添加适配浏览器样式前缀
 > 
 > **[createCover](/src/createCover)** - 创建透明蒙层(应用场景：点击触发后其他操作不可触发)
+>
+> **[domIsHidden](/src/domIsHidden)** - 是否是隐藏元素
 
 #### 事件处理
 

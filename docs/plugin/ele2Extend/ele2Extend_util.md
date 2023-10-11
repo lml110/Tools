@@ -29,14 +29,20 @@ this.$tipsMessage('asf',1) // 成功提示
 
 **Example**  
 ```javascript
-click_delProduct(){
-  this.$tips2('永久删除该产品','product/deleteProduct',{productId:this.exportImportObj.id}).then((data) => {
-    this.exportImportObj.exportImportVisible = false;
-    this.fetchData();
-  }).catch((err)=>{
+this.$tips2('永久删除该组','product/deleteProductVerification',{type:this.type, id},{ meta:'$get' }).then((data) => {
+    this.$tipsMessage('删除成功',1)
+    return this.GetList();
+}).catch((err)=>{
     console.log('catch',err);
-  });
-},
+});
+this.$tips2('调用接口退保').then(() => {
+    return this.$get('refund/refundPolicy',{ policyUuid }).then((data) => {
+        console.log('调用接口退保',data);
+        return this.setTableData();
+    }).catch((err)=>{
+        console.log('err',err);
+    });
+}).catch((err)=>{});
 ```
 ## getEleHeight(nodeName) ⇒ <code>Number</code>
 <p>获取元素高度</p>

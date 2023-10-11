@@ -98,7 +98,7 @@ import cUploadButton from "@/components/Upload/c-upload-button";
 export default {
   props: {
     value: Boolean,
-    uuid: String
+    uuid: String,
   },
   components: { cUploadButton },
   data() {
@@ -112,7 +112,7 @@ export default {
         afterPreservationPremium: void 0,
         totalPremium: void 0,
         preservationDate: "",
-        proof: []
+        proof: [],
       },
       newInsuredList_form: {
         type: "select",
@@ -121,29 +121,29 @@ export default {
         list: [],
         multiple: true,
         "list-name": "name",
-        change: this.newInsuredList_change
+        change: this.newInsuredList_change,
       },
       decreaseForm: {
         totalPremium: {
           label: "原保费",
           type: "input-number",
           pre: 2,
-          disabled: true
+          disabled: true,
         },
         afterPreservationPremium: {
           label: "保全后的保费",
           tips: "请输入数字，不能大于原总保费",
           type: "input-number",
-          pre: 2
+          pre: 2,
         },
         preservationDate: {
           label: "保全时间",
           tips: "请选择保全时间",
-          type: "date"
+          type: "date",
         },
         proof: {
-          label: "上传凭证"
-        }
+          label: "上传凭证",
+        },
       },
 
       save_loading: false,
@@ -152,9 +152,9 @@ export default {
       columns: [
         { key: "name", title: "被保人姓名", align: "center" },
         { key: "relationToApplicant", title: "与投保人关系", align: "center" },
-        { key: "idNo", title: "被保人证件号码", align: "center" }
+        { key: "idNo", title: "被保人证件号码", align: "center" },
         // {title: '操作',slot:"optionId",width:80,align:'center'},
-      ]
+      ],
     };
   },
   created() {},
@@ -163,7 +163,7 @@ export default {
     Modal_ok(formInfo) {},
     newInsuredList_change(val) {
       const list = this.newInsuredList_form.list;
-      this.orderInsuredList = val.map(el => {
+      this.orderInsuredList = val.map((el) => {
         return list[el];
       });
       // console.log(list.slice(index,1));
@@ -171,11 +171,11 @@ export default {
     delete_Insured(row) {},
     getPolicyPreservationDetail() {
       return this.$get("preservation/getPolicyPreservationDetail", {
-        policyUuid: this.uuid
+        policyUuid: this.uuid,
       })
         .then((data = {}) => {
           const { orderInsuredList, orderSummary } = data;
-          this.newInsuredList_form.list = orderInsuredList.map(el => {
+          this.newInsuredList_form.list = orderInsuredList.map((el) => {
             el.relationToApplicant =
               relationToApplicantJson[el.relationToApplicant];
             return el;
@@ -183,15 +183,15 @@ export default {
           this.decreaseData.totalPremium = +orderSummary.totalPremium;
           this.orderSummary = orderSummary;
         })
-        .catch(err => {});
+        .catch((err) => {});
     },
     handleFileList(fileList) {
       this.decreaseData.proof = fileList;
     },
     onRemove(fileList) {
       this.decreaseData.proof = fileList;
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -241,26 +241,26 @@ export default {
         userIdOrMobile: this.userId, //保险师ID-未知
         content: "",
         templateCode: "",
-        params: ""
+        params: "",
       },
       SMS_Form: {
         userIdOrMobile: {
           tips: "请输入发送对象手机号或ID",
           label: "手机号/ID",
-          type: "input"
+          type: "input",
         },
         params: {
           label: "模版参数",
           tips: '请输入模版所需参数,多个参数用","分隔【投被保人】',
-          type: "input"
+          type: "input",
         },
         content: {
           label: "模版内容",
           disabled: true,
           autosize: true,
           dataType: "textarea",
-          type: "input"
-        }
+          type: "input",
+        },
       },
       templateData: {
         tips: "请选择模板名称",
@@ -268,7 +268,7 @@ export default {
         type: "select",
         list: [],
         "list-name": "templateName",
-        change: this.templateData_change
+        change: this.templateData_change,
       },
       BusinessTypeData: {
         tips: "请选择业务范围",
@@ -277,8 +277,8 @@ export default {
         change: this.BusinessTypeData_change,
         "list-name": "name",
         "list-key": "type",
-        list: {}
-      }
+        list: {},
+      },
     };
   },
   computed: {
@@ -288,8 +288,8 @@ export default {
       },
       set(newVal) {
         this.$emit("input", newVal);
-      }
-    }
+      },
+    },
   },
   created() {
     this._BusinessType();
@@ -298,11 +298,11 @@ export default {
     //确认按钮
     decreaseData_ok(requedata) {
       const { productAllList, productEditId, type, formPopupTitle } = this;
-      requedata.productList = requedata.productList.map(id => {
-        let el = productAllList.find(_ => _.productId == id) || {};
+      requedata.productList = requedata.productList.map((id) => {
+        let el = productAllList.find((_) => _.productId == id) || {};
         return {
           productId: id,
-          productName: el._productName
+          productName: el._productName,
         };
       });
       Object.assign(requedata, { type });
@@ -312,12 +312,12 @@ export default {
         requedata["id"] = productEditId;
       }
       return this.$post(url, requedata)
-        .then(data => {
+        .then((data) => {
           this.$tipsMessage(`${formPopupTitle}成功`, 1);
           this.verification_show = false;
           return this.GetList();
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
     },
@@ -338,7 +338,7 @@ export default {
       //编辑时防止重置数据被覆盖
       this.$nextTick(() => {
         this.productList_data.productList = productList.map(
-          _ => "" + _.productId
+          (_) => "" + _.productId
         );
       });
     },
@@ -353,21 +353,21 @@ export default {
       this.SMS_Info.templateCode = curs ? curs.templateCode : "";
     },
     _BusinessType() {
-      return this.$get("listCustomSmsTemplateBusinessType").then(data => {
+      return this.$get("listCustomSmsTemplateBusinessType").then((data) => {
         this.BusinessTypeData.list = data;
       });
     },
     _SmsTemplate() {
       return this.$get("listCustomSmsTemplate", {
-        type: this.SMS_Info.businessType
+        type: this.SMS_Info.businessType,
       })
-        .then(data => {
-          this.templateData.list = data.map(function(el, ix) {
+        .then((data) => {
+          this.templateData.list = data.map(function (el, ix) {
             el.value = "" + ix;
             return el;
           });
         })
-        .catch(err => {
+        .catch((err) => {
           this.templateData.list = [];
         });
     },
@@ -385,22 +385,22 @@ export default {
       delete requedata.businessIndex;
       this.save_loading = true;
       this.$post("sendSmsForCustom", requedata)
-        .then(data => {
+        .then((data) => {
           this.save_loading = false;
           this.$tipsMessage("发送成功", 1);
           this.isShow = false;
         })
-        .catch(err => {
+        .catch((err) => {
           this.save_loading = false;
           this.$tipsMessage("发送失败");
         });
-    }
+    },
   },
   mounted() {},
   watch: {
     userId(val) {
       this.SMS_Info.userIdOrMobile = val;
-    }
-  }
+    },
+  },
 };
 ```

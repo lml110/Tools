@@ -53,11 +53,12 @@ Author: liumouliang
 
 ## Slots
 
-| Name    | Description         | Bindings        |
-| ------- | ------------------- | --------------- |
-| header  | 头部扩展            |                 |
-| default | 中间扩展-可放置 tab | <br/><br/><br/> |
-| page    | 分页                |                 |
+| Name     | Description         | Bindings        |
+| -------- | ------------------- | --------------- |
+| header   | 头部扩展            |                 |
+| default  | 中间扩展-可放置 tab |                 |
+| col.slot |                     | <br/><br/><br/> |
+| page     | 分页                |                 |
 
 ---
 
@@ -101,10 +102,10 @@ export default {
         list: "content",
         index: "pageNum",
         pageIndex: 0,
-        meth: "$post"
+        meth: "$post",
       },
       initParams: {
-        evaluationMonth: "2023-04"
+        evaluationMonth: "2023-04",
       },
       queryForm: {},
       queryData: [
@@ -120,7 +121,7 @@ export default {
           value: [],
           className: "dateTime",
           format: "yyyy-MM-dd HH:mm:ss",
-          vformat: "yyyy-MM-dd HH:mm:ss"
+          vformat: "yyyy-MM-dd HH:mm:ss",
         },
         {
           type: "date",
@@ -128,13 +129,13 @@ export default {
           dateType: "month",
           key: "evaluationMonth",
           value: "",
-          tips: "考核月份"
+          tips: "考核月份",
         },
         {
           type: "select",
           key: "hasBasicLawBonus",
-          list: { "0": "否", "1": "是" },
-          tips: "是否涉及"
+          list: { 0: "否", 1: "是" },
+          tips: "是否涉及",
         },
         {
           type: "select",
@@ -142,7 +143,7 @@ export default {
           list: [],
           tips: "保险公司",
           "list-key": "companyId",
-          "list-name": "companyName"
+          "list-name": "companyName",
         },
         {
           type: "cascader",
@@ -153,17 +154,17 @@ export default {
           props: {
             value: "id",
             label: "name",
-            children: "children"
+            children: "children",
           },
           showAlLevels: false,
-          filterable: true
+          filterable: true,
         },
         {
           type: "button",
           label: "实收导入",
           show: true,
-          render: () => (this.show_importPaid = true)
-        }
+          render: () => (this.show_importPaid = true),
+        },
       ],
       columns: [
         { type: "index", title: "序号", align: "center", width: 50 },
@@ -172,19 +173,19 @@ export default {
           key: "refundStatusDesc",
           title: "审核状态",
           align: "center",
-          width: 80
+          width: 80,
         },
         {
           key: "refundPremiumStatusDesc",
           title: "退款状态",
           align: "center",
-          width: 80
+          width: 80,
         },
         {
           key: "refundAmount",
           title: "退款金额(元)",
           align: "center",
-          width: 90
+          width: 90,
         },
         { key: "policySn", title: "保单号", align: "center" },
         { key: "userId", title: "保险师ID", align: "center", width: 95 },
@@ -200,9 +201,9 @@ export default {
           slot: "optionId",
           align: "center",
           width: 72,
-          fixed: "right"
-        }
-      ]
+          fixed: "right",
+        },
+      ],
     };
   },
   methods: {
@@ -218,7 +219,7 @@ export default {
           name: "PayHelpListDetail",
           replace: false,
           params: { id: id },
-          query: { s: state }
+          query: { s: state },
         },
         this.$router,
         1
@@ -255,7 +256,7 @@ export default {
       });
       return res;
     },
-    _tips: _tips2
-  }
+    _tips: _tips2,
+  },
 };
 ```

@@ -27,6 +27,7 @@ Author: liumouliang
 | Name          | Description | Bindings |
 | ------------- | ----------- | -------- |
 | extend-header |             |          |
+| formRow.slot  |             |          |
 | default       |             |          |
 | extend-bottom |             |          |
 
@@ -91,17 +92,17 @@ export default {
         returnVisitTime: "",
         je: void 0,
         check: [],
-        smsTemplate: []
+        smsTemplate: [],
       },
       formManege: {
         id: {
           label: "用户ID",
-          rule: "number"
+          rule: "number",
         },
         je: {
           label: "金额",
           pre: 2,
-          type: "input-number"
+          type: "input-number",
         },
         smsTemplate: {
           type: "select",
@@ -110,36 +111,36 @@ export default {
           multiple: true,
           allowCreate: true,
           // clearable: '',
-          "list-name": "templateName"
+          "list-name": "templateName",
         },
         serviceType: {
           type: "select",
           label: "服务类型",
           slot: "empty",
           list: {
-            "1": "客户来电",
-            "2": "电话回访",
-            "3": "运营外呼"
-          }
+            1: "客户来电",
+            2: "电话回访",
+            3: "运营外呼",
+          },
         },
         serviceId: {
           label: "关联服务",
           type: "input",
-          slot: "suffix"
+          slot: "suffix",
         },
         content: {
           label: "反馈内容",
           disabled: false,
           autosize: true,
           type: "textarea",
-          max: 500
+          max: 500,
         },
         returnVisitTime: {
           type: "date",
           label: "预约回访",
           options: {
-            disabledDate: this.mon2now
-          }
+            disabledDate: this.mon2now,
+          },
         },
         check: {
           isButton: true,
@@ -155,11 +156,11 @@ export default {
             "麻醉1",
             "麻醉2",
             { label: "label1", value: "11" },
-            { label: "label2", value: "22", disabled: true }
+            { label: "label2", value: "22", disabled: true },
           ],
           change(v) {
             console.log("check", v);
-          }
+          },
         },
         radio: {
           // isButton: true,
@@ -173,13 +174,13 @@ export default {
             "麻醉1",
             "麻醉2",
             { label: "label1", value: "11" },
-            { label: "label2", value: "22", disabled: true }
+            { label: "label2", value: "22", disabled: true },
           ],
           change(v) {
             console.log("radio", v);
-          }
-        }
-      }
+          },
+        },
+      },
     };
   },
   methods: {
@@ -187,9 +188,9 @@ export default {
       this.$refs["formValidate"].validate((valid, props) => {
         if (valid) console.log("formValidate", valid, props);
       });
-    }
+    },
   },
   created() {},
-  mounted() {}
+  mounted() {},
 };
 ```

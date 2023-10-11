@@ -1,5 +1,5 @@
 ## \_noValue(value) ⇒ <code>Boolean</code>
-<p>非空并不为0</p>
+<p>不是0的空值 (设置默认值)</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  
