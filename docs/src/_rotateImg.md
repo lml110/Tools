@@ -1,4 +1,4 @@
-## \_rotateImg(img, degree, canvas) ⇒ <code>Canvas</code>
+## \_rotateImg(img, degree, canvas)
 <p>旋转图片</p>
 
 **Date**: 2017-11-23  
@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | img | <code>Image</code> |  |
 | degree | <code>Number</code> | <p>旋转角度</p> |
-| canvas | <code>Canvas</code> | <p>画布元素</p> |
+| canvas | <code>any</code> | <p>画布元素</p> |
 
 **Example**  
 ```javascript

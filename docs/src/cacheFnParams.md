@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | Fn | <code>function</code> | <p>操作</p> |
-| presetArgs | <code>params</code> | <p>参数</p> |
+| presetArgs | <code>array</code> | <p>参数</p> |
 
 **Example**  
 ```javascript

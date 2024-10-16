@@ -1,4 +1,4 @@
-## treeToArray(list, resObj, parents) ⇒ <code>Array</code>
+## treeToArray(sourceArr, options) ⇒ <code>Array</code>
 <p>递归查询数组</p>
 
 **Date**: 2017-11-23  
@@ -6,9 +6,8 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| list | <code>Array</code> | <p>原值</p> |
-| resObj | <code>Object</code> | <p>参数</p> |
-| parents | <code>Object</code> | <p>父级元素</p> |
+| sourceArr | <code>Array</code> | <p>原值</p> |
+| options | <code>Object</code> | <p>参数</p> |
 
 **Example**  
 ```javascript

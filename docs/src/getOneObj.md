@@ -1,4 +1,4 @@
-## easyCopyObj(sourceObj, exclude) ⇒ <code>Object</code>
+## getOneObj(sourceObj, exclude) ⇒ <code>Object</code>
 <p>获取单层级对象 - 浅拷贝</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | sourceObj | <code>Object</code> | <p>源对象</p> |
-| exclude | <code>Array</code> | <p>过滤Key</p> |
+| exclude | <code>Array</code> \| <code>String</code> | <p>过滤Key</p> |
 
 **Example**  
 ```javascript

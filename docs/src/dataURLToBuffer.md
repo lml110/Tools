@@ -1,4 +1,4 @@
-## dataURLToBuffer(base64, contentType) ⇒ <code>Buffer</code>
+## dataURLToBuffer(base64, contentType) ⇒ <code>ArrayBuffer</code>
 <p>dataURL转Buffer</p>
 
 **Date**: 2017-11-23  

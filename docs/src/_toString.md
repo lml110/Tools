@@ -1,12 +1,12 @@
-## \_toString(res) ⇒ <code>String</code>
-<p>转字符</p>
+## \_toString(req) ⇒ <code>String</code>
+<p>转字符串</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| res | <code>Value</code> | <p>任意值</p> |
+| req | <code>Array</code> \| <code>function</code> | <p>任意值</p> |
 
 **Example**  
 ```javascript

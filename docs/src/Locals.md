@@ -1,5 +1,7 @@
-## 本地缓存集合()
-## get(key) ⇒ <code>Value</code>
+## Locals()
+<p>prott-本地缓存集合</p>
+
+## get(key) ⇒ <code>any</code>
 <p>获取</p>
 
 **Date**: 2017-11-23  
@@ -13,7 +15,7 @@
 ```javascript
 Locals.get(key)
 ```
-## set(key, value, options)
+## set(key, [value])
 <p>设置</p>
 
 **Date**: 2017-11-23  
@@ -22,14 +24,13 @@ Locals.get(key)
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>String</code> | <p>无key清空</p> |
-| value | <code>Value</code> | <p>空值过期</p> |
-| options | <code>Object</code> | <p>配置信息</p> |
+| [value] | <code>any</code> | <p>空值过期</p> |
 
 **Example**  
 ```javascript
 Locals.set(key, value)
 ```
-## remove(key) ⇒ <code>null</code>
+## remove(key) ⇒ <code>any</code>
 <p>删除单个</p>
 
 **Date**: 2017-11-23  
@@ -43,7 +44,7 @@ Locals.set(key, value)
 ```javascript
 Locals.remove(key)
 ```
-## clear(key) ⇒ <code>null</code>
+## clear([key]) ⇒ <code>any</code>
 <p>删除</p>
 
 **Date**: 2017-11-23  
@@ -51,7 +52,7 @@ Locals.remove(key)
 
 | Param | Type | Description |
 | --- | --- | --- |
-| key | <code>String</code> | <p>删除值|默认全部删除</p> |
+| [key] | <code>String</code> | <p>删除值|默认全部删除</p> |
 
 **Example**  
 ```javascript

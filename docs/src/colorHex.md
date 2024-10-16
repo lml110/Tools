@@ -10,5 +10,6 @@
 
 **Example**  
 ```javascript
-console.log(colorHex('rgb(23, 245, 56)'));   // #17f538console.log(colorHex('#fff'));   // #ffffff
+console.log(colorHex('rgb(23, 245, 56)'));   // #17f538
+console.log(colorHex('#fff'));   // #ffffff
 ```

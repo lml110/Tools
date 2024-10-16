@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| idCard | <code>String</code> | 
+| idCard | <code>String</code> \| <code>number</code> | 
 
 **Example**  
 ```javascript

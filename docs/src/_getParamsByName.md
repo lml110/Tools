@@ -1,4 +1,4 @@
-## \_getParamsByName(url, name) ⇒ <code>value</code>
+## \_getParamsByName(url, name) ⇒ <code>String</code>
 <p>根据参数获取链接中的对应值</p>
 
 **Date**: 2017-11-23  

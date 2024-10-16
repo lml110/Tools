@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | idCard | <code>String</code> \| <code>Number</code> |  |
-| isAge | <code>Val</code> | <p>是否需要包含年龄</p> |
+| isAge | <code>boolean</code> | <p>是否需要包含年龄</p> |
 
 **Example**  
 ```javascript

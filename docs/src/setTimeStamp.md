@@ -7,7 +7,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>Date</code> |  |
+| date | <code>any</code> |  |
 | zone | <code>Number</code> | <p>时区</p> |
 
 **Example**  

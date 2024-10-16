@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| arr | <code>Arrar</code> |  |
+| arr | <code>Array</code> |  |
 | type | <code>Number</code> | <p>1-for,0-set</p> |
 
 **Example**  

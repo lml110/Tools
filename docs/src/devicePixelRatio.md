@@ -1,0 +1,3 @@
+## devicePixelRatio
+<p>devicePixelRatio</p>
+

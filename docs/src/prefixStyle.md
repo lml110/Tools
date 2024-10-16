@@ -10,10 +10,10 @@
 
 **Example**  
 ```javascript
-this.spinner.style.webkitTransform = 
-this.spinner.style.MozTransform = 
-this.spinner.style.msTransform = 
-this.spinner.style.OTransform = 
+this.spinner.style.webkitTransform =
+this.spinner.style.MozTransform =
+this.spinner.style.msTransform =
+this.spinner.style.OTransform =
 this.spinner.style.transform = myTransform;
 
 transform = prefixStyle('transform'),

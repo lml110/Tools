@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| value | <code>null</code> | 
+| value | <code>any</code> | 
 
 **Example**  
 ```javascript

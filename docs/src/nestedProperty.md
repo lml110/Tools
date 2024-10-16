@@ -1,4 +1,9 @@
-## default
+## nestedProperty
+**Date**: 2017-11-23  
+**Author**: liumouliang  
+### new nestedProperty()
+<p>嵌套对象处理方法</p>
+
 **Example**  
 ```javascript
 var array = [
@@ -17,7 +22,7 @@ var obj = {
   }
 };
 let pop = []
-console.log(obj?.a?.b); 
+console.log(obj?.a?.b);
 console.log(nestedProperty.get(pop, "length"));
 //因`?.`不能使用
 console.log(nestedProperty.get(obj, "a.b.c.arr.+.c"));
@@ -27,23 +32,23 @@ console.log(nestedProperty.get(obj, "a.d.c")); //undefined
 console.log(nestedProperty.get(obj)); //原值
 ```
 ## hasNestedProperty(object, property, options:) ⇒
-<p>Tell if a nested object has a given property (or array a given index)
-given an object such as a.b.c.d = 5, hasNestedProperty(a, &quot;b.c.d&quot;) will return true.
-It also returns true if the property is in the prototype chain.</p>
+<p>告诉嵌套对象是否具有给定的属性
+给定一个对象，例如a.b.c.d=5，hasNestedProperty（a，“b.c.d”）将返回true。
+如果属性在原型链中，它也会返回true。</p>
 
-**Returns**: <p>true if has (property in object), false otherwise</p>  
+**Returns**: <p>true if有（对象中的属性），否则为false</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | object | <code>Object</code> | <p>the object to get the property from</p> |
 | property | <code>String</code> | <p>the path to the property as a string</p> |
-| options: | <code>Object</code> | <ul> <li>own: set to reject properties from the prototype</li> </ul> |
+| options: | <code>Object</code> | <ul> <li>设置为拒绝原型中的属性</li> </ul> |
 
 ## setNestedProperty(object, property, value) ⇒
-<p>Set the property of an object nested in one or more objects
-If the property doesn't exist, it gets created.</p>
+<p>设置嵌套在一个或多个对象中的对象的属性
+如果属性不存在，则会创建它</p>
 
-**Returns**: <p>object if no assignment was made or the value if the assignment was made</p>  
+**Returns**: <p>object</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -52,15 +57,15 @@ If the property doesn't exist, it gets created.</p>
 | value |  | <p>the value to set</p> |
 
 ## isInNestedProperty(object, property, objectInPath, options:) ⇒ <code>boolean</code>
-<p>Tell if an object is on the path to a nested property
-If the object is on the path, and the path exists, it returns true, and false otherwise.</p>
+<p>告知对象是否位于嵌套属性的路径上
+如果对象在路径上，并且路径存在，则返回true，否则返回false。</p>
 
-**Returns**: <code>boolean</code> - <p>true if the object is on the path</p>  
+**Returns**: <code>boolean</code> - <p>true</p>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | object | <code>Object</code> | <p>to get the nested property from</p> |
 | property | <code>String</code> | <p>name of the nested property</p> |
 | objectInPath | <code>Object</code> | <p>the object to check</p> |
-| options: | <code>Object</code> | <ul> <li>validPath: return false if the path is invalid, even if the object is in the path</li> </ul> |
+| options: | <code>Object</code> | <ul> <li>validPath: 如果路径无效，即使对象在路径中，也返回false</li> </ul> |
 

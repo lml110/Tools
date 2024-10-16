@@ -1,5 +1,5 @@
 ## Cookies()
-<p>Cookie集合</p>
+<p>prott-Cookie集合</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  
@@ -20,7 +20,7 @@ cookies.get('escaped') // 北
 cookies.get('default') // 北
 cookies.get() // { escaped: '北', default: '北' }
 ```
-## get(key) ⇒ <code>Value</code>
+## get(key) ⇒ <code>any</code>
 <p>获取</p>
 
 **Date**: 2017-11-23  
@@ -52,7 +52,7 @@ Cookies.info()
 ```javascript
 Cookies.keys()
 ```
-## set(key, value, options)
+## set(key, [value], [options])
 <p>设置</p>
 
 **Date**: 2017-11-23  
@@ -61,8 +61,8 @@ Cookies.keys()
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>String</code> | <p>无key清空</p> |
-| value | <code>Value</code> | <p>空值过期</p> |
-| options | <code>Object</code> | <p>配置信息</p> |
+| [value] | <code>any</code> | <p>空值过期</p> |
+| [options] | <code>Object</code> | <p>配置信息</p> |
 
 **Example**  
 ```javascript
@@ -72,7 +72,7 @@ Cookies.keys()
 //options.secure - 安全
 Cookies.set(key, value)
 ```
-## remove(key) ⇒ <code>null</code>
+## remove(key) ⇒ <code>any</code>
 <p>删除单个</p>
 
 **Date**: 2017-11-23  
@@ -86,7 +86,7 @@ Cookies.set(key, value)
 ```javascript
 Cookies.remove(key)
 ```
-## clear(key) ⇒ <code>null</code>
+## clear(key) ⇒ <code>any</code>
 <p>删除</p>
 
 **Date**: 2017-11-23  

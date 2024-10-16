@@ -6,9 +6,10 @@
 
 | Param | Type |
 | --- | --- |
-| context | <code>context</code> | 
+| context | <code>any</code> | 
 
 **Example**  
 ```javascript
-// window.devicePixelRatiogetPixelRatio(context)
+// window.devicePixelRatio
+getPixelRatio(context)
 ```

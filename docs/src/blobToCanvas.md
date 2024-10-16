@@ -1,4 +1,4 @@
-## blobToCanvas(blob, options) ⇒ <code>Promise</code>
+## blobToCanvas(blob, [options]) ⇒ <code>Promise</code>
 <p>文件流转Canvas</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | blob | <code>Blob</code> | <p>文件流</p> |
-| options | <code>Object</code> | <p>配置项</p> |
+| [options] | <code>Object</code> | <p>配置项</p> |
 
 **Example**  
 ```javascript

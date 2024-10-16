@@ -9,7 +9,7 @@
 | list | <code>Array</code> | <p>[['a1','a2'],['b1','b2']]</p> |
 | data | <code>Object</code> | <p>{'a1':valData}</p> |
 | filter | <code>Array</code> | <p>['id','valueName'] valData.id</p> |
-| ...refs | <code>null</code> | <p>data过滤数组 || ','分隔符</p> |
+| ...refs | <code>any</code> | <p>data过滤数组 || ','分隔符</p> |
 
 **Example**  
 ```javascript

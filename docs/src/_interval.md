@@ -1,4 +1,4 @@
-## \_interval() ⇒ <code>new</code>
+## \_interval() ⇒ <code>Class</code>
 <p>通用计时函数</p>
 
 **Date**: 2017-11-23  

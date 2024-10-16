@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| element | <code>ele</code> | 
+| element | <code>Element</code> | 
 | className | <code>String</code> | 
 
 **Example**  

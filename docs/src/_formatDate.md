@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>date</code> \| <code>dataVal</code> | <p>默认当前时间</p> |
+| date | <code>any</code> | <p>默认当前时间</p> |
 | fmt | <code>String</code> | <p>格式|默认：yyyy-MM-DD hh:mm:ss</p> |
 
 **Example**  

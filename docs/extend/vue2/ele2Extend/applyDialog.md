@@ -6,29 +6,31 @@ Author: liumouliang
 
 ## Props
 
-| Prop name    | Description            | Type    | Values | Default                                                                      |
-| ------------ | ---------------------- | ------- | ------ | ---------------------------------------------------------------------------- |
-| value        |                        | boolean | -      |                                                                              |
-| customClass  | 自定义类名             | string  | -      |                                                                              |
-| title        | 标题文本               | string  | -      | ''                                                                           |
-| titleIcon    | 标题图标               | string  | -      | ''                                                                           |
-| width        | 全局宽度               | string  | -      | '50%'                                                                        |
-| size         | 尺寸                   | string  | -      | 'medium'                                                                     |
-| top          | 位置 top               | string  | -      | '8vh'                                                                        |
-| appendToBody | 是否插入至 body 元素上 | boolean | -      | false                                                                        |
-| loading      | 加载状态               | boolean | -      | false                                                                        |
-| isFooter     | 是否需要底部区域       | boolean | -      | false                                                                        |
-| cancelText   | 取消按钮文本           | string  | -      | '取消'                                                                       |
-| okText       | 确认按钮文本           | string  | -      | '确认'                                                                       |
-| options      |                        | object  | -      | {<br/> close_on_press_escape: false,<br/> close_on_click_modal: false,<br/>} |
-| notCencel    | 是否取消触发时隐藏     | boolean | -      | false                                                                        |
+| Prop name    | Description            | Type    | Values | Default                                                                                                                                              |
+| ------------ | ---------------------- | ------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value        |                        | boolean | -      |                                                                                                                                                      |
+| customClass  | 自定义类名             | string  | -      | ''                                                                                                                                                   |
+| title        | 标题文本               | string  | -      | ''                                                                                                                                                   |
+| titleIcon    | 标题图标               | string  | -      | ''                                                                                                                                                   |
+| width        | 全局宽度               | string  | -      | '50%'                                                                                                                                                |
+| size         | 尺寸                   | string  | -      | 'medium'                                                                                                                                             |
+| top          | 位置 top               | string  | -      | '8vh'                                                                                                                                                |
+| appendToBody | 是否插入至 body 元素上 | boolean | -      | false                                                                                                                                                |
+| loading      | 加载状态               | boolean | -      | false                                                                                                                                                |
+| isFooter     | 是否需要底部区域       | boolean | -      | false                                                                                                                                                |
+| cancelText   | 取消按钮文本           | string  | -      | '取消'                                                                                                                                               |
+| okText       | 确认按钮文本           | string  | -      | '确认'                                                                                                                                               |
+| showClose    | 是否显示关闭按钮       | boolean | -      | true                                                                                                                                                 |
+| options      |                        | object  | -      | {<br/> close_on_press_escape: false, //是否可以通过按下 ESC 关闭 Dialog<br/> close_on_click_modal: false, //是否可以通过点击 modal 关闭 Dialog<br/>} |
+| notCencel    | 是否取消触发时隐藏     | boolean | -      | false                                                                                                                                                |
 
 ## Events
 
 | Event name | Properties | Description    |
 | ---------- | ---------- | -------------- |
 | input      |            | value 状态变化 |
-| cancel     |            | 取消后触发     |
+| off        |            | 取消后触发     |
+| cancel     |            | 关闭后触发     |
 | ok         |            | 确认后触发     |
 
 ## Slots
@@ -51,6 +53,8 @@ Author: liumouliang
     width="300px"
     isFooter
     okText="下一步"
+    :showClose="false"
+    :options="options"
     @cancel="dialog_cancel"
     @ok="dialog_ok"
   >
@@ -74,6 +78,10 @@ export default {
         listName: "保全减人",
         listKey: "decreaseInsured",
       },
+      options: {
+        close_on_press_escape: false, //是否可以通过按下 ESC 关闭 Dialog
+        close_on_click_modal: false, //是否可以通过点击 modal 关闭 Dialog
+      },
     };
   },
   created() {},
@@ -96,6 +104,8 @@ export default {
     },
     dialog_cancel() {
       this.filed = "";
+      const Fn = getObjVal(this, "$refs.uploadButton.clearFiles");
+      return Fn && Fn();
     },
   },
 };

@@ -6,9 +6,10 @@
 
 | Param | Type |
 | --- | --- |
-| val | <code>val</code> | 
+| val | <code>string</code> | 
 
 **Example**  
 ```javascript
+//开头为1的11位数字
 checkPhone(val)
 ```

@@ -1,4 +1,4 @@
-## mergeJson(keyName, refs) ⇒ <code>Array</code>
+## mergeJson(keyFN, refs) ⇒ <code>Array</code>
 <p>根据标识合并多个单层数组或对象</p>
 
 **Date**: 2019-06-27  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| keyName | <code>String</code> | <p>唯一标识</p> |
+| keyFN | <code>String</code> | <p>唯一标识</p> |
 | refs | <code>Array</code> \| <code>Object</code> | <p>arguments 单层数组或对象</p> |
 
 **Example**  
@@ -44,4 +44,23 @@ mergeJson(curs=>{
     return ''+curs.datumId + curs.id
 },datumList,checkFailResultList)
 mergeJson('datumId',datumList[0],datumList[1],checkFailResultList[0])
+//# 示例二
+const lml1 = [
+    {
+        dutyMax: 'GP3311',
+        dutyMin: 'GP3312',
+        rate: 0.1,
+        static: true,
+    },
+    {
+        dutyMax: 'GP3321',
+        dutyMin: 'GP3322',
+        rate: 0.1,
+    },
+]
+const res = mergeJson(curs=>{
+    return curs.dutyMin
+}, lml1,[{dutyMin: 'GP3322',"nameStrDefault": ['A方案','B方案'],rate:1}])
+
+console.log(JSON.stringify(res)); //[{"dutyMax":"GP3311","dutyMin":"GP3312","rate":0.1,"static":true},{"dutyMax":"GP3321","dutyMin":"GP3322","rate":1,"nameStrDefault":["A方案","B方案"]}]
 ```

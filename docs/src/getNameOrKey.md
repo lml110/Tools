@@ -7,8 +7,8 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | arr | <code>Array</code> |  |
-| queryFn | <code>function</code> \| <code>string</code> | <p>过滤函数</p> |
-| queryKey | <code>Array</code> | <p>数组遍历一维[] // Object.keys || Object.values</p> |
+| queryFn | <code>any</code> | <p>过滤函数</p> |
+| queryKey | <code>any</code> | <p>数组遍历一维[] // Object.keys || Object.values</p> |
 
 **Example**  
 ```javascript

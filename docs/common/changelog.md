@@ -29,6 +29,18 @@
 
 # 改动日志
 
+## 1.0.1.20231103
+
+- 新增 `PollingQuery`方法
+- 新增 `awaitTo`方法
+- 新增 `findForStatic`方法
+
+## 1.0.1.20231027
+
+- 新增 ele的`cell-cascader`级联组件中change事件
+- 新增 change事件可以传递多个参数
+- 新增 `getAllLeftTime`方法中的防抖动变量
+
 ## 1.0.1.20231010
 
 - 恢复 `getEndDateToMonth`方法

@@ -1,10 +1,3 @@
-## \_filterData()
-<p>目标：</p>
-<ol>
-<li>遍历所有元素中的所有有效值</li>
-<li>_levelFn：判断是否进行递归，并返回递归字段</li>
-</ol>
-
 ## filterData(source, queryFn) ⇒ <code>Array</code>
 <p>深度过滤数据</p>
 
@@ -28,4 +21,30 @@ let resData = filterData(data, (res, ix,ss, pk,ps) => {
     }
 });
 console.log(resData);
+// 只给了树结构中的最后一条数据，查询出对应元素的结构,
+// 但有个缺点：这是查询所有元素的，即便查询到目标依然会继续查询，这样也可防止出现多个重名情况
+// 关联查询 使用 key =='id' && value == 51432 //先查询出具体的值 && curs.level == 3
+fill_data(data){
+    trace('fill_data',this.dataList)
+    const valueData = filterData(this.dataList, (value, key, curs, pk,ps)=>{
+        // trace('fill_data == ',value, key)
+        if(key =='id' && value == 51432){
+            let _valueList = [];
+            let _valueKeys = [];
+            _for(pk, _ =>{
+                _valueKeys.push(_);
+                if(_ !== "children"){
+                    const obj = getObjVal(this.dataList, _valueKeys.join('.'));
+                    if(obj){
+                        _valueList.push(getOneObj(obj,'children'));
+                    };
+                }
+            });
+            return _valueList;
+        }
+    },(value, key) => {
+        return !!(value.id) || key === 'children'; //查询的是对象并且存在id || 属性是children (value is array)
+    })
+    trace('valueData == ',valueData)
+},
 ```

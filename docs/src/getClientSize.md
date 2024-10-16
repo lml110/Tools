@@ -1,4 +1,4 @@
-## getClientSize(size, element) ⇒ <code>Number</code>
+## getClientSize(size, [element]) ⇒ <code>Number</code>
 <p>根据size获取对应尺寸</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | size | <code>String</code> | <p>尺寸值|默认：height</p> |
-| element | <code>ele</code> | <p>默认：body</p> |
+| [element] | <code>Element</code> | <p>默认：body</p> |
 
 **Example**  
 ```javascript

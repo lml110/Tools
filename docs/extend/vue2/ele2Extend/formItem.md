@@ -16,6 +16,16 @@ Author: liumouliang
 | forms      | 类型数据    | object        | -      | {}      |
 | list       |             | array\|object | -      |         |
 
+## Methods
+
+### getEleComponent
+
+> 获取 ele 对应内置组件
+
+### getEleFormItem
+
+> 获取 ele-form-item 组件
+
 ## Events
 
 | Event name | Properties | Description |
@@ -73,6 +83,7 @@ Author: liumouliang
         </el-col>
     </el-row>
     <form-item required prop="000001" :forms="formManege['000001']" />
+    <form-item prop="cascader" :forms="formManege.cascader" :list="areaCodeList" @change="change_areaList" />
     <form-item>
         <form-button @click="click_submit">保存</form-button>
     </form-item>
@@ -93,8 +104,19 @@ export default {
         je: void 0,
         check: [],
         smsTemplate: [],
+        cascader: null,
       },
       formManege: {
+        cascader: {
+          label: "开户地",
+          type: "cascader",
+          showAlLevels: true,
+          props: {
+            label: "name",
+            value: "code",
+            checkStrictly: true,
+          },
+        },
         id: {
           label: "用户ID",
           rule: "number",
@@ -188,6 +210,28 @@ export default {
       this.$refs["formValidate"].validate((valid, props) => {
         if (valid) console.log("formValidate", valid, props);
       });
+    },
+    _findAreaName(list, code) {
+      const obj = findTarget(list, (_) => _.code == code, "children") || {};
+      return obj.name || "";
+    },
+    change_areaList(val, props, list, resFn) {
+      const [provinceCode, cityCode] = val;
+      let res = {
+        provinceCode,
+        provinceName: this._findAreaName(list, provinceCode),
+      };
+      if (cityCode) {
+        res = Object.assign(res, {
+          cityCode,
+          cityName: this._findAreaName(list, cityCode),
+        });
+      }
+      this.groupPolicyRefundInfo = Object.assign(
+        this.groupPolicyRefundInfo,
+        res
+      );
+      return resFn(res);
     },
   },
   created() {},

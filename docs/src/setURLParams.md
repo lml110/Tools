@@ -1,4 +1,4 @@
-## setURLParams(url, changes, useChange)
+## setURLParams(url, [changes], [useChange])
 <p>设置url中参数覆盖</p>
 
 **Date**: 2021-12-22  
@@ -7,8 +7,8 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | url | <code>String</code> | <p>链接</p> |
-| changes | <code>Object</code> | <p>改动集合</p> |
-| useChange | <code>Booeal</code> | <p>是否完全使用改动的集合</p> |
+| [changes] | <code>Object</code> | <p>改动集合</p> |
+| [useChange] | <code>Boolean</code> | <p>是否完全使用改动的集合</p> |
 
 **Example**  
 ```javascript

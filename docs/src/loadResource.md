@@ -1,4 +1,4 @@
-## loadResource(url:, type) ⇒ <code>url</code>
+## loadResource(url:, [type]) ⇒ <code>Promise</code>
 <p>加载页面资源文件</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | url: | <code>String</code> | <p>文件远程地址</p> |
-| type | <code>String</code> | <p>css || js || pre</p> |
+| [type] | <code>String</code> | <p>css || js || pre</p> |
 
 **Example**  
 ```javascript

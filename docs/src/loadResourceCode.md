@@ -1,4 +1,4 @@
-## loadResourceCode(code, type) ⇒ <code>null</code>
+## loadResourceCode(code, type) ⇒ <code>any</code>
 <p>加载页面代码</p>
 
 **Date**: 2017-11-23  

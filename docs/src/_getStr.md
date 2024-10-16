@@ -10,5 +10,8 @@
 
 **Example**  
 ```javascript
-//处理'array', 'number'console.log(_getStr(0)); //'0'console.log(_getStr([])); //''
+//处理'date', 'number', 'boolean'
+console.log(_getStr(0)); //'0'
+console.log(_getStr(new Date())); //'标准时间'
+console.log(_getStr(false)); //'false'
 ```

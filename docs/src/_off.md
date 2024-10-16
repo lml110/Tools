@@ -1,4 +1,4 @@
-## \_off(element, event, handler) ⇒ <code>null</code>
+## \_off(element, event, handler)
 <p>解绑事件</p>
 
 **Date**: 2017-11-23  
@@ -6,8 +6,8 @@
 
 | Param | Type |
 | --- | --- |
-| element | <code>ele</code> | 
-| event | <code>eve</code> | 
+| element | <code>Element</code> | 
+| event | <code>String</code> | 
 | handler | <code>function</code> | 
 
 **Example**  

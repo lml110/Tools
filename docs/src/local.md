@@ -1,4 +1,4 @@
-## local(key, value) ⇒ <code>null</code>
+## local(key, value) ⇒ <code>any</code>
 <p>本地缓存简化版</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type |
 | --- | --- |
 | key | <code>String</code> | 
-| value | <code>Value</code> | 
+| value | <code>any</code> | 
 
 **Example**  
 ```javascript

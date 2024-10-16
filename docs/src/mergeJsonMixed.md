@@ -1,4 +1,4 @@
-## mergeJsonMixed(keyName, refs) ⇒ <code>Array</code>
+## mergeJsonMixed(keyFN, refs) ⇒ <code>Array</code>
 <p>根据标识获取多个单层数组的交集</p>
 
 **Date**: 2019-06-27  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| keyName | <code>String</code> | <p>唯一标识</p> |
+| keyFN | <code>String</code> | <p>唯一标识</p> |
 | refs | <code>Array</code> | <p>arguments 单层数组</p> |
 
 **Example**  

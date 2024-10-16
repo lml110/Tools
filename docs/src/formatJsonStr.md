@@ -1,4 +1,4 @@
-## formatJsonStr(str, cut) ⇒ <code>json</code>
+## formatJsonStr(str, cut) ⇒ <code>any</code>
 <p>格式json字符串</p>
 
 **Date**: 2017-11-23  

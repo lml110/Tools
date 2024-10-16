@@ -10,5 +10,6 @@
 
 **Example**  
 ```javascript
-//iframe之类的可能也是空标签clearEmptyTags(str)
+//iframe之类的可能也是空标签
+clearEmptyTags(str)
 ```

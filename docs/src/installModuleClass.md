@@ -1,4 +1,4 @@
-## installModuleClass(that, store, includes) ⇒ <code>Null</code>
+## installModuleClass(that, store, includes) ⇒ <code>any</code>
 <p>class类绑定this指向</p>
 
 **Date**: 2021-12-22  

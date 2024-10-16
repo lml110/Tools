@@ -1,4 +1,4 @@
-## \_toJson(str) ⇒ <code>json</code>
+## \_toJson(str) ⇒ <code>any</code>
 <p>转json</p>
 
 **Date**: 2017-11-23  

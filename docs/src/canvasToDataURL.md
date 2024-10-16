@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| canvas | <code>Canvas</code> | <p>画布</p> |
+| canvas | <code>any</code> | <p>画布</p> |
 | type | <code>String</code> | <p>图片类型 src|jpg|png</p> |
 | quality | <code>Number</code> | <p>质量|默认：0.8</p> |
 

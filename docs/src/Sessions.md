@@ -1,5 +1,7 @@
-## 会话缓存集合()
-## get(key) ⇒ <code>Value</code>
+## Sessions()
+<p>prott-会话缓存集合</p>
+
+## get(key) ⇒ <code>any</code>
 <p>获取</p>
 
 **Date**: 2017-11-23  
@@ -13,7 +15,7 @@
 ```javascript
 Sessions.get(key)
 ```
-## set(key, value)
+## set(key, [value])
 <p>设置</p>
 
 **Date**: 2017-11-23  
@@ -22,13 +24,13 @@ Sessions.get(key)
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>String</code> |  |
-| value | <code>Value</code> | <p>空值删除</p> |
+| [value] | <code>any</code> | <p>空值删除</p> |
 
 **Example**  
 ```javascript
 Sessions.set(key, value)
 ```
-## remove(key) ⇒ <code>null</code>
+## remove(key) ⇒ <code>any</code>
 <p>删除单个</p>
 
 **Date**: 2017-11-23  
@@ -42,7 +44,7 @@ Sessions.set(key, value)
 ```javascript
 Sessions.remove(key)
 ```
-## clear(key) ⇒ <code>null</code>
+## clear([key]) ⇒ <code>any</code>
 <p>删除</p>
 
 **Date**: 2017-11-23  
@@ -50,7 +52,7 @@ Sessions.remove(key)
 
 | Param | Type | Description |
 | --- | --- | --- |
-| key | <code>String</code> | <p>删除值|默认全部删除</p> |
+| [key] | <code>String</code> | <p>删除值|默认全部删除</p> |
 
 **Example**  
 ```javascript

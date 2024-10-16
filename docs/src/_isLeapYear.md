@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| year | <code>Date</code> | <p>可以是一个date类型，也可以是一个int类型的年份，不传默认当前时间</p> |
+| year | <code>any</code> | <p>可以是一个date类型，也可以是一个int类型的年份，不传默认当前时间</p> |
 
 **Example**  
 ```javascript

@@ -6,10 +6,11 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| bool | <code>null</code> |  |
+| bool | <code>any</code> |  |
 | val | <code>Boolean</code> | <p>默认值</p> |
 
 **Example**  
 ```javascript
-//是否需要自动删除空参数delEmpty = isThisBoolean(null,true);
+//是否需要自动删除空参数
+delEmpty = isThisBoolean(null,true);
 ```

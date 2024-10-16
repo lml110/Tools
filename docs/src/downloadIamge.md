@@ -1,4 +1,4 @@
-## downloadIamge(imgsrc, name) ⇒ <code>Blob</code>
+## downloadIamge(imgsrc, name)
 <p>下载图片</p>
 
 **Date**: 2017-11-23  

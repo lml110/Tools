@@ -1,4 +1,4 @@
-## getMaximin(arr, maximin) ⇒ <code>Value</code>
+## getMaximin(arr, maximin) ⇒ <code>any</code>
 <p>获取简单一维数组中的最大值</p>
 
 **Date**: 2017-11-23  

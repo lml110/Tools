@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| source | <code>Number</code> \| <code>String</code> |  |
+| source | <code>any</code> |  |
 | len | <code>Number</code> | <p>可选-长度|默认2</p> |
 
 **Example**  

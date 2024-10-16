@@ -1,4 +1,4 @@
-## throttle(func, wait, options) ⇒ <code>Null</code>
+## throttle(func, wait, options) ⇒ <code>any</code>
 <p>节流函数</p>
 
 **Date**: 2017-11-23  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| func | <code>Funcrion</code> |  |
+| func | <code>function</code> |  |
 | wait | <code>Number</code> | <p>等待时间</p> |
 | options | <code>Object</code> | <p>同防抖</p> |
 

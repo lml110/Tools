@@ -1,4 +1,4 @@
-## \_browser() ⇒ <code>new</code>
+## \_browser() ⇒ <code>any</code>
 <p>获取移动端设备环境类</p>
 
 **Date**: 2017-11-23  

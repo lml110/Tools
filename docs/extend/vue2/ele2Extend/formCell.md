@@ -13,6 +13,12 @@ Author: liumouliang
 | row       | 控件类型数据 | object        | -      | {}      |
 | list      | 控件源数据   | array\|object | -      |         |
 
+## Methods
+
+### getEleComponent
+
+> 获取 ele 对应内置组件
+
 ## Events
 
 | Event name | Properties | Description |
@@ -43,14 +49,41 @@ Author: liumouliang
 <form-cell v-model="lmldata[5]" type="switch" :row="lmls.switch"></form-cell>
 <form-cell v-model="dateList" type="date" :row="lmls.datetimerange"></form-cell>
 <form-cell v-model="lmldata[6]" type="date"></form-cell>
+<!-- 地址 -->
+<form-cell
+  v-model="selectAddress"
+  type="cascader"
+  :row="areaConfig"
+  :list="areaCodeList"
+  @change="change_areaList"
+/>
+<el-form :disabled="!isEdit" class="process-form-box">
+    <form-cell v-model="transitStatus" type="radio" :list="transitList" @change="transit_change" />
+    <form-cell v-if="transitStatus==3" class="process-form-remark" v-model="remark" type="textarea" :row="remarkRow" />
+</el-form>
 ```
 
 ```js
 export default {
   data() {
     return {
+      //# radio
+      transitStatus: "",
+      transitList: [
+        { label: "通过", value: "2" },
+        { label: "不通过", value: "3" },
+      ],
+      //# textarea
+      remark: "",
+      remarkRow: {
+        autosize: { minRows: 3, maxRows: 8 },
+        tips: "请填写不通过原因",
+      },
+
       lmldata: [],
       dateList: [],
+      selectAddress: {},
+
       forms: {
         id: {
           label: "用户ID",
@@ -138,6 +171,33 @@ export default {
             console.log("radio", v);
           },
         },
+        //地址address
+        areaConfig: {
+          // label: '开户地',
+          // type: 'cascader',
+          showAlLevels: true, //显示全部
+          changeOnSelect: true,
+          filterable: true, //是否搜索
+          tips: "请选择地址级联",
+          isOnlyLastLevel: true, //选中数据只有最后一级
+          props: {
+            label: "name",
+            value: "code",
+            checkStrictly: true, //单选
+            multiple: false, //多选
+          },
+          _initFn(v) {
+            //初始化
+            let res = [];
+            _for(v, (el) => {
+              if (el.code) {
+                res.push(el.code);
+              }
+            });
+            return res;
+          },
+        },
+        areaCodeList: [],
       },
       lmls: {
         radio: {
@@ -174,12 +234,55 @@ export default {
           separator: "到",
           // range: 'daterange',
           dateType: "datetimerange",
+          defaultTime: ["00:00:00", "23:59:59"],
           change(val) {
             console.log("datetimerange", val);
           },
         },
       },
     };
+  },
+  methods: {
+    transit_change(status) {
+      if (status != 3) {
+        this.remark = "";
+      }
+    },
+    _findAreaName(list, code) {
+      const obj = findTarget(list, (_) => _.code == code, "children") || {};
+      return obj.name || "";
+    },
+    // 正常的开户地传值
+    change_areaList(val, props, list, resFn) {
+      const [provinceCode, cityCode] = val;
+      let res = {
+        provinceCode,
+        provinceName: this._findAreaName(list, provinceCode),
+      };
+      if (cityCode) {
+        res = Object.assign(res, {
+          cityCode,
+          cityName: this._findAreaName(list, cityCode),
+        });
+      }
+      this.groupPolicyRefundInfo = Object.assign(
+        this.groupPolicyRefundInfo,
+        res
+      );
+      return resFn(res);
+    },
+    change_areaList(val, props, list, resFn) {
+      let res = {};
+
+      if (val.length == 3) {
+        const [provinceCode, cityCode, areaCode] = val;
+        res = this.getAreaData(provinceCode, cityCode, areaCode);
+        trace("change_areaList", res);
+      } else {
+        this.clearSelectAddress();
+      }
+      return resFn(res);
+    },
   },
 };
 ```

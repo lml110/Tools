@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>null</code> | <p>原值</p> |
+| value | <code>any</code> | <p>原值</p> |
 
 **Example**  
 ```javascript

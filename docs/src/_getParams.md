@@ -1,4 +1,4 @@
-## \_getParams(url, name) ⇒ <code>Object</code> \| <code>String</code>
+## \_getParams(url, [name]) ⇒ <code>Object</code> \| <code>String</code>
 <p>获取URL字符串的参数</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | url | <code>String</code> | <p>地址</p> |
-| name | <code>String</code> | <p>可选-单值</p> |
+| [name] | <code>String</code> | <p>可选-单值</p> |
 
 **Example**  
 ```javascript

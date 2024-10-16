@@ -6,8 +6,8 @@
 
 | Param | Type |
 | --- | --- |
-| element | <code>ele</code> | 
-| event | <code>eve</code> | 
+| element | <code>Element</code> | 
+| event | <code>String</code> | 
 | handler | <code>function</code> | 
 
 **Example**  

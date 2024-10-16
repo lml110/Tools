@@ -6,8 +6,8 @@
 
 | Param | Type |
 | --- | --- |
-| element | <code>ele</code> | 
-| className | <code>null</code> | 
+| element | <code>Element</code> | 
+| className | <code>String</code> | 
 
 **Example**  
 ```javascript

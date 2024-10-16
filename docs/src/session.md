@@ -1,4 +1,4 @@
-## session(key, value) ⇒ <code>Value</code> \| <code>Null</code>
+## session(key, value) ⇒ <code>any</code>
 <p>Sessions简化版</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>String</code> | <p>//无值清空</p> |
-| value | <code>Value</code> | <p>//空值删除</p> |
+| value | <code>any</code> | <p>//空值删除</p> |
 
 **Example**  
 ```javascript

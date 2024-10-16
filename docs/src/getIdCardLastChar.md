@@ -1,4 +1,4 @@
-## getIdCardLastChar(cid) ⇒ <code>Number</code>
+## getIdCardLastChar(cid) ⇒ <code>string</code>
 <p>获取身份证号第18位校验码</p>
 
 **Date**: 2017-11-23  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cid | <code>value</code> | <p>17或18位均可</p> |
+| cid | <code>String</code> | <p>17或18位均可</p> |
 
 **Example**  
 ```javascript

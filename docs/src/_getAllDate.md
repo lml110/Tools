@@ -7,7 +7,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| date | <code>date</code> \| <code>date-val</code> | <p>默认当前时间</p> |
+| date | <code>any</code> | <p>默认当前时间</p> |
 | weekEnArr | <code>Array</code> | <p>替换周期</p> |
 
 **Example**  

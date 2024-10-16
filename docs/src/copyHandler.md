@@ -1,4 +1,4 @@
-## copyHandler(text) ⇒ <code>Promise</code>
+## copyHandler(text) ⇒ <code>Promise.&lt;void&gt;</code>
 <p>复制文本</p>
 
 **Date**: 2022-12-22  

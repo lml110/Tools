@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| file | <code>file</code> |  |
+| file | <code>any</code> |  |
 | isSize | <code>Boolean</code> | <p>是否需要尺寸参数</p> |
 
 **Example**  

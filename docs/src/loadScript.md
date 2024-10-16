@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| url | <code>Stringq</code> | <p>地址</p> |
+| url | <code>String</code> | <p>地址</p> |
 
 **Example**  
 ```javascript

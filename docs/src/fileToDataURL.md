@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| file | <code>File</code> | 
+| file | <code>File</code> \| <code>Blob</code> | 
 
 **Example**  
 ```javascript

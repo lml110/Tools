@@ -1,4 +1,4 @@
-## \_cloneObj(obj, isSelf) ⇒ <code>val</code>
+## \_cloneObj(obj, [isSelf]) ⇒ <code>\*</code>
 <p>深拷贝数据</p>
 
 **Date**: 2017-11-23  
@@ -6,8 +6,8 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| obj | <code>val</code> |  |
-| isSelf | <code>Boolean</code> | <p>是否排除循环引用</p> |
+| obj | <code>\*</code> |  |
+| [isSelf] | <code>Boolean</code> | <p>是否排除循环引用</p> |
 
 **Example**  
 ```javascript

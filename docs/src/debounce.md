@@ -1,4 +1,4 @@
-## debounce(func, wait, options) ⇒ <code>Null</code>
+## debounce(func, wait, options) ⇒ <code>any</code>
 <p>防抖函数</p>
 
 **Date**: 2017-11-23  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| func | <code>Funcrion</code> |  |
+| func | <code>function</code> |  |
 | wait | <code>Number</code> | <p>需要延迟的毫秒数</p> |
 | options | <code>Object</code> | <p>选项对象</p> |
 

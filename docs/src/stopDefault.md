@@ -1,4 +1,4 @@
-## stopDefault(e) ⇒ <code>null</code>
+## stopDefault(e)
 <p>阻止默认事件</p>
 
 **Date**: 2017-11-23  
@@ -6,9 +6,9 @@
 
 | Param | Type |
 | --- | --- |
-| e | <code>ele</code> | 
+| e | <code>Event</code> | 
 
 **Example**  
 ```javascript
-on(document,'touchmove',stopDefault);
+on(document,'touchmove', stopDefault);
 ```

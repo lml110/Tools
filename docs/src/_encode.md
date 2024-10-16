@@ -1,4 +1,4 @@
-## \_encode(s, isonly) ⇒ <code>String</code>
+## \_encode(s, [isonly]) ⇒ <code>String</code>
 <p>URL编码转换</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | s | <code>String</code> |  |
-| isonly | <code>Boolean</code> | <p>是否只转中文</p> |
+| [isonly] | <code>Boolean</code> | <p>是否只转中文</p> |
 
 **Example**  
 ```javascript

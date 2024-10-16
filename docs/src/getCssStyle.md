@@ -1,4 +1,4 @@
-## getCssStyle(element, propertyName) ⇒ <code>val</code>
+## getCssStyle(element, propertyName) ⇒ <code>any</code>
 <p>获取css样式属性</p>
 
 **Date**: 2017-11-23  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| element | <code>ele</code> |  |
+| element | <code>any</code> |  |
 | propertyName | <code>String</code> | <p>属性名</p> |
 
 **Example**  

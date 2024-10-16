@@ -1,4 +1,4 @@
-## isString(str) ⇒ <code>Boolean</code>
+## isString(res) ⇒ <code>Boolean</code>
 <p>是否是字符串类型</p>
 
 **Date**: 2021-12-22  
@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| str | <code>any</code> | 
+| res | <code>unknown</code> | 
 
 **Example**  
 ```javascript

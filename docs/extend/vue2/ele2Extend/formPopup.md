@@ -11,6 +11,7 @@ Since: 部分 props 引入 apply-dialog
 | Prop name     | Description          | Type    | Values | Default |
 | ------------- | -------------------- | ------- | ------ | ------- |
 | labelWidth    | 标题宽度             | string  | -      | 'auto'  |
+| customClass   |                      | string  | -      | ''      |
 | labelPosition | 标题位置             | string  | -      | 'right' |
 | info          | 操作数据             | object  | -      | {}      |
 | isFooter      | 是否展示底部按钮区域 | boolean | -      | true    |
@@ -51,7 +52,7 @@ Since: 部分 props 引入 apply-dialog
     :loading="save_loading"
     @cancel="modal_cencel"
     @ok="Modal_ok"
-    @err="decreaseData_err"
+    @err="Modal_err"
   >
     <template #header>
       <div style="margin-bottom:18px;">
@@ -161,6 +162,21 @@ export default {
   computed: {},
   methods: {
     Modal_ok(formInfo) {},
+    dialog_ok({ failMsg }) {
+      const { offlineDataUuid } = this;
+      this.$get("exportOrder/failOfflineOrderData", {
+        offlineDataUuid,
+        failMsg,
+      })
+        .then((data) => {
+          this.$emit("ok", data);
+          this.isShow = false;
+        })
+        .catch((err) => {
+          console.error("failOfflineOrderData", err);
+          this.$tipsMessage("操作失败", 3);
+        });
+    },
     newInsuredList_change(val) {
       const list = this.newInsuredList_form.list;
       this.orderInsuredList = val.map((el) => {
@@ -296,7 +312,7 @@ export default {
   },
   methods: {
     //确认按钮
-    decreaseData_ok(requedata) {
+    Modal_ok(requedata) {
       const { productAllList, productEditId, type, formPopupTitle } = this;
       requedata.productList = requedata.productList.map((id) => {
         let el = productAllList.find((_) => _.productId == id) || {};
@@ -322,7 +338,7 @@ export default {
         });
     },
     //验证错误
-    decreaseData_ok(props) {
+    Modal_err(err) {
       this.$tipsMessage("必填信息不能为空");
     },
     //新增

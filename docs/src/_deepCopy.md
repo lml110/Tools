@@ -6,7 +6,7 @@
 
 | Param | Type |
 | --- | --- |
-| obj | <code>value</code> | 
+| obj | <code>\*</code> | 
 
 **Example**  
 ```javascript
@@ -70,5 +70,6 @@ target.reg = /\s+/
 console.log('target: ',target);
 console.log('test1: ', test1);
 console.log('test2: ', test2);
-console.log('test3: ', test3);// 场景：数组，对象，循环引-自身
+console.log('test3: ', test3);
+// 场景：数组，对象，循环引-自身
 ```

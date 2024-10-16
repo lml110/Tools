@@ -1,4 +1,4 @@
-## cacheCalculate(Fn) ⇒ <code>value</code>
+## cacheCalculate(Fn) ⇒ <code>function</code>
 <p>缓存计算值</p>
 
 **Date**: 2022-12-22  
@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| Fn | <code>Fn</code> | <p>处理函数</p> |
+| Fn | <code>function</code> | <p>处理函数</p> |
 
 **Example**  
 ```javascript

@@ -1,7 +1,3 @@
-## arrUnit
-<p>['bit',bytes', 'KB', 'MB', 'GB', 'TB']
-sizeofUnit</p>
-
 ## strlenUnit(total) ⇒ <code>String</code>
 <p>转换带单位数据</p>
 

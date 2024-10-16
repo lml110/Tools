@@ -1,5 +1,5 @@
-## getObjVal(object, property) ⇒ <code>value</code>
-<p>获取对象val</p>
+## getObjVal(object, property) ⇒ <code>any</code>
+<p>查询嵌套对象的属性</p>
 
 **Date**: 2017-11-23  
 **Author**: liumouliang  

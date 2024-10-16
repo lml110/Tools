@@ -1,8 +1,9 @@
-## PageList() ⇒ <code>Class</code>
-<p>分页处理方法</p>
-
+## PageList
 **Date**: 2017-11-23  
 **Author**: liumouliang  
+### new PageList()
+<p>分页处理方法</p>
+
 **Example**  
 ```javascript
 const page_list = new PageList();

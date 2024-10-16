@@ -1,4 +1,4 @@
-## cookie(key, value, options) ⇒ <code>null</code>
+## cookie(key, value, options) ⇒ <code>any</code>
 <p>cookie简易版操作</p>
 
 **Date**: 2017-11-23  
@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | key | <code>String</code> |  |
-| value | <code>value</code> |  |
+| value | <code>any</code> |  |
 | options | <code>Object</code> | <p>配置信息</p> |
 
 **Example**  

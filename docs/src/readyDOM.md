@@ -1,4 +1,4 @@
-## readyDOM(callback) ⇒ <code>null</code>
+## readyDOM(callback) ⇒ <code>any</code>
 <p>兼容document加载完成事件</p>
 
 **Date**: 2017-11-23  

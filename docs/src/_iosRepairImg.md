@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| img | <code>Image</code> |  |
+| img | <code>any</code> |  |
 | orient | <code>Number</code> | <p>差异值</p> |
 
 **Example**  

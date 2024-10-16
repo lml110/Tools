@@ -1,12 +1,13 @@
-## classEndDate() ⇒ <code>Class</code>
-<p>获取截止时间的方法类</p>
-
+## classEndDate
 **Date**: 2022-11-23  
 **Author**: liumouliang  
+### new classEndDate()
+<p>class-获取截止时间的方法类</p>
+
 **Example**  
 ```javascript
 //# tag: ['year','month','day','hour','minute','second']
-const diffDates = new classEndDate();
+const endDates = new classEndDate();
 const diffDates = new classEndDate();
 // 截止当前天
 const endDate_day = diffDates.getEndDate(new Date("2021-12-31 08:00:00"),2)
@@ -44,7 +45,7 @@ console.log('截止对应秒',_formatDate(endtime_s)); // 2022-01-01 00:00:01
 //# 剩余时间例子
 const alLeftTimes = new getAllLeftTime();
 const endDate = diffDates.getEndDate(null,1,'month')
-const diffDate = diffDates.getDiffDate(null,1,'month')
+const diffDate = diffDates.getDiffDate(null,1,'month') //810084400
 console.log(_formatDate(endDate)); // 2023-11-01 00:00:00
 console.log(alLeftTimes.getLeftTimeStr(diffDate)); //03周03天06小时46分56秒
 
@@ -52,39 +53,15 @@ const endTime = diffDates.getEndTime(null,2,'hour')
 const diffTime = diffDates.getDiffTime(null,2,'hour')
 console.log(_formatDate(endTime)); //2023-10-07 19:19:50
 console.log(alLeftTimes.getLeftTimeStr(diffTime)); //01小时59分59秒
-```
-## getEndDate(date, diff, tag) ⇒ <code>Date</code>
-<p>获取结束日期 (当前截止时间)</p>
 
-**Date**: 2022-12-22  
-**Author**: liumouliang  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| date | <code>Date</code> | <p>时间</p> |
-| diff | <code>Number</code> | <p>差异值</p> |
-| tag | <code>String</code> | <p>标识（day）</p> |
-
-**Example**  
-```javascript
-//当天截止，当月截止
-getEndDate(date, diff = 1, tag = 'day')
-```
-## getDiffDate(date, diff, tag) ⇒ <code>Date</code>
-<p>获取差异日期</p>
-
-**Date**: 2022-12-22  
-**Author**: liumouliang  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| date | <code>Date</code> | <p>时间</p> |
-| diff | <code>Number</code> | <p>差异值</p> |
-| tag | <code>String</code> | <p>标识（day）</p> |
-
-**Example**  
-```javascript
-getDiffDate(date, diff = 1, tag = 'day')
+if(payOverTimeType === 1){
+    const diffDates = new classEndDate();
+    const endDate = +diffDates.getEndDate(curDate);
+    endTime = endDate - curDate;
+}
+if(endTime>=0){
+    return alLeftTimes.getLeftTimeStr(endTime)
+}
 ```
 ## getEndMonth(date, diff) ⇒ <code>Date</code>
 <p>获取结束月份（默认下一月）</p>
@@ -132,4 +109,37 @@ getEndTime(date, diff = 1, tag = 'second')
 **Example**  
 ```javascript
 getDiffTime(date, diff = 1, tag = 'second')
+```
+## getEndDate(date, diff, tag) ⇒ <code>Date</code>
+<p>获取结束日期 (当前截止时间)</p>
+
+**Date**: 2022-12-22  
+**Author**: liumouliang  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| date | <code>Date</code> | <p>时间</p> |
+| diff | <code>Number</code> | <p>差异值</p> |
+| tag | <code>String</code> | <p>标识（day）</p> |
+
+**Example**  
+```javascript
+//当天截止，当月截止
+getEndDate(date, diff = 1, tag = 'day')
+```
+## getDiffDate(date, [diff], [tag]) ⇒ <code>Number</code>
+<p>获取差异日期</p>
+
+**Date**: 2022-12-22  
+**Author**: liumouliang  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| date | <code>any</code> | <p>时间</p> |
+| [diff] | <code>Number</code> | <p>差异值</p> |
+| [tag] | <code>String</code> | <p>标识（day）</p> |
+
+**Example**  
+```javascript
+getDiffDate(date, diff = 1, tag = 'day')
 ```

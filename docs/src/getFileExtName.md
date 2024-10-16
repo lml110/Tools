@@ -1,4 +1,4 @@
-## getFileExtName(std, 是否包含文件名) ⇒ <code>String</code>
+## getFileExtName(std, [isName]) ⇒ <code>String</code>
 <p>获取后缀名并转换小写</p>
 
 **Date**: 2017-11-23  
@@ -6,8 +6,8 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| std | <code>str</code> | <p>文件地址</p> |
-| 是否包含文件名 | <code>isName</code> |  |
+| std | <code>String</code> | <p>文件地址</p> |
+| [isName] | <code>Boolean</code> | <p>是否包含文件名</p> |
 
 **Example**  
 ```javascript

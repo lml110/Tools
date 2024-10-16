@@ -7,8 +7,8 @@
 
 | Param | Type |
 | --- | --- |
-| v1 | <code>String</code> | 
-| v2 | <code>String</code> | 
+| v1 | <code>any</code> | 
+| v2 | <code>any</code> | 
 
 **Example**  
 ```javascript

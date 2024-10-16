@@ -6,7 +6,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ele | <code>element</code> | <p>元素</p> |
+| ele | <code>any</code> | <p>元素</p> |
 
 **Example**  
 ```javascript

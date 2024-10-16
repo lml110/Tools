@@ -1,10 +1,4 @@
-## \_queryFn
-<p>-重构find
--递归查询
--查到后退出</p>
-<p>缺点：不能递归查询对象</p>
-
-## findTarget(sourceArr, queryFn, childKey) ⇒ <code>Value</code>
+## findTarget(sourceArr, queryFn, childKey) ⇒ <code>any</code>
 <p>遍历获取数组中的对应目标节点</p>
 
 **Date**: 2017-11-23  
@@ -14,7 +8,7 @@
 | --- | --- | --- |
 | sourceArr | <code>Array</code> |  |
 | queryFn | <code>function</code> | <p>查询函数</p> |
-| childKey | <code>function</code> \| <code>string</code> | <p>递归处理</p> |
+| childKey | <code>function</code> \| <code>String</code> | <p>递归处理</p> |
 
 **Example**  
 ```javascript
