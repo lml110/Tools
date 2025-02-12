@@ -6,9 +6,9 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>any</code> | <p>操作数</p> |
+| value | <code>any</code> | <p>操作目标</p> |
 | sourceArr | <code>Array</code> | <p>源数据</p> |
-| keys | <code>Array</code> \| <code>String</code> | <p>枚举</p> |
+| keys | <code>Array</code> \| <code>String</code> | <p>枚举(数组则返回对应值[label,value]，字符串key则查到后全部返回)</p> |
 | [emptyDesc] | <code>String</code> | <p>为空描述</p> |
 
 **Example**  

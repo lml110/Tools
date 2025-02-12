@@ -157,6 +157,12 @@ export default {
   created() {},
   computed: {},
   methods: {
+    click_downTemplate() {
+      return downloadFile(
+        "https://res.wyins.net/autoUpload/group/f7a53d7b-745c-42fc-a27b-da5def42edf3.xlsx",
+        "鼎和雇主补充资料模板"
+      );
+    },
     importGroupIndustryInfo(file) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {

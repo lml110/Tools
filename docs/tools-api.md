@@ -68,7 +68,7 @@
 >
 > **[_stringify](/src/_stringify)** - 转字符串 
 >
-> **[_timeout](/src/_timeout)** - 创建一个任务列表实例 
+> **[_timeout](/src/_timeout)** - class-setTimeout延时函数 
 >
 > **[_trim](/src/_trim)** - 去掉字符串空格 
 
@@ -119,6 +119,8 @@
 ### 数组处理
 
 > **[arr2Union](/src/arr2Union)** - 获取数组的并集 
+>
+> **[arrayToString](/src/arrayToString)** - 数组转字符串 
 >
 > **[findForStatic](/src/findForStatic)** - 根据静态枚举查询对应值 
 >
@@ -489,7 +491,7 @@
 
 ## 业务处理
 
-> **[asyncStateErrorMsg](/src/asyncStateErrorMsg)** - 自定义错误对象 
+> **[asyncStateErrorMsg](/src/asyncStateErrorMsg)** - 异步处理错误状态(如有错误，后续不进行请求) 
 >
 > **[classCountDown](/src/classCountDown)** - class-倒计时 
 >
@@ -498,6 +500,8 @@
 > **[PageList](/src/PageList)** - 分页处理方法 
 >
 > **[PollingQuery](/src/PollingQuery)** - 异步轮询 
+>
+> **[TaskQueue](/src/TaskQueue)** - 任务队列 
 >
 > **[useStateErrorMsg](/src/useStateErrorMsg)** - hook-封装errMsg的赋值 
 

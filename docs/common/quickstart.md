@@ -31,7 +31,7 @@ import { warning, _cloneObj, trace, _keyid } from 'tools';
 
 ## 使用CDN引入
 ```html
-<script src="//res.wyins.net/autoUpload/common/xxx.js" type="text/javascript"></script>
+<script src="xxx.js" type="text/javascript"></script>
 
 <script>
 tools.isAndorIosNoWe()

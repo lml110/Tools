@@ -14,11 +14,25 @@
 **Example**  
 ```javascript
 uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'}}
-uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'},{contentTypeNum:3,prossFn({loaded,total}){}})
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'},{contentType: 'multipart/form-data',prossFn({loaded,total}){}})
 uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile',{file1: ['测试1','测试2']},{lml:'11'},{
     formDataFn(requedata, filedata){
         return JSON.stringify(requedata);
     }
 })
-uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile?aa=11',{file1: ['测试1','测试2']},{lml:'11'},{method: 'get'})
+uploadFile('/mock/60dae3958621c72358c0d4d7/template/lml/uploadFile?aa=11',{file1: ['测试1','测试2']},{lml:'11'},{method: 'get'}).then(({
+    data,
+    status,
+    result,
+}) => {
+    console.log('then',result);
+}).catch((err)=>{});
+
+{
+    prossFn, // 进度方法
+    headers, // 请求头
+    method = "POST", // 请求类型
+    contentType, // 内容类型
+    formDataFn, // 参数方法
+}
 ```

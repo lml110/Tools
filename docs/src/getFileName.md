@@ -15,5 +15,6 @@ if(){
 console.log(getFileName('a/b/c.js')); // === c
 console.log(getFileName('/aa/bb/CC/工号导入模板.1221.sa.xlsx')); // 工号导入模板.1221.sa
 console.log(getFileName('/aa/bb/Cc/工号导入模板.1221.sa.xlsx',true)); //['工号导入模板.1221.sa', 'xlsx']
+console.log(getFileName('/aa/bb/Cc/工号导入模板.1221.sa.xlsx?v=1&f=2.ml')); //工号导入模板.1221.sa
 }
 ```

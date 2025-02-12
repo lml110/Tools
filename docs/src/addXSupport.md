@@ -5,7 +5,8 @@
 **Author**: liumouliang  
 **Example**  
 ```javascript
-addXSupport()
+addXSupport()
+
 # fiex布局不支持-解决
 <bxs-popup v-model="showPopup" class="comments-popup" :class="isAfterIphoneX && 'IphoneX-bottom'" position="bottom">
 .comments-popup.bx-popup.bx-popup--bottom{

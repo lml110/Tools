@@ -1,5 +1,5 @@
 ## asyncStateErrorMsg(err, Fun, callBack) ⇒ <code>Promise</code>
-<p>自定义错误对象</p>
+<p>异步处理错误状态(如有错误，后续不进行请求)</p>
 
 **Date**: 2022-11-23  
 **Author**: liumouliang  

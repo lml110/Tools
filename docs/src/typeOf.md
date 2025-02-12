@@ -21,4 +21,9 @@ Symbol.for('test') === Symbol.for('test')
 Symbol('test') === Symbol('test')
 console.log(typeOf(0)); //number
 console.log(typeOf(window)); //window
+const err = new Error('查无此订单')
+// err.name === 'Error'
+console.log(typeOf(err)); //error
+console.log(typeOf(err.message)); //string
+console.log(typeOf(err.stack)); //string
 ```

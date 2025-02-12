@@ -7,7 +7,7 @@
 | Param | Type | Description |
 | --- | --- | --- |
 | func | <code>function</code> |  |
-| wait | <code>Number</code> | <p>需要延迟的毫秒数</p> |
+| wait | <code>Number</code> | <p>可选-需要延迟的毫秒数（默认requestAnimationFrame）</p> |
 | options | <code>Object</code> | <p>选项对象</p> |
 
 **Example**  

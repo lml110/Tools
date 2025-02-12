@@ -15,6 +15,8 @@ setErr(msg：错误提示 || 错误对象(继承)，data: 提示对应数据)
 const [ err, setErr ] = useStateErrorMsg();
 
 let [err1, setErr1] = useStateErrorMsg();
+console.log(useStateErrorMsg(err)); //初始化赋值 setErr也能赋值，但会增加额外操作，如增加有效值
+
 //resObj 已设数据
 //curMsg 当前文案
 //curData 当前赋值数据
