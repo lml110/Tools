@@ -26,8 +26,6 @@
 >
 > **[getFormData](/src/getFormData)** - 获取formData 
 >
-> **[isTypeOf](/src/isTypeOf)** - 验证类型 判断+类型检测 
->
 > **[throttle](/src/throttle)** - 节流函数 
 >
 > **[trace](/src/trace)** - 控制台输出信息 
@@ -54,6 +52,8 @@
 >
 > **[installModuleClass](/src/installModuleClass)** - class类绑定this指向 
 >
+> **[promiseAllSettled](/src/promiseAllSettled)** - 模拟Promise.allSettled 
+>
 > **[_filter](/src/_filter)** - 数据过滤-不递归 
 >
 > **[_findName](/src/_findName)** - 查询数组内数据值 
@@ -68,7 +68,7 @@
 >
 > **[_stringify](/src/_stringify)** - 转字符串 
 >
-> **[_timeout](/src/_timeout)** - 创建一个任务列表实例 
+> **[_timeout](/src/_timeout)** - class-setTimeout延时函数 
 >
 > **[_trim](/src/_trim)** - 去掉字符串空格 
 
@@ -100,6 +100,9 @@
 >
 > **[_swapArray](/src/_swapArray)** - 复杂数组数据交换 
 
+### undefined
+
+
 ### `business`复杂
 
 > **[afreshSetTree](/src/afreshSetTree)** - 一维数组生成一次性树结构 
@@ -119,6 +122,8 @@
 ### 数组处理
 
 > **[arr2Union](/src/arr2Union)** - 获取数组的并集 
+>
+> **[arrayToString](/src/arrayToString)** - 数组转字符串 
 >
 > **[findForStatic](/src/findForStatic)** - 根据静态枚举查询对应值 
 >
@@ -489,15 +494,17 @@
 
 ## 业务处理
 
-> **[asyncStateErrorMsg](/src/asyncStateErrorMsg)** - 自定义错误对象 
+> **[asyncStateErrorMsg](/src/asyncStateErrorMsg)** - 异步处理错误状态(如有错误，后续不进行请求) 
 >
 > **[classCountDown](/src/classCountDown)** - class-倒计时 
 >
-> **[classWatcherMap](/src/classWatcherMap)** - class-重构WeakMap，使其可以遍历 
+> **[classWatcherMap](/src/classWatcherMap)** - class-监听控制 
 >
 > **[PageList](/src/PageList)** - 分页处理方法 
 >
 > **[PollingQuery](/src/PollingQuery)** - 异步轮询 
+>
+> **[TaskQueue](/src/TaskQueue)** - 任务队列-并发控制器 
 >
 > **[useStateErrorMsg](/src/useStateErrorMsg)** - hook-封装errMsg的赋值 
 
