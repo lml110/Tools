@@ -51,6 +51,7 @@ Author: liumouliang
 export default {
   data() {
     return {
+      queryData: {},
       queryForm: [
         {
           type: "select",
@@ -94,9 +95,8 @@ export default {
         })
         .catch((err) => {});
     },
-    click_search(row) {
-      let params = this._getQueryData(searchKeys);
-      params = this._setQueryDataNum(params, "auditStatus");
+    click_search() {
+      let params = this.queryData;
       this.GetList(params);
     },
     click_reset() {
@@ -110,7 +110,6 @@ export default {
 ```
 
 ```js
-// import listMainMixin from '@/mixins/common/search-list-mixin';
 import { _for, typeOf, getObjVal, _noValue } from "tools";
 export default {
   data() {

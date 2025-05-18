@@ -6,23 +6,26 @@ Author: liumouliang
 
 ## Props
 
-| Prop name    | Description            | Type    | Values | Default                                                                                                                                              |
-| ------------ | ---------------------- | ------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value        |                        | boolean | -      |                                                                                                                                                      |
-| customClass  | 自定义类名             | string  | -      | ''                                                                                                                                                   |
-| title        | 标题文本               | string  | -      | ''                                                                                                                                                   |
-| titleIcon    | 标题图标               | string  | -      | ''                                                                                                                                                   |
-| width        | 全局宽度               | string  | -      | '50%'                                                                                                                                                |
-| size         | 尺寸                   | string  | -      | 'medium'                                                                                                                                             |
-| top          | 位置 top               | string  | -      | '8vh'                                                                                                                                                |
-| appendToBody | 是否插入至 body 元素上 | boolean | -      | false                                                                                                                                                |
-| loading      | 加载状态               | boolean | -      | false                                                                                                                                                |
-| isFooter     | 是否需要底部区域       | boolean | -      | false                                                                                                                                                |
-| cancelText   | 取消按钮文本           | string  | -      | '取消'                                                                                                                                               |
-| okText       | 确认按钮文本           | string  | -      | '确认'                                                                                                                                               |
-| showClose    | 是否显示关闭按钮       | boolean | -      | true                                                                                                                                                 |
-| options      |                        | object  | -      | {<br/> close_on_press_escape: false, //是否可以通过按下 ESC 关闭 Dialog<br/> close_on_click_modal: false, //是否可以通过点击 modal 关闭 Dialog<br/>} |
-| notCencel    | 是否取消触发时隐藏     | boolean | -      | false                                                                                                                                                |
+| Prop name    | Description                                             | Type    | Values | Default                                                                                                                                                                                                         |
+| ------------ | ------------------------------------------------------- | ------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value        |                                                         | boolean | -      |                                                                                                                                                                                                                 |
+| customClass  | 自定义类名                                              | string  | -      | ''                                                                                                                                                                                                              |
+| title        | 标题文本                                                | string  | -      | ''                                                                                                                                                                                                              |
+| titleIcon    | 标题图标                                                | string  | -      | ''                                                                                                                                                                                                              |
+| width        | 全局宽度                                                | string  | -      | '50%'                                                                                                                                                                                                           |
+| size         | 尺寸                                                    | string  | -      | 'medium'                                                                                                                                                                                                        |
+| top          | 位置 top                                                | string  | -      | '8vh'                                                                                                                                                                                                           |
+| fullscreen   | 是否为全屏 Dialog                                       | boolean | -      | false                                                                                                                                                                                                           |
+| center       | 是否对头部和底部采用居中布局                            | boolean | -      | false                                                                                                                                                                                                           |
+| appendToBody | 是否插入至 body 元素上                                  | boolean | -      | false                                                                                                                                                                                                           |
+| loading      | 加载状态                                                | boolean | -      | false                                                                                                                                                                                                           |
+| isFooter     | 是否需要底部区域                                        | boolean | -      | false                                                                                                                                                                                                           |
+| cancelText   | 取消按钮文本                                            | string  | -      | '取消'                                                                                                                                                                                                          |
+| okText       | 确认按钮文本                                            | string  | -      | '确认'                                                                                                                                                                                                          |
+| showClose    | 是否显示关闭按钮                                        | boolean | -      | true                                                                                                                                                                                                            |
+| beforeClose  | 关闭前的回调，会暂停 Dialog 的关闭 done 用于关闭 Dialog | func    | -      |                                                                                                                                                                                                                 |
+| options      |                                                         | object  | -      | {<br/> destroy_on_close: false, //关闭时销毁 Dialog 中的元素<br/> close_on_press_escape: false, //是否可以通过按下 ESC 关闭 Dialog<br/> close_on_click_modal: false, //是否可以通过点击 modal 关闭 Dialog<br/>} |
+| notCencel    | 是否取消触发时隐藏                                      | boolean | -      | false                                                                                                                                                                                                           |
 
 ## Events
 
@@ -50,6 +53,8 @@ Author: liumouliang
   <apply-dialog
     v-model="isShow"
     title="请选择处理的流程"
+    custom-class="dialog"
+    append-to-body
     width="300px"
     isFooter
     okText="下一步"

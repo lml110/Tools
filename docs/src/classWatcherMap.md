@@ -2,7 +2,7 @@
 **Date**: 2022-11-23  
 **Author**: liumouliang  
 ### new classWatcherMap()
-<p>class-重构WeakMap，使其可以遍历</p>
+<p>class-监听控制</p>
 
 **Example**  
 ```javascript

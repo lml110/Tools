@@ -26,8 +26,6 @@
 >
 > **[getFormData](/src/getFormData)** - 获取formData 
 >
-> **[isTypeOf](/src/isTypeOf)** - 验证类型 判断+类型检测 
->
 > **[throttle](/src/throttle)** - 节流函数 
 >
 > **[trace](/src/trace)** - 控制台输出信息 
@@ -53,6 +51,8 @@
 > **[classWeakMap](/src/classWeakMap)** - class-重构WeakMap，使其可以遍历 
 >
 > **[installModuleClass](/src/installModuleClass)** - class类绑定this指向 
+>
+> **[promiseAllSettled](/src/promiseAllSettled)** - 模拟Promise.allSettled 
 >
 > **[_filter](/src/_filter)** - 数据过滤-不递归 
 >
@@ -99,6 +99,9 @@
 > **[specPermutation](/src/specPermutation)** - 二维数组中数组元素的全排列 == 规格 废弃 与arrayToTree相同 
 >
 > **[_swapArray](/src/_swapArray)** - 复杂数组数据交换 
+
+### undefined
+
 
 ### `business`复杂
 
@@ -495,13 +498,13 @@
 >
 > **[classCountDown](/src/classCountDown)** - class-倒计时 
 >
-> **[classWatcherMap](/src/classWatcherMap)** - class-重构WeakMap，使其可以遍历 
+> **[classWatcherMap](/src/classWatcherMap)** - class-监听控制 
 >
 > **[PageList](/src/PageList)** - 分页处理方法 
 >
 > **[PollingQuery](/src/PollingQuery)** - 异步轮询 
 >
-> **[TaskQueue](/src/TaskQueue)** - 任务队列 
+> **[TaskQueue](/src/TaskQueue)** - 任务队列-并发控制器 
 >
 > **[useStateErrorMsg](/src/useStateErrorMsg)** - hook-封装errMsg的赋值 
 

@@ -17,10 +17,3 @@ if(rr){
 }
 isArray(null) //undefined
 ```
-
-* [isArray(res)](#isArray) ⇒ <code>Array</code> \| <code>void</code>
-    * [~any](#isArray..any) : <code>any</code>
-    * [~list](#isArray..list) : <code>Array</code>
-
-### isArray~any : <code>any</code>
-### isArray~list : <code>Array</code>

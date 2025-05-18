@@ -212,6 +212,10 @@ export default {
             console.log("radio", v);
           },
         },
+        select: {
+          "list-key": "id",
+          "list-name": "name",
+        },
         switch: {
           // disabled: true,
           active: {

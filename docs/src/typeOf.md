@@ -1,13 +1,15 @@
-## typeOf(obj, [type]) ⇒ <code>any</code>
+## typeOf(source, type) ⇒ <code>string</code>
 <p>判断数据类型</p>
 
+**Returns**: <code>string</code> - <p>返回类型字符串</p>  
+**Overload**:   
 **Date**: 2019-09-09  
 **Author**: liumouliang  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| obj | <code>\*</code> | <p>原值</p> |
-| [type] | <code>String</code> | <p>类型</p> |
+| source | <code>unknown</code> | <p>要检测类型的值</p> |
+| type | <code>T</code> | <p>指定需要验证的类型</p> |
 
 **Example**  
 ```javascript
@@ -27,3 +29,24 @@ console.log(typeOf(err)); //error
 console.log(typeOf(err.message)); //string
 console.log(typeOf(err.stack)); //string
 ```
+## TypeOfMap
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| boolean | <code>Boolean</code> | 
+| number | <code>Number</code> | 
+| string | <code>String</code> | 
+| function | <code>function</code> | 
+| array | <code>Array.&lt;any&gt;</code> | 
+| object | <code>Object</code> | 
+| symbol | <code>Symbol</code> | 
+| date | <code>Date</code> | 
+| error | <code>Error</code> | 
+| promise | <code>Promise.&lt;any&gt;</code> | 
+| map | <code>Map.&lt;any, any&gt;</code> | 
+| set | <code>Set.&lt;any&gt;</code> | 
+| regexp | <code>RegExp</code> | 
+| undefined | <code>undefined</code> | 
+| null | <code>null</code> | 
+

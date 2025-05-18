@@ -12,4 +12,13 @@
 **Example**  
 ```javascript
 imageLoaded(source)
+// 加载单图
+imageLoaded('https://example.com/image.jpg')
+  .then(img => console.log('Loaded', img.width))
+  .catch(console.error);
+
+// 加载多图
+imageLoaded(['img1.jpg', 'img2.jpg'])
+  .then(images => console.log('All loaded', images))
+  .catch(console.error);
 ```

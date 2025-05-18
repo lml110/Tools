@@ -2,7 +2,7 @@
 **Date**: 2023-11-10  
 **Author**: liumouliang  
 ### new TaskQueue()
-<p>任务队列</p>
+<p>任务队列-并发控制器</p>
 
 **Example**  
 ```javascript
